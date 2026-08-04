@@ -5,7 +5,7 @@
 
 # 配色。他の候補: ocean, forest, avocado, noir, one-light, slate,
 #                congo, fire, autumn, github, terminal
-colorScheme = "slate"
+colorScheme = "forest"
 
 defaultAppearance = "light"      # 既定はライト。dark にすると既定がダーク
 autoSwitchAppearance = true      # OSの設定に自動追従
