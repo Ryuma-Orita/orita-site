@@ -221,24 +221,19 @@ main h1 ~ nav { margin-top: 0.9rem; }
 }
 
 /* --- リンク（サイト全体のホバー色） --- */
-/* テーマ既定の明るい青緑は浮くので、ホバーはアクセント色に統一。
-   ヘッダーのメニュー、一覧のタイトル、フッターにも効かせる。
+/* テーマ既定の明るい青緑は浮くので、ホバーはアクセント色に統一する。
 
-   メニューの文字は <a> の中の <span> に入っており、そちらにも
-   テーマの色指定があるため、子要素まで届かせる必要がある。
-   ただし SVG アイコンは公式ロゴの色を保つため除外する。 */
-main a:hover,
-main a:focus-visible,
-header a:hover,
-header a:focus-visible,
-footer a:hover,
-footer a:focus-visible,
-main a:hover *:not(svg):not(svg *),
-main a:focus-visible *:not(svg):not(svg *),
-header a:hover *:not(svg):not(svg *),
-header a:focus-visible *:not(svg):not(svg *),
-footer a:hover *:not(svg):not(svg *),
-footer a:focus-visible *:not(svg):not(svg *) {
+   注意:
+   - main / header / footer のような要素名で絞ると、テーマ側の構造次第で
+     届かないことがある（実際ヘッダーのメニューに届かなかった）。
+     そのため要素名に依存しない a:hover で指定している。
+   - メニューの文字は <a> の中の <span> に入っており、その span 自体が
+     色を持っているため、子要素まで届かせる必要がある。
+   - SVG アイコン（arXiv・DOI の公式ロゴ）は色を保つため除外する。 */
+a:hover,
+a:focus-visible,
+a:hover *:not(svg):not(svg *),
+a:focus-visible *:not(svg):not(svg *) {
   color: var(--orita-accent) !important;
 }
 
