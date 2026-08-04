@@ -18,7 +18,7 @@ description: "니가타대학 이학부 부교수"
 |---|---|---|
 | 2024.7 – | 부교수 | [니가타대학](https://www.niigata-u.ac.jp/en/) |
 | 2020.3 – 2024.6 | 조교수 | [니가타대학](https://www.niigata-u.ac.jp/en/) |
-| 2018.4 – 2020.2 | 일본학술진흥회 특별연구원-PD | [도쿄도립대학](https://www.tmu.ac.jp/english/index.html) |
+| 2018.4 – 2020.2 | 일본학술진흥회 특별연구원-PD | [수도대학도쿄](https://www.tmu.ac.jp/english/index.html) |
 | 2017.8 – 2018.3 | 박사후연구원 | [국가이론과학연구중심 (NCTS)](http://www.ncts.ntu.edu.tw/) |
 | 2017.3 | 박사 (수리과학) | [도쿄대학](https://www.u-tokyo.ac.jp/en/) |
 | 2014.4 – 2017.3 | 일본학술진흥회 특별연구원-DC1 | [도쿄대학](https://www.u-tokyo.ac.jp/en/) |
