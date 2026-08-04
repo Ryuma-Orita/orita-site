@@ -220,24 +220,13 @@ main h1 ~ nav { margin-top: 0.9rem; }
   background-position: left bottom;
 }
 
-/* --- リンク（サイト全体のホバー色） --- */
-/* テーマ既定の明るい青緑は浮くので、ホバーはアクセント色に統一する。
+/* --- リンクの色 ---
 
-   注意:
-   - main / header / footer のような要素名で絞ると、テーマ側の構造次第で
-     届かないことがある（実際ヘッダーのメニューに届かなかった）。
-     そのため要素名に依存しない a:hover で指定している。
-   - メニューの文字は <a> の中の <span> に入っており、その span 自体が
-     色を持っているため、子要素まで届かせる必要がある。
-   - SVG アイコン（arXiv・DOI の公式ロゴ）は色を保つため除外する。 */
-a:hover,
-a:focus-visible,
-a:hover *:not(svg):not(svg *),
-a:focus-visible *:not(svg):not(svg *) {
-  color: var(--orita-accent) !important;
-}
+   順序が重要:
+     (1) 平常時の色  →  (2) 下線の例外  →  (3) ホバー色  →  (4) アイコンの例外
+   同じ強さの指定は「後に書いたほうが勝つ」ため、ホバーは平常時より後に置く。 */
 
-/* --- 本文中のリンク（平常時） --- */
+/* (1) 本文中のリンク（平常時） */
 .prose a {
   color: var(--orita-link) !important;
   text-decoration: underline;
@@ -245,21 +234,44 @@ a:focus-visible *:not(svg):not(svg *) {
   text-decoration-thickness: 1px;
   text-decoration-color: color-mix(in oklab, currentColor 32%, transparent);
 }
-.prose a:hover { text-decoration-color: var(--orita-accent); }
 
-/* 一覧のタイトルや見出しの中のリンクには下線を付けない */
+/* (2) 一覧のタイトルや見出しの中のリンクには下線を付けない */
 main h1 a, main h2 a, main h3 a,
 main article a:not(.prose a) {
   text-decoration: none;
 }
 
-/* アイコンだけのリンクは色を変えず、下線も引かない。
-   ホバーは薄くするだけ（arXiv・DOI の公式ロゴの色を保つため）。 */
+/* (3) ホバー色（サイト全体）
+
+   テーマ既定の明るい青緑は浮くので、アクセント色に統一する。
+
+   対象を広く取っている理由:
+   - 要素名（header / footer）で絞るとテーマの構造次第で届かない
+   - 文字が <a> の中の <span> に入っている場合があるので子要素も含める
+   - 検索・言語切替・ダークモードは <a> ではなく <button> や
+     <summary> の場合があるのでそれらも含める
+   - SVG も含める。arXiv と DOI の公式ロゴは固有の色を持っており
+     currentColor を使っていないため、この指定では変化しない。 */
+a:hover, a:focus-visible,
+button:hover, button:focus-visible,
+summary:hover, summary:focus-visible,
+[role="button"]:hover, [role="button"]:focus-visible,
+a:hover *, a:focus-visible *,
+button:hover *, button:focus-visible *,
+summary:hover *, summary:focus-visible *,
+[role="button"]:hover *, [role="button"]:focus-visible *,
+.prose a:hover, .prose a:focus-visible {
+  color: var(--orita-accent) !important;
+}
+.prose a:hover { text-decoration-color: var(--orita-accent); }
+
+/* (4) アイコンだけのリンクは色を変えない。ホバーは薄くするだけ。 */
 .prose a:has(svg) {
   color: inherit !important;
   text-decoration: none;
 }
-.prose a:has(svg):hover {
+.prose a:has(svg):hover,
+.prose a:has(svg):hover * {
   color: inherit !important;
   opacity: 0.6;
 }
