@@ -3,12 +3,15 @@ title: 幾何学IA
 event: シラバス
 event_url: http://syllabus.niigata-u.ac.jp/syllabusHtml/2021/06/06_211S1516_ja_JP.html
 location: 新潟大学 理学部
-summary: 第1ターム月曜3限・木曜2限
+summary: 第1ターム月曜3限・木曜2限 · 新潟大学 理学部
 date: '2021-04-08'
 date_end: '2021-06-07'
 publishDate: '2021-02-01T00:00:00Z'
 all_day: true
 ---
+第1ターム月曜3限・木曜2限 · 新潟大学 理学部
+
+[シラバス](http://syllabus.niigata-u.ac.jp/syllabusHtml/2021/06/06_211S1516_ja_JP.html)
 
 > **注意**
 >
@@ -26,26 +29,26 @@ all_day: true
 **講義内容**
 
 1. パラメータづけられた可微分曲線，内積
-	[動画](https://youtu.be/hYfCDkmIXOE)
+	[{{< icon "youtube" >}}](https://youtu.be/hYfCDkmIXOE "動画")
 2. 演習
 3. 正則曲線，弧長，ベクトル空間の向き
-	[動画](https://youtu.be/RJ-w255wJ98)
+	[{{< icon "youtube" >}}](https://youtu.be/RJ-w255wJ98 "動画")
 4. 演習
 5. ベクトル積，曲線の曲率，主法線ベクトル
-	[動画](https://youtu.be/POmZI1lZsbI)
+	[{{< icon "youtube" >}}](https://youtu.be/POmZI1lZsbI "動画")
 6. 演習
 7. 従法線ベクトル，捩率
-	[動画](https://youtu.be/jAVHYByowHc)
+	[{{< icon "youtube" >}}](https://youtu.be/jAVHYByowHc "動画")
 8. 演習
 9. Frenet–Serretの公式，空間曲線の基本定理
-	[動画](https://youtu.be/iZiF7DNBWP0)
+	[{{< icon "youtube" >}}](https://youtu.be/iZiF7DNBWP0 "動画")
 10. 演習
 11. 局所標準形，閉曲線
-	[動画](https://youtu.be/z8TPsXlIPLA)
+	[{{< icon "youtube" >}}](https://youtu.be/z8TPsXlIPLA "動画")
 12. 演習
 13. Jordanの閉曲線定理，回転指数定理，4頂点定理
-	[動画](https://youtu.be/_kiRjiDY52U)
+	[{{< icon "youtube" >}}](https://youtu.be/_kiRjiDY52U "動画")
 14. 演習
 15. 4頂点定理の証明，等周不等式
-	[動画](https://youtu.be/6BKCf7BMjDA)
+	[{{< icon "youtube" >}}](https://youtu.be/6BKCf7BMjDA "動画")
 16. ターム末試験とまとめ

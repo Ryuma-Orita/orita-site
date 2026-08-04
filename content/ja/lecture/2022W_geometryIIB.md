@@ -3,13 +3,15 @@ title: 幾何学IIB
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/06/06_224S1542_ja_JP.html
 location: 新潟大学 理学部
-summary: 第4ターム月曜3限
+summary: 第4ターム月曜3限 · 新潟大学 理学部
 date: '2022-12-05'
 date_end: '2023-02-13'
 publishDate: '2022-01-28T00:00:00Z'
 all_day: true
-tag: 2022W
 ---
+第4ターム月曜3限 · 新潟大学 理学部
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/06/06_224S1542_ja_JP.html)
 
 **テキスト**
 - 松本幸夫 著「多様体の基礎」東京大学出版会
@@ -23,18 +25,18 @@ tag: 2022W
 
 **講義内容**
 1. はめ込みと埋め込み
-	[動画](https://youtu.be/sH0Fnr7dfD8)
+	[{{< icon "youtube" >}}](https://youtu.be/sH0Fnr7dfD8 "動画")
 2. 埋め込み定理，１の分割
-	[動画](https://youtu.be/u2EDZC48OrI)
+	[{{< icon "youtube" >}}](https://youtu.be/u2EDZC48OrI "動画")
 3. 正則点と臨界点
-	[動画](https://youtu.be/empXWbrxRUM)
+	[{{< icon "youtube" >}}](https://youtu.be/empXWbrxRUM "動画")
 4. ベクトル場その１
-	[動画](https://youtu.be/GFPRs_kYDsQ)
+	[{{< icon "youtube" >}}](https://youtu.be/GFPRs_kYDsQ "動画")
 5. ベクトル場その２
-	[動画](https://youtu.be/3vqdeo-3W0Y)
+	[{{< icon "youtube" >}}](https://youtu.be/3vqdeo-3W0Y "動画")
 6. 微分形式その１
-	[動画](https://youtu.be/_US7foJaBNo)
+	[{{< icon "youtube" >}}](https://youtu.be/_US7foJaBNo "動画")
 7. 微分形式その２
-	[動画](https://youtu.be/gLIB6C8wEWc)
+	[{{< icon "youtube" >}}](https://youtu.be/gLIB6C8wEWc "動画")
 8. 微分形式その３
-	[動画](https://youtu.be/DLsl1O2iO6Y)
+	[{{< icon "youtube" >}}](https://youtu.be/DLsl1O2iO6Y "動画")

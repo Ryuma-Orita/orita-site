@@ -3,55 +3,60 @@
 #  好みに応じて値を変えて構いません。
 # ============================================================
 
-colorScheme = "slate"        # 他の候補: blowfish, ocean, forest, noir, one-light
-defaultAppearance = "light"
-autoSwitchAppearance = true
+# 配色。他の候補: ocean, forest, avocado, noir, one-light, slate,
+#                congo, fire, autumn, github, terminal
+colorScheme = "slate"
+
+defaultAppearance = "light"      # 既定はライト。dark にすると既定がダーク
+autoSwitchAppearance = true      # OSの設定に自動追従
 
 enableSearch = true
+disableImageOptimization = true  # SVG背景をそのまま使うために必要
 enableCodeCopy = false
 mainSections = ["publication", "talk"]
 
 [header]
-  layout = "fixed-fill-blur"
+  layout = "fixed-fill-blur"     # スクロールしても上部に残るヘッダー
 
 [footer]
   showMenu = false
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = true
+  showAppearanceSwitcher = true  # ライト/ダーク切り替えボタン
   showScrollToTop = true
 
-# --- トップページ: プロフィール型（写真・肩書・自己紹介・リンク）---
+# --- トップページ（写真・肩書・リンク・本文）---
 [homepage]
-  layout = "custom"
+  layout = "background"                  # 公式サイトと同じ、全面背景のレイアウト
+  homepageImage = "img/background.svg"   # 動きを内蔵した背景（静止画にするなら .jpg に）
+  layoutBackgroundBlur = true            # スクロールすると背景がぼける
+  disableHeroImageFilter = false         # 背景に暗めのフィルタをかける
   showRecent = false
 
 # --- 個別ページ ---
 [article]
   showDate = true
+  showDateUpdated = false
   showAuthor = false
-  showBreadcrumbs = false
+  showBreadcrumbs = true         # 「ホーム > 論文 > ...」のパンくず
   showDraftLabel = false
+  showEdit = false
   showHeadingAnchors = true
-  showPagination = false
-  showReadingTime = false
+  showPagination = true          # 前後の記事への移動
+  showReadingTime = false        # 書誌ページには不要
   showTableOfContents = false
   showTaxonomies = false
   showWordCount = false
   showComments = false
   showZenMode = false
   sharingLinks = false
+  showRelatedContent = false
 
 # --- 一覧ページ ---
 [list]
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true             # ★ 著者名・掲載誌・会場をここに出す
   showCards = false
-  groupByYear = true
+  groupByYear = true             # ★ 年ごとにまとめる
   constrainItemsWidth = true
-
-[sitemap]
-  excludedKinds = ["taxonomy", "term"]
-
-[taxonomy]
-  showTermCount = true
+  showTableOfContents = false

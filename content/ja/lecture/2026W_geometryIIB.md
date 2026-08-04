@@ -3,13 +3,15 @@ title: 幾何学IIB
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2026/06/06_264S1542_ja_JP.html
 location: 新潟大学 理学部
-summary: 第4ターム月曜3限
+summary: 第4ターム月曜3限 · 新潟大学 理学部
 date: '2026-10-01'
 date_end: '2027-03-31'
 publishDate: '2026-01-28T00:00:00Z'
 all_day: true
-tag: 2026W
 ---
+第4ターム月曜3限 · 新潟大学 理学部
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2026/06/06_264S1542_ja_JP.html)
 
 **テキスト**
 - 松本幸夫 著「多様体の基礎」東京大学出版会

@@ -6,3 +6,5 @@
 /ja/publication_types/* /ja/publication/ 301
 /categories/*           /               301
 /ja/categories/*        /ja/            301
+/post/*                 /               301
+/ja/post/*              /ja/            301

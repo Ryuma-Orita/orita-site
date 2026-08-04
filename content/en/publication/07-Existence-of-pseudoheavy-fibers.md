@@ -13,4 +13,13 @@ links:
   url: https://arxiv.org/abs/1901.09395
 - name: Journal Page
   url: https://dx.doi.org/10.1142/S0219199720500479
+summary: Morimichi Kawasaki, Ryuma Orita — Communications in Contemporary Mathematics, vol. 23 (2021), no. 5, 2050047
 ---
+{{< katex >}}
+Morimichi Kawasaki, Ryuma Orita  
+Communications in Contemporary Mathematics, vol. **23** (2021), no. 5, 2050047  
+[arXiv](https://arxiv.org/abs/1901.09395) · [Journal Page](https://dx.doi.org/10.1142/S0219199720500479)
+
+## Abstract
+
+In this paper, we introduce the notion of pseudoheaviness of closed subsets of closed symplectic manifolds and prove the existence of pseudoheavy fibers of moment maps. In particular, we generalize Entov and Polterovich's theorem, which ensures the existence of non-displaceable fibers. As its application, we provide a partial answer to a problem posed by them, which asks the existence of heavy fibers. Moreover, we obtain a family of singular Lagrangian submanifolds in $S^2\times S^2$ with various rigidities.

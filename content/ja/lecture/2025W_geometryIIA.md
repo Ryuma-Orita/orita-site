@@ -3,13 +3,16 @@ title: 幾何学IIA
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2025/06/06_253S1534_ja_JP.html
 location: 新潟大学 理学部
-summary: 第3ターム月曜3限
+summary: 第3ターム月曜3限 · 新潟大学 理学部
 date: '2025-10-06'
 date_end: '2025-12-01'
 publishDate: '2025-01-28T00:00:00Z'
 all_day: true
-tag: 2025W
 ---
+第3ターム月曜3限 · 新潟大学 理学部
+
+{{< katex >}}
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2025/06/06_253S1534_ja_JP.html)
 
 **テキスト**
 - 松本幸夫 著「多様体の基礎」東京大学出版会
@@ -21,9 +24,9 @@ tag: 2025W
 **講義内容**
 1. 多様体の定義
 2. 多様体の例（オンデマンド授業）
-3. $C^{\\infty}$級関数
-4. $C^{\\infty}$級写像
+3. $C^{\infty}$級関数
+4. $C^{\infty}$級写像
 5. 接ベクトル空間
-6. $C^{\\infty}$級写像の微分
-7. $C^{\\infty}$級写像の微分の例
+6. $C^{\infty}$級写像の微分
+7. $C^{\infty}$級写像の微分の例
 8. 写像の局所的性質，テスト

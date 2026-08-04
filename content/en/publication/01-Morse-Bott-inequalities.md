@@ -12,4 +12,12 @@ links:
   url: https://arxiv.org/abs/1609.02381
 - name: Journal Page
   url: https://dx.doi.org/10.3836/tjm/1502179256
+summary: Ryuma Orita — Tokyo Journal of Mathematics, vol. 41 (2018), no. 1, pp. 113–130
 ---
+Ryuma Orita  
+Tokyo Journal of Mathematics, vol. **41** (2018), no. 1, pp. 113–130  
+[arXiv](https://arxiv.org/abs/1609.02381) · [Journal Page](https://dx.doi.org/10.3836/tjm/1502179256)
+
+## Abstract
+
+In the present paper, we define Morse–Bott functions on manifolds with boundary which are generalizations of Morse functions and show Morse–Bott inequalities for these manifolds.

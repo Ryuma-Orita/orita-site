@@ -1,0 +1,32 @@
+{{/*
+  KaTeX の区切り記号を補う。
+
+  Blowfish の {{< katex >}} は KaTeX を読み込むが、
+  インラインの $...$ を既定で拾わない場合があるため、
+  読み込み完了後に $...$ を含めて描き直す。
+
+  KaTeX が読み込まれていないページでは何もしない。
+*/}}
+<script>
+(function () {
+  var tries = 0;
+  function render() {
+    if (typeof window.renderMathInElement !== "function") {
+      if (++tries < 40) { setTimeout(render, 100); }
+      return;
+    }
+    window.renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$",  right: "$$",  display: true  },
+        { left: "\\[", right: "\\]", display: true  },
+        { left: "$",   right: "$",   display: false },
+        { left: "\\(", right: "\\)", display: false }
+      ],
+      throwOnError: false,
+      ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
+    });
+  }
+  if (document.readyState === "complete") { render(); }
+  else { window.addEventListener("load", render); }
+})();
+</script>

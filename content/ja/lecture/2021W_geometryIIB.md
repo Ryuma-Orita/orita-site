@@ -3,13 +3,15 @@ title: 幾何学IIB
 event: シラバス
 event_url: http://syllabus.niigata-u.ac.jp/syllabusHtml/2021/06/06_214S1542_ja_JP.html
 location: 新潟大学 理学部
-summary: 第4ターム月曜3限
+summary: 第4ターム月曜3限 · 新潟大学 理学部
 date: '2021-12-06'
 date_end: '2022-02-07'
 publishDate: '2021-02-01T00:00:00Z'
 all_day: true
-tag: 2021W
 ---
+第4ターム月曜3限 · 新潟大学 理学部
+
+[シラバス](http://syllabus.niigata-u.ac.jp/syllabusHtml/2021/06/06_214S1542_ja_JP.html)
 
 > **注意**
 >
@@ -30,18 +32,18 @@ tag: 2021W
 **講義内容**
 
 1. 射影空間
-	[動画](https://youtu.be/UmtXWuEhIGU)
+	[{{< icon "youtube" >}}](https://youtu.be/UmtXWuEhIGU "動画")
 2. はめ込みと埋め込み
-	[動画](https://youtu.be/a5ejdrxTTaU)
+	[{{< icon "youtube" >}}](https://youtu.be/a5ejdrxTTaU "動画")
 3. 埋め込み定理，１の分割
-	[動画](https://youtu.be/pzIlXBJDuUk)
+	[{{< icon "youtube" >}}](https://youtu.be/pzIlXBJDuUk "動画")
 4. 正則点と臨界点
-	[動画](https://youtu.be/omrk4pOzDBw)
+	[{{< icon "youtube" >}}](https://youtu.be/omrk4pOzDBw "動画")
 5. ベクトル場その１
-	[動画](https://youtu.be/0adGFgxNuwc)
+	[{{< icon "youtube" >}}](https://youtu.be/0adGFgxNuwc "動画")
 6. ベクトル場その２
-	[動画](https://youtu.be/Np5jtpxDlUk)
+	[{{< icon "youtube" >}}](https://youtu.be/Np5jtpxDlUk "動画")
 7. 微分形式その１
-	[動画](https://youtu.be/ALJsuWcZ1fw)
+	[{{< icon "youtube" >}}](https://youtu.be/ALJsuWcZ1fw "動画")
 8. 微分形式その２
-	[動画](https://youtu.be/97hkRuuLjSc)
+	[{{< icon "youtube" >}}](https://youtu.be/97hkRuuLjSc "動画")

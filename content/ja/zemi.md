@@ -1,5 +1,8 @@
 ---
 title: 研究室（ゼミ）
+showDate: false
+showPagination: false
+showBreadcrumbs: false
 ---
 
 ### メンバー（2026年度）

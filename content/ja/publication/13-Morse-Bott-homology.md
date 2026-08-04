@@ -11,4 +11,12 @@ abstract: Banyaga and Hurtubise defined the Morse--Bott--Smale chain complex as 
 links:
 - name: arXiv
   url: https://arxiv.org/abs/2504.16962
+summary: Ryuma Orita, Kanon Yashiro — arXiv:2504.16962
 ---
+Ryuma Orita, Kanon Yashiro  
+arXiv:2504.16962  
+[arXiv](https://arxiv.org/abs/2504.16962)
+
+## 概要
+
+Banyaga and Hurtubise defined the Morse--Bott--Smale chain complex as a quotient of a large chain complex by introducing five degeneracy relations. However, their five degeneracy relations are in fact redundant. In the present paper, we unify these five conditions into a single degeneracy condition and resolve the issue of the well-definedness of the Morse--Bott--Smale chain complex. This provides an appropriate definition of the Morse--Bott homology and more computable examples. Moreover, we show that our chain complex for a Morse--Smale function is quasi-isomorphic to the usual Morse--Smale--Witten chain complex. As a consequence, we obtain an alternative proof of the Morse Homology Theorem.

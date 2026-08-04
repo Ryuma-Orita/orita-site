@@ -1,0 +1,109 @@
+/* ============================================================
+   独自のスタイル調整
+
+   このファイルは Blowfish が自動的に読み込みます。
+   テーマ本体のスタイルより後に適用されるので、
+   ここに書いたものが優先されます。
+
+   themes/ の中は絶対に編集しないでください。
+   見た目の調整はすべてこのファイルで行います。
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. 背景の斜めバー（右上から左下へ流れる）
+
+   トップページの背景（assets/img/background.svg）と
+   同じ意匠・同じ向き・同じ速さにしてあるので、
+   ページを移っても流れが途切れて見えません。
+
+   模様の実体：static/img/bg-pattern.svg
+   ------------------------------------------------------------ */
+
+@keyframes orita-bg-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-720px, 720px, 0); }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50vmax;              /* 動かしても端が見えないよう広く取る */
+  z-index: -10;
+  pointer-events: none;
+
+  background-image: url("/img/bg-pattern.svg");
+  background-repeat: repeat;
+  background-size: 720px 720px;
+
+  opacity: 0.5;
+  animation: orita-bg-drift 90s linear infinite;
+  will-change: transform;
+}
+
+.dark body::before { opacity: 0.22; }
+
+@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+@media print { body::before { display: none; } }
+
+
+/* ------------------------------------------------------------
+   2. 本文を左揃えにする
+
+   トップページはプロフィールを中央に置くレイアウトのため、
+   その下の本文（研究興味・学歴の表・関連リンク）まで
+   中央揃えになってしまう。箇条書きや表は左揃えのほうが読みやすい。
+   ------------------------------------------------------------ */
+
+.prose { text-align: left; }
+
+/* 表は幅いっぱいに広げ、行間を少し詰める */
+.prose table { width: 100%; }
+.prose table td,
+.prose table th { padding-top: 0.45rem; padding-bottom: 0.45rem; }
+
+
+/* ------------------------------------------------------------
+   3. 日本語まわりの微調整
+   ------------------------------------------------------------ */
+
+/* 和文の行間を少し広げて読みやすくする */
+.prose p,
+.prose li { line-height: 1.9; }
+
+/* 和文には斜体が無いので、強調は太字で表現する */
+.prose em { font-style: normal; font-weight: 600; }
+
+
+/* ------------------------------------------------------------
+   4. アイコン
+
+   viewBox で狙い撃ちしているので、テーマの class 名に依存しない。
+     24x24 … 本文中の YouTube アイコン
+     64x24 … プロフィールの arXiv ワードマーク（横長）
+   ------------------------------------------------------------ */
+
+/* 本文中のアイコンリンク（授業ページの YouTube など） */
+.prose a svg[viewBox="0 0 24 24"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.14em;   /* 文字のベースラインに合わせる */
+  margin-inline: 0.1em;
+}
+
+/* アイコンだけのリンクは下線を引かない */
+.prose a:has(svg) { text-decoration: none; }
+.prose a:has(svg):hover { opacity: 0.6; }
+
+/* ラッパーが挟まっても縦位置がずれないように */
+.prose a > span:has(svg) {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+/* プロフィールの arXiv は横長なので正方形に潰させない */
+svg[viewBox="0 0 64 24"] {
+  width: auto !important;
+  aspect-ratio: 64 / 24;
+}

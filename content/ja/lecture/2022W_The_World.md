@@ -3,13 +3,15 @@ title: 数学の世界
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/84/84_223G6501_ja_JP.html
 location: 新潟大学
-summary: 第3ターム水曜4,5限，共同担当
+summary: 第3ターム水曜4,5限，共同担当 · 新潟大学
 date: '2022-10-05'
 date_end: '2022-11-30'
 publishDate: '2022-01-28T00:00:00Z'
 all_day: true
-tag: 2022W
 ---
+第3ターム水曜4,5限，共同担当 · 新潟大学
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/84/84_223G6501_ja_JP.html)
 
 > **注意**
 >

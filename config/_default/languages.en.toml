@@ -16,19 +16,9 @@ title = "Ryuma ORITA"
   image = "img/author.jpg"
   headline = "Associate Professor, Department of Mathematics, Niigata University"
   bio = "My research interests include Hamiltonian dynamics in symplectic geometry."
-
-[[params.profileLinks]]
-  name = "arXiv"
-  url = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R"
-
-[[params.profileLinks]]
-  name = "Google Scholar"
-  url = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ"
-
-[[params.profileLinks]]
-  name = "ResearchGate"
-  url = "https://www.researchgate.net/profile/Ryuma_Orita"
-
-[[params.profileLinks]]
-  name = "ORCID"
-  url = "https://orcid.org/0000-0002-0475-7030"
+  links = [
+    { arxiv = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R" },
+    { "google-scholar" = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ" },
+    { researchgate = "https://www.researchgate.net/profile/Ryuma_Orita" },
+    { orcid = "https://orcid.org/0000-0002-0475-7030" },
+  ]

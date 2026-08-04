@@ -3,13 +3,15 @@ title: 微分位相幾何学
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2023/29/29_230F7191_ja_JP.html
 location: 新潟大学 大学院自然科学研究科
-summary: D向け，第2学期木曜3限
+summary: D向け，第2学期木曜3限 · 新潟大学 大学院自然科学研究科
 date: '2023-10-05'
 date_end: '2024-02-08'
 publishDate: '2023-01-28T00:00:00Z'
 all_day: true
-tag: 2023W
 ---
+D向け，第2学期木曜3限 · 新潟大学 大学院自然科学研究科
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2023/29/29_230F7191_ja_JP.html)
 
 **テキスト**
 - John W. Milnor 著「Morse Theory」Princeton University Press

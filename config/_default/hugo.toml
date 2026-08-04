@@ -28,3 +28,7 @@ summaryLength = 0
   changefreq = "monthly"
   filename = "sitemap.xml"
   priority = 0.5
+
+# タクソノミーページを sitemap から除外（テーマ側設定の引っ越し）
+[params.sitemap]
+  excludedKinds = ["taxonomy", "term"]

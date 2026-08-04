@@ -1,2 +1,4 @@
-# タグだけ使う。Academic が作っていた authors / publication_types は廃止。
-tag = "tags"
+# タクソノミー（タグ・カテゴリ）は使わない。
+# 将来、授業を年度で絞り込みたくなったら:
+#   tag = "tags"
+# と書き、各ファイルに tags: ["2026W"] を付ける。

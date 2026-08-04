@@ -3,13 +3,15 @@ title: 数学基礎演習a
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/06/06_221S0515_ja_JP.html
 location: 新潟大学 理学部
-summary: 第1ターム金曜4限，共同担当
+summary: 第1ターム金曜4限，共同担当 · 新潟大学 理学部
 date: '2022-04-08'
 date_end: '2022-06-03'
 publishDate: '2022-01-28T00:00:00Z'
 all_day: true
-tag: 2022S
 ---
+第1ターム金曜4限，共同担当 · 新潟大学 理学部
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/06/06_221S0515_ja_JP.html)
 
 > **注意**
 >

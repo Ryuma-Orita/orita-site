@@ -3,12 +3,15 @@ title: 幾何学IA
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2024/06/06_241S1516_ja_JP.html
 location: 新潟大学 理学部
-summary: 第1ターム月曜3限・火曜2限
+summary: 第1ターム月曜3限・火曜2限 · 新潟大学 理学部
 date: '2024-04-08'
 date_end: '2024-06-03'
 publishDate: '2024-01-28T00:00:00Z'
 all_day: true
 ---
+第1ターム月曜3限・火曜2限 · 新潟大学 理学部
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2024/06/06_241S1516_ja_JP.html)
 
 **テキスト**
 - 梅原雅顕・山田光太郎 共著「曲線と曲面（改訂版）－微分幾何的アプローチ－」裳華房

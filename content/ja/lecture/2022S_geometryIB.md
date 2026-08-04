@@ -3,13 +3,15 @@ title: 幾何学IB
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/06/06_222S1526_ja_JP.html
 location: 新潟大学 理学部
-summary: 第2ターム月曜3限・木曜4限
+summary: 第2ターム月曜3限・木曜4限 · 新潟大学 理学部
 date: '2022-06-13'
 date_end: '2022-08-08'
 publishDate: '2022-01-28T00:00:00Z'
 all_day: true
-tag: 2022S
 ---
+第2ターム月曜3限・木曜4限 · 新潟大学 理学部
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2022/06/06_222S1526_ja_JP.html)
 
 > **注意**
 >
@@ -24,26 +26,26 @@ tag: 2022S
 
 **講義内容**
 1. 曲面とは何か
-	[動画](https://youtu.be/nOfyO0dyh4A)
+	[{{< icon "youtube" >}}](https://youtu.be/nOfyO0dyh4A "動画")
 2. ~~演習~~
 3. 第一基本形式その１（定義）
-	[動画](https://youtu.be/5eW94zmbI94)
+	[{{< icon "youtube" >}}](https://youtu.be/5eW94zmbI94 "動画")
 4. 演習
 5. 第一基本形式その２（面積，長さと角度）
-	[動画](https://youtu.be/3CIwCPKqh04)
+	[{{< icon "youtube" >}}](https://youtu.be/3CIwCPKqh04 "動画")
 6. 演習
 7. 第二基本形式その１（定義，曲率）
-	[動画](https://youtu.be/WO2_5JGDOMo)
+	[{{< icon "youtube" >}}](https://youtu.be/WO2_5JGDOMo "動画")
 8. 演習
 9. 第二基本形式その２（例，不変性）
-	[動画](https://youtu.be/drGzS7Hz4Ok)
+	[{{< icon "youtube" >}}](https://youtu.be/drGzS7Hz4Ok "動画")
 10. 演習
 11. 法曲率，主方向
-	[動画](https://youtu.be/5ZHBSWLW7VU)
+	[{{< icon "youtube" >}}](https://youtu.be/5ZHBSWLW7VU "動画")
 12. 演習
 13. 臍点，漸近方向，測地線
-	[動画](https://youtu.be/t7yVNeCVNAE)
+	[{{< icon "youtube" >}}](https://youtu.be/t7yVNeCVNAE "動画")
 14. 演習
 15. 驚異の定理，Gauss–Bonnetの定理
-	[動画](https://youtu.be/a5hLqhVsq9M)
+	[{{< icon "youtube" >}}](https://youtu.be/a5hLqhVsq9M "動画")
 16. ターム末試験とまとめ

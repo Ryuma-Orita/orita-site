@@ -12,4 +12,12 @@ links:
   url: https://arxiv.org/abs/1604.06177
 - name: Journal Page
   url: https://dx.doi.org/10.1112/blms.12054
+summary: Ryuma Orita — Bulletin of the London Mathematical Society, vol. 49 (2017), no. 4, pp. 571–580
 ---
+Ryuma Orita  
+Bulletin of the London Mathematical Society, vol. **49** (2017), no. 4, pp. 571–580  
+[arXiv](https://arxiv.org/abs/1604.06177) · [Journal Page](https://dx.doi.org/10.1112/blms.12054)
+
+## Abstract
+
+We show that the presence of one non-degenerate, non-contractible periodic orbit of a Hamiltonian on the standard symplectic torus implies the existence of infinitely many simple non-contractible periodic orbits.

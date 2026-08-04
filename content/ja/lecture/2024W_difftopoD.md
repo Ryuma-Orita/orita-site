@@ -3,13 +3,15 @@ title: 微分位相幾何学
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2024/29/29_240F7191_ja_JP.html
 location: 新潟大学 大学院自然科学研究科
-summary: D向け，第2学期
+summary: D向け，第2学期 · 新潟大学 大学院自然科学研究科
 date: '2024-10-03'
 date_end: '2025-02-06'
 publishDate: '2024-01-28T00:00:00Z'
 all_day: true
-tag: 2024W
 ---
+D向け，第2学期 · 新潟大学 大学院自然科学研究科
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2024/29/29_240F7191_ja_JP.html)
 
 > **注意**
 >

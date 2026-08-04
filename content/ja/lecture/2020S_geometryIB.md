@@ -1,13 +1,13 @@
 ---
 title: 幾何学IB
 location: 新潟大学 理学部
-summary: 第2ターム月曜3限・木曜2限
+summary: 第2ターム月曜3限・木曜2限 · 新潟大学 理学部
 date: '2020-06-18'
 date_end: '2020-08-10'
 publishDate: '2020-01-01T00:00:00Z'
 all_day: true
-tag: 2020S
 ---
+第2ターム月曜3限・木曜2限 · 新潟大学 理学部
 
 > **注意**
 >
@@ -22,34 +22,34 @@ tag: 2020S
 **講義内容**
 
 1. 等周問題の歴史，初等幾何的な「証明」 (06-18)
-	[動画](https://youtu.be/owj7A_UXwQA)
+	[{{< icon "youtube" >}}](https://youtu.be/owj7A_UXwQA "動画")
 2. 等周不等式（微分積分法による証明） (06-22)
-	[動画](https://youtu.be/X2uUaiSePcA)
+	[{{< icon "youtube" >}}](https://youtu.be/X2uUaiSePcA "動画")
 3. 平面上の直線全体の座標付け，直線の集合の測度 (06-25)
-	[動画](https://youtu.be/O6Utv8Xv3Us)
+	[{{< icon "youtube" >}}](https://youtu.be/O6Utv8Xv3Us "動画")
 4. Cauchy–Croftonの公式 (06-29)
-	[動画](https://youtu.be/8zpZKoFqOgw)
+	[{{< icon "youtube" >}}](https://youtu.be/8zpZKoFqOgw "動画")
 5. Cauchy–Croftonの公式の応用 (07-02)
-	[動画](https://youtu.be/33d6vwnOj9s)
+	[{{< icon "youtube" >}}](https://youtu.be/33d6vwnOj9s "動画")
 6. 平面上の位置全体の座標付け，位置の集合の測度 (07-06)
-	[動画](https://youtu.be/u6paigVC55Q)
+	[{{< icon "youtube" >}}](https://youtu.be/u6paigVC55Q "動画")
 7. 等周不等式（位置の集合を利用した証明） (07-09)
-	[動画](https://youtu.be/Ek2EZztqDvc)
+	[{{< icon "youtube" >}}](https://youtu.be/Ek2EZztqDvc "動画")
 8. 等周不等式（Blaschkeの証明） (07-13)
-	[動画](https://youtu.be/2DBz1EEzKZM)
+	[{{< icon "youtube" >}}](https://youtu.be/2DBz1EEzKZM "動画")
 9. 位置の集合に関するPoincaréの式 (07-16)
-	[動画](https://youtu.be/LYa2K5nsdOs)
+	[{{< icon "youtube" >}}](https://youtu.be/LYa2K5nsdOs "動画")
 10. 平行曲線で囲まれた部分の面積 (07-20)
-	[動画](https://youtu.be/UWJpBEcUbV4)
+	[{{< icon "youtube" >}}](https://youtu.be/UWJpBEcUbV4 "動画")
 11. 管の体積 (07-23)
-	[動画](https://youtu.be/e7jDI04Y6OE)
+	[{{< icon "youtube" >}}](https://youtu.be/e7jDI04Y6OE "動画")
 12. 等周不等式（Santalóの証明） (07-27)
-	[動画](https://youtu.be/L3_Jas0_oA8)
+	[{{< icon "youtube" >}}](https://youtu.be/L3_Jas0_oA8 "動画")
 13. 変分法の基本問題 (07-30)
-	[動画](https://youtu.be/AyX8nm-yJcA)
+	[{{< icon "youtube" >}}](https://youtu.be/AyX8nm-yJcA "動画")
 14. 最速降下問題 (08-03)
-	[動画](https://youtu.be/LvCYS4tHvYg)
+	[{{< icon "youtube" >}}](https://youtu.be/LvCYS4tHvYg "動画")
 15. 条件付き変分問題 (08-06)
-	[動画](https://youtu.be/s2GFDtzT3Mo)
+	[{{< icon "youtube" >}}](https://youtu.be/s2GFDtzT3Mo "動画")
 16. 等周不等式（変分法による証明），内接長方形問題 (08-10)
-	[動画](https://youtu.be/FuyetsOgvps)
+	[{{< icon "youtube" >}}](https://youtu.be/FuyetsOgvps "動画")

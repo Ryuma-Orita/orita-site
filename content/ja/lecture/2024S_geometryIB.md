@@ -3,13 +3,15 @@ title: 幾何学IB
 event: シラバス
 event_url: https://syllabus.niigata-u.ac.jp/syllabusHtml/2024/06/06_242S1526_ja_JP.html
 location: 新潟大学 理学部
-summary: 第2ターム月曜3限・火曜2限
+summary: 第2ターム月曜3限・火曜2限 · 新潟大学 理学部
 date: '2024-06-10'
 date_end: '2024-08-05'
 publishDate: '2024-01-28T00:00:00Z'
 all_day: true
-tag: 2024S
 ---
+第2ターム月曜3限・火曜2限 · 新潟大学 理学部
+
+[シラバス](https://syllabus.niigata-u.ac.jp/syllabusHtml/2024/06/06_242S1526_ja_JP.html)
 
 **テキスト**
 - 小宮克弘 著「位相幾何入門」裳華房
