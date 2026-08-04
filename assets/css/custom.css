@@ -65,10 +65,26 @@ body::before {
 
 /* 表は幅いっぱいに。狭い画面でも崩れないよう横スクロールを許す */
 .prose table { width: 100%; display: block; overflow-x: auto; }
-.prose table th, .prose table td { white-space: normal; }
-/* 期間・年の列は折り返さない */
+.prose table th, .prose table td {
+  white-space: normal;
+  word-break: keep-all;      /* 和文を語の途中で折らない */
+  overflow-wrap: normal;
+}
+
+/* 期間の列は折り返さない */
 .prose table td:first-child,
 .prose table th:first-child { white-space: nowrap; }
+
+/* 「特別研究員-PD」のハイフンや、和文の途中で不自然に割れるのを防ぐ。
+   どうしても入りきらない場合だけ折り返す。 */
+.prose table td {
+  overflow-wrap: normal;
+  word-break: keep-all;      /* 和文を単語単位で扱う */
+  line-break: strict;
+  hyphens: none;
+}
+.prose table td:nth-child(2) { min-width: 12em; }
+.prose table td:nth-child(3) { min-width: 14em; }
 .prose table td,
 .prose table th { padding-top: 0.45rem; padding-bottom: 0.45rem; }
 
@@ -144,8 +160,14 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
    アクセント: ビリジアン (#2f7d63)。ダークモードではミルキーグリーン。
    ------------------------------------------------------------ */
 
-:root { --orita-accent: #2f7d63; }   /* ビリジアン */
-.dark  { --orita-accent: #a9d5bd; }   /* ダークではミルキーグリーン */
+:root {
+  --orita-accent: #2f7d63;   /* ビリジアン（罫・ホバー） */
+  --orita-link:   #2a5445;   /* 本文リンク（文字色に近い深緑） */
+}
+.dark {
+  --orita-accent: #a9d5bd;   /* ミルキーグリーン */
+  --orita-link:   #c3d8cd;   /* 本文リンク（明るすぎない淡緑） */
+}
 
 /* --- 見出しを明朝体に --- */
 main h1, main h2, main h3,
@@ -166,15 +188,27 @@ main h1 { font-weight: 700; }
   background-position: left bottom;
 }
 
-/* --- リンクのホバーを臙脂に --- */
-main a:hover,
+/* --- 本文中のリンク --- */
+/* テーマ既定の明るい青緑は本文の中で浮くので、文字色に近い深緑にし、
+   下線で区別する。テーマ側の指定に確実に勝たせるため !important を付ける。 */
+.prose a {
+  color: var(--orita-link) !important;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in oklab, currentColor 32%, transparent);
+}
 .prose a:hover {
-  color: var(--orita-accent);
+  color: var(--orita-accent) !important;
   text-decoration-color: var(--orita-accent);
 }
 
-/* アイコンリンクは色を変えず、従来どおり薄くする */
-.prose a:has(svg):hover { color: inherit; }
+/* アイコンだけのリンクは色を変えず、下線も引かない */
+.prose a:has(svg) {
+  color: inherit !important;
+  text-decoration: none;
+}
+.prose a:has(svg):hover { color: inherit !important; opacity: 0.6; }
 
 /* --- 文字選択の色 --- */
 ::selection {
