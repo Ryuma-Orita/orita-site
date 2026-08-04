@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;700&display=swap");
+
 /* ============================================================
    独自のスタイル調整
 
@@ -124,3 +126,48 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
   width: auto;
 }
 .orita-arxiv-link:hover { opacity: 0.65; }
+
+
+/* ------------------------------------------------------------
+   5. 見出しフォントとアクセントカラー
+
+   見出し: Zen Old Mincho（明朝体）。本文はゴシックのまま。
+   アクセント: 臙脂 (#b31b1b) — arXiv のロゴと同じ赤。
+   ------------------------------------------------------------ */
+
+:root { --orita-accent: #b31b1b; }
+.dark  { --orita-accent: #e06060; }   /* ダークでは少し明るく */
+
+/* --- 見出しを明朝体に --- */
+main h1, main h2, main h3,
+.prose h1, .prose h2, .prose h3 {
+  font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", Georgia, serif;
+  letter-spacing: 0.015em;
+}
+
+/* トップページの名前も明朝体に */
+main h1 { font-weight: 700; }
+
+/* --- 見出し h2 に臙脂の短い罫 --- */
+.prose h2 {
+  padding-bottom: 0.35rem;
+  background-image: linear-gradient(var(--orita-accent), var(--orita-accent));
+  background-repeat: no-repeat;
+  background-size: 2.2rem 3px;
+  background-position: left bottom;
+}
+
+/* --- リンクのホバーを臙脂に --- */
+main a:hover,
+.prose a:hover {
+  color: var(--orita-accent);
+  text-decoration-color: var(--orita-accent);
+}
+
+/* アイコンリンクは色を変えず、従来どおり薄くする */
+.prose a:has(svg):hover { color: inherit; }
+
+/* --- 文字選択の色 --- */
+::selection {
+  background: color-mix(in oklab, var(--orita-accent) 26%, transparent);
+}

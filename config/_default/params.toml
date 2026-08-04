@@ -14,6 +14,7 @@ enableSearch = true
 disableImageOptimization = true  # SVGをそのまま使うために必要
 enableCodeCopy = false
 mainSections = ["publication", "talk"]
+defaultSocialImage = "img/ogp.png"  # 共有時のプレビュー画像
 
 [header]
   layout = "fixed-fill-blur"     # スクロールしても上部に残るヘッダー
