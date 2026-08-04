@@ -19,7 +19,7 @@ description: "新潟大学理学部 准教授"
 - にいがた“知の革新”STELLAプログラムの動画（Morse理論） [{{< icon "youtube" >}}](https://www.youtube.com/watch?v=qUGHlm9EC68 "動画を見る")
 - 新潟大学ウェブマガジンの記事 [{{< icon "article" >}}](https://www.niigata-u.ac.jp/webmagazine/717251/ "記事を読む")
 
-### 経歴
+### 略歴
 
 | 期間 | 職位・学位 | 所属 |
 |---|---|---|

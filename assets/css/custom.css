@@ -235,6 +235,11 @@ main h1 ~ nav { margin-top: 0.9rem; }
   text-decoration-color: color-mix(in oklab, currentColor 32%, transparent);
 }
 
+/* (1-b) ブラウザ既定の「訪問済みリンク = 紫」を打ち消す。
+   :where() で書くと指定の強さがゼロになるので、
+   ブラウザ既定だけを上書きし、テーマの色指定には影響しない。 */
+:where(a:visited) { color: inherit; }
+
 /* (2) 一覧のタイトルや見出しの中のリンクには下線を付けない */
 main h1 a, main h2 a, main h3 a,
 main article a:not(.prose a) {
@@ -245,33 +250,42 @@ main article a:not(.prose a) {
 
    テーマ既定の明るい青緑は浮くので、アクセント色に統一する。
 
-   対象を広く取っている理由:
-   - 要素名（header / footer）で絞るとテーマの構造次第で届かない
-   - 文字が <a> の中の <span> に入っている場合があるので子要素も含める
-   - 検索・言語切替・ダークモードは <a> ではなく <button> や
-     <summary> の場合があるのでそれらも含める
-   - SVG も含める。arXiv と DOI の公式ロゴは固有の色を持っており
-     currentColor を使っていないため、この指定では変化しない。 */
-a:hover, a:focus-visible,
-button:hover, button:focus-visible,
-summary:hover, summary:focus-visible,
-[role="button"]:hover, [role="button"]:focus-visible,
-a:hover *, a:focus-visible *,
-button:hover *, button:focus-visible *,
-summary:hover *, summary:focus-visible *,
-[role="button"]:hover *, [role="button"]:focus-visible *,
-.prose a:hover, .prose a:focus-visible {
+   :not(#no-such-id) について
+     そんな id はサイト内に存在しないので、対象は何も変わらない。
+     CSS は「指定が具体的なほうが勝つ」という規則があり、
+     id を含む指定は最も強い。テーマ側のどんな指定にも
+     負けないようにするための書き方。
+
+   対象を広く取っている理由
+     - 要素名（header / footer）で絞るとテーマの構造次第で届かない
+     - 文字が <a> の中の <span> に入っている場合があるので子要素も含める
+     - 検索・言語切替・ダークモードは <button> や <summary> の場合がある
+     - arXiv と DOI の公式ロゴは固有の色を持ち currentColor を
+       使っていないため、この指定では変化しない */
+a:not(#no-such-id):hover,
+a:not(#no-such-id):focus-visible,
+a:not(#no-such-id):hover *,
+a:not(#no-such-id):focus-visible *,
+button:not(#no-such-id):hover,
+button:not(#no-such-id):focus-visible,
+button:not(#no-such-id):hover *,
+button:not(#no-such-id):focus-visible *,
+summary:not(#no-such-id):hover,
+summary:not(#no-such-id):hover *,
+[role="button"]:not(#no-such-id):hover,
+[role="button"]:not(#no-such-id):hover * {
   color: var(--orita-accent) !important;
 }
 .prose a:hover { text-decoration-color: var(--orita-accent); }
 
-/* (4) アイコンだけのリンクは色を変えない。ホバーは薄くするだけ。 */
+/* (4) アイコンだけのリンクは色を変えない。ホバーは薄くするだけ。
+   (3) より強い指定にするため、こちらにも :not(#no-such-id) を重ねる。 */
 .prose a:has(svg) {
   color: inherit !important;
   text-decoration: none;
 }
-.prose a:has(svg):hover,
-.prose a:has(svg):hover * {
+.prose a:has(svg):not(#no-such-id):hover,
+.prose a:has(svg):not(#no-such-id):hover * {
   color: inherit !important;
   opacity: 0.6;
 }
