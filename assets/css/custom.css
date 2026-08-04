@@ -9,16 +9,28 @@
 
    themes/ の中は絶対に編集しないでください。
    見た目の調整はすべてこのファイルで行います。
+
+   目次
+     1. 背景の斜めバー
+     2. 本文と表
+     3. 日本語まわり
+     4. アイコン
+     5. フォントと配色
+     6. プロフィール写真
    ============================================================ */
+
 
 /* ------------------------------------------------------------
    1. 背景の斜めバー（右上から左下へ流れる）
 
-   トップページの背景（assets/img/background.svg）と
-   同じ意匠・同じ向き・同じ速さにしてあるので、
-   ページを移っても流れが途切れて見えません。
+   サイト全体で共通の背景。模様の実体は static/img/bg-pattern.svg。
+   assets/img/background.svg は現在未使用の予備
+   （params.toml で background レイアウトに切り替えたときに使う。
+     その場合はこの body::before のブロックを削除すること）。
 
-   模様の実体：static/img/bg-pattern.svg
+   調整箇所:
+     速さ   … 下の 7.5s（小さいほど速い。background.svg 内の値と揃える）
+     濃さ   … opacity（ライト用とダーク用の2箇所）
    ------------------------------------------------------------ */
 
 @keyframes orita-bg-drift {
@@ -37,7 +49,7 @@ body::before {
   background-repeat: repeat;
   background-size: 720px 720px;
 
-  opacity: 0.24;   /* ライトは控えめに（本文と競わせない） */
+  opacity: 0.24;               /* ライトは控えめに（本文と競わせない） */
   animation: orita-bg-drift 7.5s linear infinite;
   will-change: transform;
 }
@@ -49,44 +61,46 @@ body::before {
 
 
 /* ------------------------------------------------------------
-   2. 本文を左揃えにする
+   2. 本文と表
 
    トップページはプロフィールを中央に置くレイアウトのため、
-   その下の本文（研究興味・学歴の表・関連リンク）まで
-   中央揃えになってしまう。箇条書きや表は左揃えのほうが読みやすい。
+   本文まで中央揃えになってしまう。左揃えに戻す。
    ------------------------------------------------------------ */
 
 .prose { text-align: left; }
 
-/* トップページの経歴・学位の表は、見出し行を出さない
-   （「年 学位 大学」のような行が不要なため）。
-   一覧やほかのページの表には影響しない。 */
+/* 表の見出し行（「年 学位 大学」など）を出さない。
+   ※ .prose 内の全ての表に効く。現在、表があるのはトップページだけだが、
+     将来の記事で見出し行を出したくなったら、この1行を削除すること。 */
 .prose table thead { display: none; }
 
-/* 表は幅いっぱいに。狭い画面でも崩れないよう横スクロールを許す */
-.prose table { width: 100%; display: block; overflow-x: auto; }
-.prose table th, .prose table td {
-  white-space: normal;
-  word-break: keep-all;      /* 和文を語の途中で折らない */
-  overflow-wrap: normal;
+/* 幅いっぱいに使い、狭い画面では横スクロールで逃がす */
+.prose table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
 }
 
-/* 期間の列は折り返さない */
-.prose table td:first-child,
-.prose table th:first-child { white-space: nowrap; }
-
-/* 「特別研究員-PD」のハイフンや、和文の途中で不自然に割れるのを防ぐ。
-   どうしても入りきらない場合だけ折り返す。 */
+.prose table th,
 .prose table td {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  /* 和文を語の途中で折らない（「マス・フォア・インダストリ / 研究所」対策）。
+     ハイフン等での不自然な折り返しも禁止。
+     ※ 本文中の U+2011（非改行ハイフン）と組で機能する */
+  word-break: keep-all;
   overflow-wrap: normal;
-  word-break: keep-all;      /* 和文を単語単位で扱う */
   line-break: strict;
   hyphens: none;
 }
+
+/* 期間・年の列は折り返さない */
+.prose table th:first-child,
+.prose table td:first-child { white-space: nowrap; }
+
+/* 職位・所属の列が痩せすぎないように */
 .prose table td:nth-child(2) { min-width: 12em; }
 .prose table td:nth-child(3) { min-width: 14em; }
-.prose table td,
-.prose table th { padding-top: 0.45rem; padding-bottom: 0.45rem; }
 
 
 /* ------------------------------------------------------------
@@ -104,13 +118,15 @@ body::before {
 /* ------------------------------------------------------------
    4. アイコン
 
-   本文中のアイコンリンク（YouTube / arXiv / DOI）と
-   プロフィール欄のリンクアイコンの調整。
+   本文中のアイコンリンク（YouTube / arXiv / DOI / 記事 / メール）と
+   プロフィール欄のアイコンの調整。
    テーマの class 名ではなく viewBox で狙い撃ちしているので、
    テーマを更新しても壊れない。
+     0 0 24 24            … 自作アイコン（正方形）
+     0 0 17.732 24.269    … arXiv 公式ロゴ（縦長）
    ------------------------------------------------------------ */
 
-/* 本文中のアイコン全般：文字と同じ高さに揃える */
+/* 本文中のアイコン：文字と同じ高さに揃える */
 .prose a svg {
   display: inline-block;
   height: 1.05em;
@@ -119,17 +135,13 @@ body::before {
   margin-inline: 0.1em;
 }
 
-/* arXiv のロゴマークは縦長なので少しだけ大きく */
+/* arXiv 公式ロゴは縦長なので少しだけ大きく */
 .prose a svg[viewBox="0 0 17.732 24.269"] {
   height: 1.25em;
   vertical-align: -0.28em;
 }
 
-/* アイコンだけのリンクは下線を引かない */
-.prose a:has(svg) { text-decoration: none; }
-.prose a:has(svg):hover { opacity: 0.6; }
-
-/* ラッパーが挟まっても縦位置がずれないように */
+/* ラッパーの span が挟まっても縦位置がずれないように */
 .prose a > span:has(svg) {
   display: inline-block;
   line-height: 1;
@@ -139,9 +151,10 @@ body::before {
 /* プロフィール欄：縦長の arXiv ロゴを正方形に潰させない */
 svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
 
-/* 論文一覧の各項目に添える arXiv リンク */
+/* 論文一覧の各項目に添える arXiv リンク
+   （layouts/partials/extend-article-link.html が出力する） */
 .orita-arxiv-link {
-  display: block;          /* タイトル行に食い込ませない */
+  display: block;            /* タイトル行に食い込ませない */
   width: fit-content;
   margin-top: 0.45rem;
   line-height: 1;
@@ -156,10 +169,11 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
 
 
 /* ------------------------------------------------------------
-   5. 見出しフォントとアクセントカラー
+   5. フォントと配色
 
-   見出し: Zen Old Mincho（明朝体）。本文はゴシックのまま。
-   アクセント: ビリジアン (#2f7d63)。ダークモードではミルキーグリーン。
+   見出し     … Zen Old Mincho（明朝体）。本文はゴシックのまま。
+   アクセント … ライト = ビリジアン / ダーク = ミルキーグリーン
+   リンク     … 平常時は文字色に近い緑 + 下線。ホバーでアクセント色。
    ------------------------------------------------------------ */
 
 :root {
@@ -186,7 +200,7 @@ main h1 {
   margin-bottom: 0.55rem;
 }
 
-/* 名前のすぐ下の肩書き（headline）に余白を足す */
+/* 名前のすぐ下の肩書きに余白を足す */
 main h1 + p,
 main h1 + div {
   margin-top: 0.55rem;
@@ -197,7 +211,7 @@ main h1 + div {
 main h1 ~ ul,
 main h1 ~ nav { margin-top: 0.9rem; }
 
-/* --- 見出し h2 に臙脂の短い罫 --- */
+/* --- 見出し h2 の下にアクセント色の短い罫 --- */
 .prose h2 {
   padding-bottom: 0.35rem;
   background-image: linear-gradient(var(--orita-accent), var(--orita-accent));
@@ -206,10 +220,9 @@ main h1 ~ nav { margin-top: 0.9rem; }
   background-position: left bottom;
 }
 
-/* --- リンクの色（サイト全体） --- */
-/* テーマ既定の明るい青緑は本文でもメニューでも浮くので、
-   文字色に近い深緑にする。.prose の中だけでなく、
-   ヘッダーのメニューや一覧のタイトルにも効かせる。 */
+/* --- リンク（サイト全体のホバー色） --- */
+/* テーマ既定の明るい青緑は浮くので、ホバーはアクセント色に統一。
+   ヘッダーのメニュー、一覧のタイトル、フッターにも効かせる。 */
 main a:hover,
 main a:focus-visible,
 header a:hover,
@@ -219,7 +232,7 @@ footer a:focus-visible {
   color: var(--orita-accent) !important;
 }
 
-/* 本文中のリンクは平常時も落ち着いた色 + 下線で示す */
+/* --- 本文中のリンク（平常時） --- */
 .prose a {
   color: var(--orita-link) !important;
   text-decoration: underline;
@@ -229,19 +242,22 @@ footer a:focus-visible {
 }
 .prose a:hover { text-decoration-color: var(--orita-accent); }
 
-/* 一覧のタイトルや見出しの中のリンクは、下線を付けず文字色のまま。
-   マウスを乗せたときだけ色が変わる。 */
+/* 一覧のタイトルや見出しの中のリンクには下線を付けない */
 main h1 a, main h2 a, main h3 a,
 main article a:not(.prose a) {
   text-decoration: none;
 }
 
-/* アイコンだけのリンクは色を変えず、下線も引かない */
+/* アイコンだけのリンクは色を変えず、下線も引かない。
+   ホバーは薄くするだけ（arXiv・DOI の公式ロゴの色を保つため）。 */
 .prose a:has(svg) {
   color: inherit !important;
   text-decoration: none;
 }
-.prose a:has(svg):hover { color: inherit !important; opacity: 0.6; }
+.prose a:has(svg):hover {
+  color: inherit !important;
+  opacity: 0.6;
+}
 
 /* --- 文字選択の色 --- */
 ::selection {

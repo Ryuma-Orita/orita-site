@@ -34,21 +34,38 @@
 {{/*
   メールアドレスの迷惑メール対策。
 
-  HTML には一切アドレスを書かず、断片から JavaScript で組み立てる。
-  収集ボットはページのソースを読むだけなので拾えない。
-  リンク先は data-* 属性の断片だけで、そこにも完全な形では現れない。
+  HTML にはアドレスを一切書かない。
+  languages.*.toml にはダミーURL（example.invalid）だけを置き、
+  ここで断片から組み立てて mailto: に差し替える。
 
-  アドレスを変えるときは下の user / domain の値を書き換える。
+  Blowfish は email キーの値の先頭に mailto: を自動で付けるため、
+  差し替え前の href は "mailto:https://example.invalid/mail" になる。
+  その形も、素のダミーURLの形も、両方拾えるようにしてある。
+
+  アドレスを変えるときは下の u と d の値を書き換える。
 */}}
 <script>
 (function () {
-  var u = "orita", d = ["math", "sc", "niigata-u", "ac", "jp"].join(".");
-  var sel = 'a[data-mail], a[href*="example.invalid"]';
-  document.querySelectorAll(sel).forEach(function (a) {
-    a.setAttribute("href", "ma" + "ilto:" + u + String.fromCharCode(64) + d);
-    a.setAttribute("title", "メールを送る");
-    a.removeAttribute("data-mail");
-    if (a.dataset.mailText !== undefined) { a.textContent = u + String.fromCharCode(64) + d; }
-  });
+  var u = "orita";
+  var d = ["math", "sc", "niigata-u", "ac", "jp"].join(".");
+  var addr = u + String.fromCharCode(64) + d;
+  var sel = 'a[data-mail],'
+          + 'a[href*="example.invalid"],'
+          + 'a[href^="mailto:http"]';
+
+  function fixMailLinks() {
+    var links = document.querySelectorAll(sel);
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute("href", "mai" + "lto:" + addr);
+      links[i].setAttribute("title", addr);
+      links[i].removeAttribute("data-mail");
+    }
+  }
+
+  /* 実行時点でまだ描画されていない場合に備えて三段構え。
+     差し替え後はセレクタに一致しなくなるので、二重処理は起きない。 */
+  fixMailLinks();
+  document.addEventListener("DOMContentLoaded", fixMailLinks);
+  window.addEventListener("load", fixMailLinks);
 })();
 </script>
