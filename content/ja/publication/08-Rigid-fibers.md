@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*J. Math. Soc. Japan*, vol. **74**, no. 3, pp. 829–847'
 citation_full: Journal of the Mathematical Society of Japan, vol. **74** (2022), no. 3, pp. 829–847
-abstract: (Non-)displaceability of fibers of integrable systems has been an important problem in symplectic geometry. In this paper, for a large class of classical Liouville integrable systems containing the Lagrangian top, the Kovalevskaya top and the C. Neumann problem, we find a non-displaceable fiber for each of them. Moreover, we show that the non-displaceable fiber which we detect is the unique fiber which is non-displaceable from the zero-section. As a special case of this result, we also show the existence of a singular level set of a convex Hamiltonian, which is non-displaceable from the zero-section. To prove these results, we use the notion of superheaviness introduced by Entov and Polterovich.
+abstract: 可積分系のファイバーが非交叉配置可能かどうかは，シンプレクティック幾何学における重要な問題であり続けてきました。この論文では，Lagrangeのこま，Kovalevskayaのこま，C. Neumann問題を含む古典的なLiouville可積分系の広いクラスに対して，それぞれ非交叉配置不可能なファイバーを1つ見つけます。さらに，見つけたファイバーが，零切断から非交叉配置不可能な唯一のファイバーであることを示します。この結果の特別な場合として，凸なハミルトニアンの特異なレベル集合で，零切断から非交叉配置不可能なものが存在することも示します。証明には，EntovとPolterovichが導入したsuperheavy性の概念を用います。
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1905.13112
@@ -15,10 +15,11 @@ links:
   url: https://doi.org/10.2969/jmsj/84278427
 summary: Morimichi Kawasaki, Ryuma Orita — Journal of the Mathematical Society of Japan, vol. 74 (2022), no. 3, pp. 829–847
 ---
+
 Morimichi Kawasaki, Ryuma Orita  
 Journal of the Mathematical Society of Japan, vol. **74** (2022), no. 3, pp. 829–847  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/1905.13112 "arXiv") · [{{< icon "doi" >}}](https://doi.org/10.2969/jmsj/84278427 "DOI")
 
 ## 概要
 
-(Non-)displaceability of fibers of integrable systems has been an important problem in symplectic geometry. In this paper, for a large class of classical Liouville integrable systems containing the Lagrangian top, the Kovalevskaya top and the C. Neumann problem, we find a non-displaceable fiber for each of them. Moreover, we show that the non-displaceable fiber which we detect is the unique fiber which is non-displaceable from the zero-section. As a special case of this result, we also show the existence of a singular level set of a convex Hamiltonian, which is non-displaceable from the zero-section. To prove these results, we use the notion of superheaviness introduced by Entov and Polterovich.
+可積分系のファイバーが非交叉配置可能かどうかは，シンプレクティック幾何学における重要な問題であり続けてきました。この論文では，Lagrangeのこま，Kovalevskayaのこま，C. Neumann問題を含む古典的なLiouville可積分系の広いクラスに対して，それぞれ非交叉配置不可能なファイバーを1つ見つけます。さらに，見つけたファイバーが，零切断から非交叉配置不可能な唯一のファイバーであることを示します。この結果の特別な場合として，凸なハミルトニアンの特異なレベル集合で，零切断から非交叉配置不可能なものが存在することも示します。証明には，EntovとPolterovichが導入したsuperheavy性の概念を用います。

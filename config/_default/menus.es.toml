@@ -1,0 +1,21 @@
+# この言語はトップページのみ。メニューは英語ページへ誘導する。
+
+[[main]]
+  name = "Publicaciones"
+  url = "/publication/"
+  weight = 10
+
+[[main]]
+  name = "Charlas"
+  url = "/talk/"
+  weight = 20
+
+[[main]]
+  name = "Docencia"
+  url = "/lecture/"
+  weight = 30
+
+[[main]]
+  name = "Seminario"
+  url = "/zemi/"
+  weight = 40

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <circle cx="1495" cy="240" r="78" fill="#ea5415" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <polygon points="1300,245 1365,375 1235,375" fill="#1d7a21" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M 1478 417 L 1478 385 A 58 58 0 0 1 1592 385 L 1592 417 Z" fill="#88593b" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="1390" cy="435" r="70" fill="#ee7701" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M 1215 575 L 1215 465 A 110 110 0 0 1 1325 575 Z" fill="#ea5415" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <polygon points="1525,498 1572,592 1478,592" fill="#1d7a21" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="1420" cy="620" r="60" fill="#88593b" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="1248" y="648" width="85" height="85" rx="12" fill="#ee7701" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="1535" cy="710" r="45" fill="#ea5415" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M 1360 812 L 1360 790 A 40 40 0 0 1 1440 790 L 1440 812 Z" fill="#1d7a21" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="1270" cy="850" r="35" fill="#88593b" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="1482" y="828" width="75" height="75" rx="11" fill="#ee7701" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+  <polygon points="1350,882 1382,948 1318,948" fill="#ea5415" stroke="#080000" stroke-width="8" stroke-linejoin="round"/>
+</svg>

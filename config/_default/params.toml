@@ -7,10 +7,11 @@
 #                congo, fire, autumn, github, terminal
 colorScheme = "forest"
 
-defaultAppearance = "dark"       # 既定はダーク（light にするとライト）
-autoSwitchAppearance = false     # OSの設定には追従しない。
-                                 # true にすると閲覧者のOS設定に合わせて切り替わる。
-                                 # どちらの場合も右上のボタンで手動切り替えは可能。
+# 閲覧者の端末（OS）のライト/ダーク設定に自動で合わせる。
+# 端末が判定できない場合は defaultAppearance が使われる。
+# どちらの場合も、右上のボタンで手動切り替えは可能。
+defaultAppearance = "dark"
+autoSwitchAppearance = true
 
 # プロフィール写真などをクリックしても拡大しないようにする
 disableImageZoom = true
@@ -24,7 +25,11 @@ mainSections = ["publication", "talk"]
 defaultSocialImage = "img/ogp.png"  # 共有時のプレビュー画像
 
 [header]
-  layout = "fixed-fill-blur"     # スクロールしても上部に残るヘッダー
+  # スクロールしても上部に残るヘッダー。
+  # blur 付き（fixed-fill-blur）にすると半透明になり背景を透かすため、
+  # 背景に色の強い形を置いている今の構成では上部だけ色が濁る。
+  # 不透明の fixed-fill にして、8配色すべてで上部を安定させる。
+  layout = "fixed-fill"
 
 [footer]
   showMenu = false
@@ -34,14 +39,10 @@ defaultSocialImage = "img/ogp.png"  # 共有時のプレビュー画像
   showScrollToTop = true
 
 # --- トップページ（写真・肩書・リンク・本文）---
-# 背景はサイト全体で1枚（assets/css/custom.css）にしているので、
-# トップページ専用の背景画像は使わない。
-# 使いたくなったら以下の3行のコメントを外し、custom.css の body::before を消すこと。
+# 背景は配色ごとに custom.css と extend-head.html が用意するので、
+# テーマのトップページ専用背景（layout = "background"）は使わない。
 [homepage]
   layout = "profile"
-  # layout = "background"
-  # homepageImage = "img/background.svg"
-  # layoutBackgroundBlur = true
   showRecent = false
 
 # --- 個別ページ ---

@@ -1,0 +1,27 @@
+locale = "zh-cn"
+contentDir = "content/zh-cn"   # ★ この言語の原稿の置き場所
+label = "简体中文"
+weight = 13
+title = "折田 龙马"
+
+[params]
+  displayName = "简体中文"
+  isoCode = "zh-CN"
+  rtl = false
+  dateFormat = "2006年1月2日"
+  description = "折田 龙马 — 新潟大学理学部 副教授。辛几何与哈密顿动力系统。"
+
+[params.author]
+  name = "折田 龙马"
+  image = "img/author.jpg"
+  imageQuality = 96
+  headline = "新潟大学理学部 副教授"
+  bio = "主要研究辛几何中的哈密顿动力系统。"
+  links = [
+    # ↓ ダミーのURL。実際のアドレスは書かない（迷惑メール対策）。
+    { email = "https://example.invalid/mail" },
+    { arxiv = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R" },
+    { "google-scholar" = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ" },
+    { researchgate = "https://www.researchgate.net/profile/Ryuma_Orita" },
+    { orcid = "https://orcid.org/0000-0002-0475-7030" },
+  ]

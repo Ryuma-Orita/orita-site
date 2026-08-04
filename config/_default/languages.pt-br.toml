@@ -1,0 +1,27 @@
+locale = "pt-br"
+contentDir = "content/pt-br"   # ★ この言語の原稿の置き場所
+label = "Português (Brasil)"
+weight = 11
+title = "Ryuma ORITA"
+
+[params]
+  displayName = "Português"
+  isoCode = "pt-BR"
+  rtl = false
+  dateFormat = "2 de January de 2006"
+  description = "Ryuma Orita — Professor associado de matemática, Universidade de Niigata. Geometria simplética e dinâmica hamiltoniana."
+
+[params.author]
+  name = "Ryuma ORITA"
+  image = "img/author.jpg"
+  imageQuality = 96
+  headline = "Professor associado, Departamento de Matemática, Universidade de Niigata"
+  bio = "Minha pesquisa trata da dinâmica hamiltoniana em geometria simplética."
+  links = [
+    # ↓ ダミーのURL。実際のアドレスは書かない（迷惑メール対策）。
+    { email = "https://example.invalid/mail" },
+    { arxiv = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R" },
+    { "google-scholar" = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ" },
+    { researchgate = "https://www.researchgate.net/profile/Ryuma_Orita" },
+    { orcid = "https://orcid.org/0000-0002-0475-7030" },
+  ]

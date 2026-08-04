@@ -6,7 +6,7 @@ authors:
 pubtype: journal
 citation: '*J. Symplectic Geom.*, vol. **17**, no. 6, pp. 1893–1927'
 citation_full: Journal of Symplectic Geometry, vol. **17** (2019), no. 6, pp. 1893–1927
-abstract: We show that the presence of a non-contractible one-periodic orbit of a Hamiltonian diffeomorphism of a connected closed symplectic manifold $(M,\omega)$ implies the existence of infinitely many non-contractible simple periodic orbits, provided that the symplectic form $\omega$ is aspherical and the fundamental group $\pi_1(M)$ is either a virtually abelian group or an $\mathrm{R}$-group. We also show that a similar statement holds for Hamiltonian diffeomorphisms of closed monotone or negative monotone symplectic manifolds under the same conditions on their fundamental groups. These results generalize some works by Ginzburg and Gürel. The proof uses the filtered Floer--Novikov homology for non-contractible periodic orbits.
+abstract: 連結な閉シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像が非可縮な1周期軌道を1つ持つならば，非可縮な単純周期軌道が無限個存在することを示します。ただし，シンプレクティック形式 $\omega$ が非球面的 (aspherical) であり，かつ基本群 $\pi_1(M)$ がvirtually abelian群 または $\mathrm{R}$-群であることを仮定します。また，基本群に同じ条件を課したうえで，閉単調および負単調なシンプレクティック多様体のハミルトン微分同相写像についても同様の主張が成り立つことを示します。これらはGinzburgとGürelの結果の一般化になっています。証明には，非可縮周期軌道に対するフィルトレーション付きFloer–Novikovホモロジーを用います。
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1703.01731
@@ -14,6 +14,7 @@ links:
   url: https://dx.doi.org/10.4310/JSG.2019.v17.n6.a9
 summary: Ryuma Orita — Journal of Symplectic Geometry, vol. 17 (2019), no. 6, pp. 1893–1927
 ---
+
 {{< katex >}}
 Ryuma Orita  
 Journal of Symplectic Geometry, vol. **17** (2019), no. 6, pp. 1893–1927  
@@ -21,4 +22,4 @@ Journal of Symplectic Geometry, vol. **17** (2019), no. 6, pp. 1893–1927
 
 ## 概要
 
-We show that the presence of a non-contractible one-periodic orbit of a Hamiltonian diffeomorphism of a connected closed symplectic manifold $(M,\omega)$ implies the existence of infinitely many non-contractible simple periodic orbits, provided that the symplectic form $\omega$ is aspherical and the fundamental group $\pi_1(M)$ is either a virtually abelian group or an $\mathrm{R}$-group. We also show that a similar statement holds for Hamiltonian diffeomorphisms of closed monotone or negative monotone symplectic manifolds under the same conditions on their fundamental groups. These results generalize some works by Ginzburg and Gürel. The proof uses the filtered Floer--Novikov homology for non-contractible periodic orbits.
+連結な閉シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像が非可縮な1周期軌道を1つ持つならば，非可縮な単純周期軌道が無限個存在することを示します。ただし，シンプレクティック形式 $\omega$ が非球面的 (aspherical) であり，かつ基本群 $\pi_1(M)$ がvirtually abelian群 または $\mathrm{R}$-群であることを仮定します。また，基本群に同じ条件を課したうえで，閉単調および負単調なシンプレクティック多様体のハミルトン微分同相写像についても同様の主張が成り立つことを示します。これらはGinzburgとGürelの結果の一般化になっています。証明には，非可縮周期軌道に対するフィルトレーション付きFloer–Novikovホモロジーを用います。

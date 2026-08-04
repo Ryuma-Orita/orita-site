@@ -1,0 +1,21 @@
+# この言語はトップページのみ。メニューは英語ページへ誘導する。
+
+[[main]]
+  name = "Pubblicazioni"
+  url = "/publication/"
+  weight = 10
+
+[[main]]
+  name = "Seminari tenuti"
+  url = "/talk/"
+  weight = 20
+
+[[main]]
+  name = "Didattica"
+  url = "/lecture/"
+  weight = 30
+
+[[main]]
+  name = "Gruppo di ricerca"
+  url = "/zemi/"
+  weight = 40

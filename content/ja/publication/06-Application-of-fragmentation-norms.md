@@ -7,12 +7,13 @@ authors:
 pubtype: conference
 citation: '*RIMS Kôkyûroku*, vol. **2098**, pp. 57–59'
 citation_full: RIMS Kôkyûroku, vol. **2098** (2018), pp. 57–59
-abstract: We prove that a certain $C^0$-robust condition of a Hamiltonian function $H$ induces the existence of a point transported $\varepsilon$ out of the original point by the Hamiltonian diffeomorphism $\varphi_H$. Related to our observation, we provide a problem on Hamiltonian pseudo-rotations.
+abstract: ハミルトン関数 $H$ に対するある $C^0$-robust な条件が，ハミルトン微分同相写像 $\varphi_H$ によって元の点から $\varepsilon$ だけ動かされる点の存在を導くことを証明します。この考察に関連して，ハミルトン擬回転 (pseudo-rotation) に関する問題を提示します。
 links:
 - name: Journal Page
   url: http://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/2098.html
 summary: Morimichi Kawasaki, Ryuma Orita — RIMS Kôkyûroku, vol. 2098 (2018), pp. 57–59
 ---
+
 {{< katex >}}
 Morimichi Kawasaki, Ryuma Orita  
 RIMS Kôkyûroku, vol. **2098** (2018), pp. 57–59  
@@ -20,4 +21,4 @@ RIMS Kôkyûroku, vol. **2098** (2018), pp. 57–59
 
 ## 概要
 
-We prove that a certain $C^0$-robust condition of a Hamiltonian function $H$ induces the existence of a point transported $\varepsilon$ out of the original point by the Hamiltonian diffeomorphism $\varphi_H$. Related to our observation, we provide a problem on Hamiltonian pseudo-rotations.
+ハミルトン関数 $H$ に対するある $C^0$-robust な条件が，ハミルトン微分同相写像 $\varphi_H$ によって元の点から $\varepsilon$ だけ動かされる点の存在を導くことを証明します。この考察に関連して，ハミルトン擬回転 (pseudo-rotation) に関する問題を提示します。

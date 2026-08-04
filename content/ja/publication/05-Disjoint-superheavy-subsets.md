@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*J. Topol. Anal.*, vol. **13**, no. 2, pp. 443–468'
 citation_full: Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468
-abstract: We present a lower bound for a fragmentation norm and construct a bi-Lipschitz embedding $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ with respect to the fragmentation norm on the group $\mathrm{Ham}(M)$ of Hamiltonian diffeomorphisms of a symplectic manifold $(M,\omega)$. As an application, we provide an answer to Brandenbursky's question on fragmentation norms on $\mathrm{Ham}(\Sigma_g)$, where $\Sigma_g$ is a closed Riemannian surface of genus $g\geq 2$.
+abstract: fragmentationノルムの下からの評価を与え，シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群 $\mathrm{Ham}(M)$ 上のfragmentationノルムに関して，bi-Lipschitz埋め込み $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ を構成します。応用として，種数 $g\geq 2$ の閉Riemann面 $\Sigma_g$ に対する $\mathrm{Ham}(\Sigma_g)$ 上のfragmentationノルムについて，Brandenburskyの問いに答えます。
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1901.01647
@@ -15,6 +15,7 @@ links:
   url: https://doi.org/10.1142/S179352532050017X
 summary: Morimichi Kawasaki, Ryuma Orita — Journal of Topology and Analysis, vol. 13 (2021), no. 2, pp. 443–468
 ---
+
 {{< katex >}}
 Morimichi Kawasaki, Ryuma Orita  
 Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468  
@@ -22,4 +23,4 @@ Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468
 
 ## 概要
 
-We present a lower bound for a fragmentation norm and construct a bi-Lipschitz embedding $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ with respect to the fragmentation norm on the group $\mathrm{Ham}(M)$ of Hamiltonian diffeomorphisms of a symplectic manifold $(M,\omega)$. As an application, we provide an answer to Brandenbursky's question on fragmentation norms on $\mathrm{Ham}(\Sigma_g)$, where $\Sigma_g$ is a closed Riemannian surface of genus $g\geq 2$.
+fragmentationノルムの下からの評価を与え，シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群 $\mathrm{Ham}(M)$ 上のfragmentationノルムに関して，bi-Lipschitz埋め込み $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ を構成します。応用として，種数 $g\geq 2$ の閉Riemann面 $\Sigma_g$ に対する $\mathrm{Ham}(\Sigma_g)$ 上のfragmentationノルムについて，Brandenburskyの問いに答えます。

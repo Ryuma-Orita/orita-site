@@ -7,16 +7,17 @@ authors:
 pubtype: preprint
 citation: arXiv:2504.16962
 citation_full: arXiv:2504.16962
-abstract: Banyaga and Hurtubise defined the Morse--Bott--Smale chain complex as a quotient of a large chain complex by introducing five degeneracy relations. However, their five degeneracy relations are in fact redundant. In the present paper, we unify these five conditions into a single degeneracy condition and resolve the issue of the well-definedness of the Morse--Bott--Smale chain complex. This provides an appropriate definition of the Morse--Bott homology and more computable examples. Moreover, we show that our chain complex for a Morse--Smale function is quasi-isomorphic to the usual Morse--Smale--Witten chain complex. As a consequence, we obtain an alternative proof of the Morse Homology Theorem.
+abstract: BanyagaとHurtubiseは，大きな鎖複体を5つの退化条件で割ることによってMorse–Bott–Smale鎖複体を定義しました。しかし，この5つの退化条件は実は冗長です。この論文では，5つの条件を1つの退化条件に統合し，Morse–Bott–Smale鎖複体のwell-defined性の問題を解決します。これにより，Morse–Bottホモロジーの適切な定義と，計算可能な例がより多く得られます。さらに，Morse–Smale関数に対する我々の鎖複体が，通常のMorse–Smale–Witten鎖複体と擬同型であることを示します。その帰結として，Morseホモロジー定理の別証明が得られます。
 links:
 - name: arXiv
   url: https://arxiv.org/abs/2504.16962
 summary: Ryuma Orita, Kanon Yashiro — arXiv:2504.16962
 ---
+
 Ryuma Orita, Kanon Yashiro  
 arXiv:2504.16962  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/2504.16962 "arXiv")
 
 ## 概要
 
-Banyaga and Hurtubise defined the Morse--Bott--Smale chain complex as a quotient of a large chain complex by introducing five degeneracy relations. However, their five degeneracy relations are in fact redundant. In the present paper, we unify these five conditions into a single degeneracy condition and resolve the issue of the well-definedness of the Morse--Bott--Smale chain complex. This provides an appropriate definition of the Morse--Bott homology and more computable examples. Moreover, we show that our chain complex for a Morse--Smale function is quasi-isomorphic to the usual Morse--Smale--Witten chain complex. As a consequence, we obtain an alternative proof of the Morse Homology Theorem.
+BanyagaとHurtubiseは，大きな鎖複体を5つの退化条件で割ることによってMorse–Bott–Smale鎖複体を定義しました。しかし，この5つの退化条件は実は冗長です。この論文では，5つの条件を1つの退化条件に統合し，Morse–Bott–Smale鎖複体のwell-defined性の問題を解決します。これにより，Morse–Bottホモロジーの適切な定義と，計算可能な例がより多く得られます。さらに，Morse–Smale関数に対する我々の鎖複体が，通常のMorse–Smale–Witten鎖複体と擬同型であることを示します。その帰結として，Morseホモロジー定理の別証明が得られます。

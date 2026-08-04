@@ -1,0 +1,19 @@
+---
+title: Basic Exercises in Mathematics b
+location: Faculty of Science, Niigata University
+summary: Term 2, Fri. Period 4 (co-taught) · Faculty of Science, Niigata University
+date: '2020-06-19'
+date_end: '2020-08-07'
+publishDate: '2020-01-01T00:00:00Z'
+all_day: true
+---
+Term 2, Fri. Period 4 (co-taught) · Faculty of Science, Niigata University
+
+> **Note**
+>
+> These exercise sessions are held online via Zoom.
+
+**Textbooks**
+
+1. Y. Takahashi and M. Kato, "微分積分概論 [新訂版]" (in Japanese), Saiensu-sha
+2. N. Innami, T. Tanaka, H. Kojima, and A. Hoshi, "要点明解 線形代数" (in Japanese), Baifukan

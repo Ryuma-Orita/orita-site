@@ -1,0 +1,27 @@
+locale = "zh-tw"
+contentDir = "content/zh-tw"   # ★ この言語の原稿の置き場所
+label = "繁體中文"
+weight = 14
+title = "折田 龍馬"
+
+[params]
+  displayName = "繁體中文"
+  isoCode = "zh-TW"
+  rtl = false
+  dateFormat = "2006年1月2日"
+  description = "折田 龍馬 — 新潟大學理學部 副教授。辛幾何與哈密頓動力系統。"
+
+[params.author]
+  name = "折田 龍馬"
+  image = "img/author.jpg"
+  imageQuality = 96
+  headline = "新潟大學理學部 副教授"
+  bio = "主要研究辛幾何中的哈密頓動力系統。"
+  links = [
+    # ↓ ダミーのURL。実際のアドレスは書かない（迷惑メール対策）。
+    { email = "https://example.invalid/mail" },
+    { arxiv = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R" },
+    { "google-scholar" = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ" },
+    { researchgate = "https://www.researchgate.net/profile/Ryuma_Orita" },
+    { orcid = "https://orcid.org/0000-0002-0475-7030" },
+  ]

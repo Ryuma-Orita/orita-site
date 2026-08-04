@@ -1,0 +1,27 @@
+locale = "he"
+contentDir = "content/he"   # ★ この言語の原稿の置き場所
+label = "עברית"
+weight = 7
+title = "ריומה אוריטה"
+
+[params]
+  displayName = "עברית"
+  isoCode = "he"
+  rtl = true
+  dateFormat = "2.1.2006"
+  description = "ריומה אוריטה — פרופסור חבר למתמטיקה, אוניברסיטת ניאיגטה. גאומטריה סימפלקטית ודינמיקה המילטונית."
+
+[params.author]
+  name = "ריומה אוריטה"
+  image = "img/author.jpg"
+  imageQuality = 96
+  headline = "פרופסור חבר, החוג למתמטיקה, אוניברסיטת ניאיגטה"
+  bio = "תחומי המחקר שלי כוללים דינמיקה המילטונית בגאומטריה סימפלקטית."
+  links = [
+    # ↓ ダミーのURL。実際のアドレスは書かない（迷惑メール対策）。
+    { email = "https://example.invalid/mail" },
+    { arxiv = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R" },
+    { "google-scholar" = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ" },
+    { researchgate = "https://www.researchgate.net/profile/Ryuma_Orita" },
+    { orcid = "https://orcid.org/0000-0002-0475-7030" },
+  ]

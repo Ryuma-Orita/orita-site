@@ -11,7 +11,7 @@ authors:
 pubtype: journal
 citation: '*J. Topol. Anal.*, Online Ready'
 citation_full: Journal of Topology and Analysis, Online Ready
-abstract: Many transformation groups on manifolds are simple, but their universal coverings are not. In the present paper, we study the concept of relatively simple group, that is, a group with the maximum proper normal subgroup. We show that many examples of universal coverings of transformation groups are relatively simple, including the universal covering $\widetilde{\mathrm{Ham}}(M,\omega)$ of the group of Hamiltonian diffeomorphisms of a closed symplectic manifold $(M,\omega)$. Tsuboi constructed a metric space $\mathcal{M}(G)$ for a simple group $G$. We generalize his construction to relatively simple groups, and study their large scale geometric structure. In particular, Tsuboi's metric space of $\widetilde{\mathrm{Ham}}(M,\omega)$ is not quasi-isometric to the half line for every closed symplectic manifold $(M,\omega)$.
+abstract: 多様体上の変換群の多くは単純群ですが，その普遍被覆は単純ではありません。この論文では，最大の真の正規部分群をもつ群，すなわちrelatively simple群という概念を研究します。閉シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群の普遍被覆 $\widetilde{\mathrm{Ham}}(M,\omega)$ を含め，変換群の普遍被覆の多くがrelatively simple群であることを示します。坪井氏は単純群 $G$ に対して距離空間 $\mathcal{M}(G)$ を構成しました。この構成をrelatively simple群へ一般化し，その大域的な幾何構造を調べます。特に，任意の閉シンプレクティック多様体 $(M,\omega)$ に対して，$\widetilde{\mathrm{Ham}}(M,\omega)$ の坪井距離空間は半直線と擬等長ではありません。
 links:
 - name: arXiv
   url: https://doi.org/10.48550/arXiv.2412.00839
@@ -19,6 +19,7 @@ links:
   url: https://doi.org/10.1142/S1793525326500445
 summary: Morimichi Kawasaki, Mitsuaki Kimura, Hiroki Kodama, Yoshifumi Matsuda, Takahiro Matsushita, Ryuma Orita — Journal of Topology and Analysis, Online Ready
 ---
+
 {{< katex >}}
 Morimichi Kawasaki, Mitsuaki Kimura, Hiroki Kodama, Yoshifumi Matsuda, Takahiro Matsushita, Ryuma Orita  
 Journal of Topology and Analysis, Online Ready  
@@ -26,4 +27,4 @@ Journal of Topology and Analysis, Online Ready
 
 ## 概要
 
-Many transformation groups on manifolds are simple, but their universal coverings are not. In the present paper, we study the concept of relatively simple group, that is, a group with the maximum proper normal subgroup. We show that many examples of universal coverings of transformation groups are relatively simple, including the universal covering $\widetilde{\mathrm{Ham}}(M,\omega)$ of the group of Hamiltonian diffeomorphisms of a closed symplectic manifold $(M,\omega)$. Tsuboi constructed a metric space $\mathcal{M}(G)$ for a simple group $G$. We generalize his construction to relatively simple groups, and study their large scale geometric structure. In particular, Tsuboi's metric space of $\widetilde{\mathrm{Ham}}(M,\omega)$ is not quasi-isometric to the half line for every closed symplectic manifold $(M,\omega)$.
+多様体上の変換群の多くは単純群ですが，その普遍被覆は単純ではありません。この論文では，最大の真の正規部分群をもつ群，すなわちrelatively simple群という概念を研究します。閉シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群の普遍被覆 $\widetilde{\mathrm{Ham}}(M,\omega)$ を含め，変換群の普遍被覆の多くがrelatively simple群であることを示します。坪井氏は単純群 $G$ に対して距離空間 $\mathcal{M}(G)$ を構成しました。この構成をrelatively simple群へ一般化し，その大域的な幾何構造を調べます。特に，任意の閉シンプレクティック多様体 $(M,\omega)$ に対して，$\widetilde{\mathrm{Ham}}(M,\omega)$ の坪井距離空間は半直線と擬等長ではありません。

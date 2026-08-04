@@ -1,0 +1,21 @@
+# この言語はトップページのみ。メニューは英語ページへ誘導する。
+
+[[main]]
+  name = "פרסומים"
+  url = "/publication/"
+  weight = 10
+
+[[main]]
+  name = "הרצאות"
+  url = "/talk/"
+  weight = 20
+
+[[main]]
+  name = "הוראה"
+  url = "/lecture/"
+  weight = 30
+
+[[main]]
+  name = "סמינר"
+  url = "/zemi/"
+  weight = 40

@@ -1,0 +1,21 @@
+# この言語はトップページのみ。メニューは英語ページへ誘導する。
+
+[[main]]
+  name = "Δημοσιεύσεις"
+  url = "/publication/"
+  weight = 10
+
+[[main]]
+  name = "Ομιλίες"
+  url = "/talk/"
+  weight = 20
+
+[[main]]
+  name = "Διδασκαλία"
+  url = "/lecture/"
+  weight = 30
+
+[[main]]
+  name = "Σεμινάριο"
+  url = "/zemi/"
+  weight = 40

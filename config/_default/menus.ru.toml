@@ -1,0 +1,21 @@
+# この言語はトップページのみ。メニューは英語ページへ誘導する。
+
+[[main]]
+  name = "Публикации"
+  url = "/publication/"
+  weight = 10
+
+[[main]]
+  name = "Доклады"
+  url = "/talk/"
+  weight = 20
+
+[[main]]
+  name = "Преподавание"
+  url = "/lecture/"
+  weight = 30
+
+[[main]]
+  name = "Семинар"
+  url = "/zemi/"
+  weight = 40

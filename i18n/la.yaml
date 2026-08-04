@@ -1,0 +1,106 @@
+# ラテン語のUI文言。テーマに存在しないため全文をサイト側で提供する。
+global:
+  language: "LA"
+
+article:
+  anchor_label: "Ancora"
+  date: "{{ .Date }}"
+  date_updated: "Renovatum: {{ .Date }}"
+  draft: "Adumbratio"
+  edit_title: "Contenta recensere"
+  reading_time:
+    one: "{{ .Count }} minutum"
+    other: "{{ .Count }} minuta"
+  reading_time_title: "Tempus legendi"
+  table_of_contents: "Index capitum"
+  word_count:
+    one: "{{ .Count }} verbum"
+    other: "{{ .Count }} verba"
+  views:
+    one: "{{ .Count }} visio"
+    other: "{{ .Count }} visiones"
+  likes:
+    one: "{{ .Count }} «placet»"
+    other: "{{ .Count }} «placet»"
+  part_of_series: "Hic articulus pars seriei est."
+  part: "Pars"
+  this_article: "Hic articulus"
+  related_articles: "Affinia"
+  reply_by_email: "Per litteras electronicas respondere"
+  reply_to: "Respondere ad {{ .Title }}"
+  zen_mode_title:
+    enable: "Modum zen inire"
+    disable: "Modum zen relinquere"
+
+a11y:
+  title: "Optiones accessibilitatis"
+  disable_blur: "Nebulam tollere"
+  disable_images: "Imaginem subiectam tollere"
+  show_link_underline: "Nexus sublineare"
+  font_size: "Magnitudo litterarum"
+
+author:
+  byline_title: "Auctor"
+
+code:
+  copy: "Exscribere"
+  copied: "Exscriptum"
+
+error:
+  404_title: "Pagina non inventa :confused:"
+  404_error: "Error 404"
+  404_description: "Pagina quam petivisti non exstare videtur."
+
+footer:
+  dark_appearance: "Ad speciem obscuram mutare"
+  light_appearance: "Ad speciem claram mutare"
+  powered_by: "Confectum per {{ .Hugo }} &amp; {{ .Theme }}"
+
+list:
+  externalurl_title: "Nexus ad situm externum"
+  no_articles: "Nulli articuli adhuc hic sunt."
+
+nav:
+  scroll_to_top_title: "Ad summum volvere"
+  skip_to_main: "Ad contenta principalia transire"
+
+search:
+  open_button_title: "Quaerere (/)"
+  close_button_title: "Claudere (Esc)"
+  input_placeholder: "Quaerere"
+
+sharing:
+  email: "Per litteras electronicas mittere"
+  facebook: "Apud Facebook communicare"
+  line: "Apud LINE communicare"
+  linkedin: "Apud LinkedIn communicare"
+  pinterest: "Apud Pinterest affigere"
+  reddit: "Apud Reddit proponere"
+  twitter: "Apud Twitter divulgare"
+  bluesky: "Apud Bluesky divulgare"
+  whatsapp: "Per WhatsApp communicare"
+  telegram: "Per Telegram communicare"
+  mastodon: "Per Mastodon communicare"
+
+shortcode:
+  recent_articles: "Recentia"
+
+recent:
+  show_more: "Plura monstrare"
+
+admonition:
+  abstract: "Summarium"
+  bug: "Mendum"
+  caution: "Cautio"
+  danger: "Periculum"
+  example: "Exemplum"
+  failure: "Defectus"
+  important: "Magni momenti"
+  info: "Notitia"
+  note: "Nota"
+  question: "Quaestio"
+  quote: "Citatio"
+  success: "Successus"
+  tip: "Consilium"
+  todo: "Agenda"
+  warning: "Monitum"

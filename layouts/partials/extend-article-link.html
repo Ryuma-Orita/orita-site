@@ -1,16 +1,32 @@
 {{/*
-  一覧ページの各項目のうしろに arXiv へのリンクを添える。
-  front matter の links に name: arXiv があるページだけに出る。
+  一覧ページの各項目のうしろに、その論文のリンクを並べる。
+  front matter の links を見て、種類ごとに見せ方を変える。
 
-  Blowfish が用意している拡張ポイント（extend-article-link）を使っているので、
-  テーマ本体は一切編集していない。
+    name が arXiv          → arXiv の公式ロゴ
+    リンク先が doi.org     → DOI の公式ロゴ
+    それ以外               → name をそのまま文字で表示
+
+  Blowfish の拡張ポイント（extend-article-link）を使っているので、
+  テーマ本体は編集していない。
 */}}
-{{- $url := "" -}}
-{{- range .Params.links -}}
-  {{- if eq (lower (.name | default "")) "arxiv" -}}{{- $url = .url -}}{{- end -}}
-{{- end -}}
-{{- with $url -}}
-<a class="orita-arxiv-link" href="{{ . }}" title="arXiv" rel="noopener" aria-label="arXiv">
-  {{- with resources.Get "icons/arxiv.svg" }}{{ .Content | safeHTML }}{{ end -}}
-</a>
+{{- with .Params.links -}}
+<div class="orita-list-links">
+  {{- range . -}}
+    {{- $name := .name | default "" -}}
+    {{- $url  := .url  | default "" -}}
+    {{- if $url -}}
+      {{- if eq (lower $name) "arxiv" -}}
+        <a href="{{ $url }}" title="arXiv" aria-label="arXiv" rel="noopener">
+          {{- with resources.Get "icons/arxiv.svg" }}{{ .Content | safeHTML }}{{ end -}}
+        </a>
+      {{- else if in $url "doi.org" -}}
+        <a href="{{ $url }}" title="DOI" aria-label="DOI" rel="noopener">
+          {{- with resources.Get "icons/doi.svg" }}{{ .Content | safeHTML }}{{ end -}}
+        </a>
+      {{- else -}}
+        <a class="is-text" href="{{ $url }}" rel="noopener">{{ $name }}</a>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</div>
 {{- end -}}

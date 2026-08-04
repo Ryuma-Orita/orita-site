@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Noto+Serif:wght@400;700&display=swap");
 
 /* ============================================================
    独自のスタイル調整
@@ -21,43 +21,79 @@
 
 
 /* ------------------------------------------------------------
-   1. 背景の斜めバー（右上から左下へ流れる）
+   1. 背景の模様
 
-   サイト全体で共通の背景。模様の実体は static/img/bg-pattern.svg。
-   assets/img/background.svg は現在未使用の予備
-   （params.toml で background レイアウトに切り替えたときに使う。
-     その場合はこの body::before のブロックを削除すること）。
+   模様・色・流れる向き・速さは、配色ごとに変わる。
+   実際の値は layouts/partials/extend-head.html が
+   ページ読み込み時に CSS 変数として与える。
+
+   模様の実体   : static/img/pattern-*.svg（色を持たない。形だけ）
+   色を与える   : --orita-bar / --orita-bar-image
+   模様を選ぶ   : --orita-pattern
+   向きと速さ   : --orita-drift / --orita-drift-sec
+
+   ここに書いてある値は、その仕組みが働かなかったときの既定値。
 
    調整箇所:
-     速さ   … 下の 7.5s（小さいほど速い。background.svg 内の値と揃える）
-     濃さ   … opacity（ライト用とダーク用の2箇所）
+     濃さ … opacity（ライト用とダーク用の2箇所）
    ------------------------------------------------------------ */
 
-@keyframes orita-bg-drift {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(-720px, 720px, 0); }
-}
+/* 流れる向き。タイル1枚分ちょうど動かすので、どれも継ぎ目なくループする。 */
+@keyframes orita-drift-dl    { to { transform: translate3d(-720px,  720px, 0); } }  /* 右上→左下 */
+@keyframes orita-drift-dr    { to { transform: translate3d( 720px,  720px, 0); } }  /* 左上→右下 */
+@keyframes orita-drift-up    { to { transform: translate3d(    0,  -720px, 0); } }  /* 上へ */
+@keyframes orita-drift-down  { to { transform: translate3d(    0,   720px, 0); } }  /* 下へ */
+@keyframes orita-drift-left  { to { transform: translate3d(-720px,     0, 0); } }   /* 左へ */
+@keyframes orita-drift-right { to { transform: translate3d( 720px,     0, 0); } }   /* 右へ */
 
 body::before {
   content: "";
   position: fixed;
-  inset: -50vmax;              /* 動かしても端が見えないよう広く取る */
+  /* 動く配色は画面より広く取る（端が見えないように）。
+     静止の配色（ミッフィー風）は画面ぴったりにして、
+     左右の余白と中央の位置を画面幅に合わせる。 */
+  inset: var(--orita-inset, -50vmax);
   z-index: -10;
   pointer-events: none;
 
-  background-image: url("/img/bg-pattern.svg");
-  background-repeat: repeat;
-  background-size: 720px 720px;
+  /* 色は塗り、形はマスクで抜く。
+     こうすると模様のSVGは色を持たず、配色だけ差し替えられる。 */
+  background-color: var(--orita-bar, #5f9c82);
+  background-image: var(--orita-bar-image, none);
+  background-repeat: var(--orita-bar-repeat, repeat);
+  background-size: var(--orita-bar-size, auto);
+  /* --orita-pattern が none の配色（ミッフィー風）は、
+     マスクを使わず色付きの模様をそのまま敷く。 */
+  -webkit-mask-image: var(--orita-pattern, url("/img/pattern-bars.svg"));
+          mask-image: var(--orita-pattern, url("/img/pattern-bars.svg"));
+  -webkit-mask-size: 720px 720px;
+          mask-size: 720px 720px;
+  -webkit-mask-repeat: repeat;
+          mask-repeat: repeat;
 
-  opacity: 0.24;               /* ライトは控えめに（本文と競わせない） */
-  animation: orita-bg-drift 7.5s linear infinite;
+  opacity: var(--orita-bar-opacity, 0.24);   /* 配色ごとに変わる */
+
+  animation: var(--orita-drift, orita-drift-dl)
+             var(--orita-drift-sec, 30s) linear infinite;
   will-change: transform;
 }
 
-.dark body::before { opacity: 0.30; }   /* ダークはもう少し出す */
+.dark body::before {
+  opacity: var(--orita-bar-opacity-dark, 0.30);
+  /* ミッフィー風だけ、ダークでは色を絞った模様に差し替える
+     （白と黄は白文字と競うため） */
+  background-image: var(--orita-bar-image-dark, var(--orita-bar-image, none));
+}
 
 @media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
 @media print { body::before { display: none; } }
+
+/* 画面が狭いと本文が横幅いっぱいに広がり、左右の余白が無くなる。
+   その場合は模様を消して、地の色だけにする（ブルーナ風の平塗り）。 */
+@media (max-width: 1100px) {
+  body::before      { opacity: var(--orita-bar-opacity-narrow, var(--orita-bar-opacity, 0.24)); }
+  .dark body::before { opacity: var(--orita-bar-opacity-narrow-dark, var(--orita-bar-opacity-dark, 0.30)); }
+}
 
 
 /* ------------------------------------------------------------
@@ -67,7 +103,8 @@ body::before {
    本文まで中央揃えになってしまう。左揃えに戻す。
    ------------------------------------------------------------ */
 
-.prose { text-align: left; }
+/* start = 書字方向の先頭。RTL（ヘブライ語）では自動的に右揃えになる */
+.prose { text-align: start; }
 
 /* 表の見出し行（「年 学位 大学」など）を出さない。
    ※ .prose 内の全ての表に効く。現在、表があるのはトップページだけだが、
@@ -113,7 +150,7 @@ body::before {
     word-break: normal;
     overflow-wrap: anywhere;
     line-break: auto;
-    padding-right: 0.5rem;
+    padding-inline-end: 0.5rem;   /* inline-end = 書字方向の末尾。RTL では左側 */
   }
   .prose table td:first-child { white-space: nowrap; }
 }
@@ -176,21 +213,37 @@ a[href^="tel:"] {
 /* プロフィール欄：縦長の arXiv ロゴを正方形に潰させない */
 svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
 
-/* 論文一覧の各項目に添える arXiv リンク
-   （layouts/partials/extend-article-link.html が出力する） */
-.orita-arxiv-link {
-  display: block;            /* タイトル行に食い込ませない */
-  width: fit-content;
-  margin-top: 0.45rem;
+/* 論文一覧の各項目に添えるリンク
+   （layouts/partials/extend-article-link.html が出力する）
+     ロゴ形式 … arXiv・DOI
+     文字形式 … それ以外（出版社のページ、講究録など） */
+.orita-list-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
   line-height: 1;
+}
+.orita-list-links a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
 }
-.orita-arxiv-link svg {
+.orita-list-links a:hover { opacity: 0.65; }
+.orita-list-links svg {
   display: block;
   height: 1.15rem;
   width: auto;
 }
-.orita-arxiv-link:hover { opacity: 0.65; }
+/* 文字で出すリンクは、ロゴと並んでも浮かないよう小さめの枠付きに */
+.orita-list-links a.is-text {
+  font-size: 0.78rem;
+  padding: 0.12rem 0.6rem;
+  border: 1px solid color-mix(in oklab, currentColor 24%, transparent);
+  border-radius: 999px;
+  white-space: nowrap;
+}
 
 
 /* ------------------------------------------------------------
@@ -226,7 +279,14 @@ main h1, main h2, main h3,
 header,
 body > div[class~="fixed"][class~="inset-x-0"],
 body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
-  font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", Georgia, serif;
+  /* Zen Old Mincho は日本語用のため、ギリシャ文字・キリル文字・
+     ヘブライ文字のアクセント付き字を持たない。そのままだと
+     システムが別のフォントから合成し、字体が不自然になる
+     （Ελληνικά のアクセントが離れて見える等）。
+     欧文セリフ体を先に挟んで、これらの文字を正しく描かせる。
+     日本語・中国語の字は欧文フォントに無いので Zen Old Mincho に回る。 */
+  font-family: "Zen Old Mincho", "Noto Serif", "Times New Roman",
+               "Noto Serif JP", "Yu Mincho", Georgia, serif;
   letter-spacing: 0.015em;
 }
 
@@ -274,12 +334,26 @@ main h1 ~ nav { margin-top: 0.9rem; }
 
 /* --- リンクの色 ---
 
-   順序が重要:
-     (1) 平常時の色  →  (2) 下線の例外  →  (3) ホバー色  →  (4) アイコンの例外
-   同じ強さの指定は「後に書いたほうが勝つ」ため、ホバーは平常時より後に置く。 */
+   ここに1箇所だけまとめる。以前はセクション2と5に分散し、
+   重複と順序の食い違いで不具合が出ていた。
 
-/* (1) 本文中のリンク（平常時） */
-.prose a {
+   同じ強さの指定は「後に書いたほうが勝つ」。
+   そのため、次の順に並べること。
+
+     (1) 本文中のリンクの色
+     (2) 例外: 公式ロゴ / 自作アイコン / 表の中
+     (3) 下線の扱い
+     (4) ホバー色（すべてに優先させたいので最後）
+
+   訪問済みリンクについて:
+     ブラウザ既定の紫はサイト側の指定より弱いため、
+     色を指定している箇所には出ない。特別な対処は不要。
+     :link と :visited の両方を書くのは、
+     訪問の有無で見た目が変わらないことを明示するため。 */
+
+/* (1) 本文中のリンク */
+.prose a:link,
+.prose a:visited {
   color: var(--orita-link) !important;
   text-decoration: underline;
   text-underline-offset: 0.18em;
@@ -287,33 +361,45 @@ main h1 ~ nav { margin-top: 0.9rem; }
   text-decoration-color: color-mix(in oklab, currentColor 32%, transparent);
 }
 
-/* (1-b) ブラウザ既定の「訪問済みリンク = 紫」を打ち消す。
-   :where() で書くと指定の強さがゼロになるので、
-   ブラウザ既定だけを上書きし、テーマの色指定には影響しない。 */
-:where(a:visited) { color: inherit; }
+/* (2a) 例外: 公式ロゴ（arXiv・DOI）は固有の色を保つ */
+.prose a:has(svg[viewBox="0 0 17.732 24.269"]):link,
+.prose a:has(svg[viewBox="0 0 17.732 24.269"]):visited,
+.prose a:has(svg[viewBox="0 0 130 130"]):link,
+.prose a:has(svg[viewBox="0 0 130 130"]):visited {
+  color: inherit !important;
+  text-decoration: none;
+}
 
-/* (2) 一覧のタイトルや見出しの中のリンクには下線を付けない */
+/* (2b) 例外: 自作アイコン（YouTube・記事・メール）は本文と同じ色 */
+.prose a:has(svg[viewBox="0 0 24 24"]):link,
+.prose a:has(svg[viewBox="0 0 24 24"]):visited {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+/* (2c) 例外: 略歴の表。所属名が全行リンクなので、色を付けると一斉に光る。
+        通常は本文と同じ色にし、下線だけで示す。 */
+.prose table a:link,
+.prose table a:visited {
+  color: inherit !important;
+  text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+}
+
+/* (3) 一覧のタイトルや見出しの中のリンクには下線を付けない */
 main h1 a, main h2 a, main h3 a,
 main article a:not(.prose a) {
   text-decoration: none;
 }
 
-/* (3) ホバー色（サイト全体）
+/* (4) ホバー色（サイト全体）
 
-   テーマ既定の明るい青緑は浮くので、アクセント色に統一する。
-
-   :not(#no-such-id) について
-     そんな id はサイト内に存在しないので、対象は何も変わらない。
-     CSS は「指定が具体的なほうが勝つ」という規則があり、
-     id を含む指定は最も強い。テーマ側のどんな指定にも
-     負けないようにするための書き方。
-
-   対象を広く取っている理由
-     - 要素名（header / footer）で絞るとテーマの構造次第で届かない
-     - 文字が <a> の中の <span> に入っている場合があるので子要素も含める
-     - 検索・言語切替・ダークモードは <button> や <summary> の場合がある
-     - arXiv と DOI の公式ロゴは固有の色を持ち currentColor を
-       使っていないため、この指定では変化しない */
+   要素名で絞るとテーマの構造次第で届かないため、a / button / summary を対象にする。
+   文字が <a> の中の <span> に入っている場合があるので子要素も含める。
+   :not(#no-such-id) は指定の強さを最大にするための書き方。
+   そんな id は存在しないので対象は変わらない。
+   **ホバー色にだけ必要**（テーマが hover:text-primary-500 という
+   クラス指定を当てており、それに勝つ必要があるため）。
+   平常時の色は自分の指定同士の順序で決まるので、この書き方は使わない。 */
 a:not(#no-such-id):hover,
 a:not(#no-such-id):focus-visible,
 a:not(#no-such-id):hover *,
@@ -327,21 +413,35 @@ summary:not(#no-such-id):hover *,
 [role="button"]:not(#no-such-id):hover,
 [role="button"]:not(#no-such-id):hover * {
   color: var(--orita-accent) !important;
-  /* テーマは下線の色も別クラス（hover:decoration-primary-400）で
-     指定しているので、こちらも揃える */
   text-decoration-color: var(--orita-accent) !important;
 }
 
-/* (4) アイコンだけのリンクは色を変えない。ホバーは薄くするだけ。
-   (3) より強い指定にするため、こちらにも :not(#no-such-id) を重ねる。 */
-.prose a:has(svg) {
-  color: inherit !important;
-  text-decoration: none;
-}
-.prose a:has(svg):not(#no-such-id):hover,
-.prose a:has(svg):not(#no-such-id):hover * {
+/* (4a) ホバー例外: 公式ロゴは色を変えず、薄くするだけ */
+.prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover,
+.prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover,
+.prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover *,
+.prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover * {
   color: inherit !important;
   opacity: 0.6;
+}
+
+/* (4c) ホバー例外: 表の中のリンク。
+        通常時は色を消しているので、ホバーでアクセント色に戻す。
+        (2c) で color: inherit !important を掛けているため、
+        ここでも同じ強さで上書きする必要がある。 */
+.prose table a:not(#no-such-id):hover,
+.prose table a:not(#no-such-id):hover * {
+  color: var(--orita-accent) !important;
+  text-decoration-color: var(--orita-accent) !important;
+}
+
+/* (4b) ホバー例外: 自作アイコンは専用の色。
+        通常のアクセント色は本文色と近い配色があり、
+        アイコンだと変化が分かりにくいため。 */
+.prose a:has(svg[viewBox="0 0 24 24"]):not(#no-such-id):hover,
+.prose a:has(svg[viewBox="0 0 24 24"]):not(#no-such-id):hover * {
+  color: var(--orita-icon-hover, var(--orita-accent)) !important;
+  opacity: 1;
 }
 
 /* --- 文字選択の色 --- */

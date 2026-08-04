@@ -1,0 +1,106 @@
+# ギリシャ語のUI文言。テーマに el.yaml が無いため全文をサイト側で提供する。
+global:
+  language: "EL"
+
+article:
+  anchor_label: "Άγκυρα"
+  date: "{{ .Date }}"
+  date_updated: "Ενημερώθηκε: {{ .Date }}"
+  draft: "Πρόχειρο"
+  edit_title: "Επεξεργασία περιεχομένου"
+  reading_time:
+    one: "{{ .Count }} λεπτό"
+    other: "{{ .Count }} λεπτά"
+  reading_time_title: "Χρόνος ανάγνωσης"
+  table_of_contents: "Πίνακας περιεχομένων"
+  word_count:
+    one: "{{ .Count }} λέξη"
+    other: "{{ .Count }} λέξεις"
+  views:
+    one: "{{ .Count }} προβολή"
+    other: "{{ .Count }} προβολές"
+  likes:
+    one: "{{ .Count }} «μου αρέσει»"
+    other: "{{ .Count }} «μου αρέσει»"
+  part_of_series: "Αυτό το άρθρο είναι μέρος μιας σειράς."
+  part: "Μέρος"
+  this_article: "Αυτό το άρθρο"
+  related_articles: "Σχετικά άρθρα"
+  reply_by_email: "Απάντηση μέσω email"
+  reply_to: "Απάντηση στο {{ .Title }}"
+  zen_mode_title:
+    enable: "Ενεργοποίηση λειτουργίας zen"
+    disable: "Απενεργοποίηση λειτουργίας zen"
+
+a11y:
+  title: "Ρυθμίσεις προσβασιμότητας"
+  disable_blur: "Απενεργοποίηση θολώματος"
+  disable_images: "Απενεργοποίηση εικόνας φόντου"
+  show_link_underline: "Υπογράμμιση συνδέσμων"
+  font_size: "Μέγεθος γραμματοσειράς"
+
+author:
+  byline_title: "Συγγραφέας"
+
+code:
+  copy: "Αντιγραφή"
+  copied: "Αντιγράφηκε"
+
+error:
+  404_title: "Η σελίδα δεν βρέθηκε :confused:"
+  404_error: "Σφάλμα 404"
+  404_description: "Η σελίδα που ζητήσατε δεν φαίνεται να υπάρχει."
+
+footer:
+  dark_appearance: "Εναλλαγή σε σκούρα εμφάνιση"
+  light_appearance: "Εναλλαγή σε ανοιχτή εμφάνιση"
+  powered_by: "Λειτουργεί με {{ .Hugo }} &amp; {{ .Theme }}"
+
+list:
+  externalurl_title: "Σύνδεσμος σε εξωτερικό ιστότοπο"
+  no_articles: "Δεν υπάρχουν ακόμη άρθρα εδώ."
+
+nav:
+  scroll_to_top_title: "Κύλιση στην κορυφή"
+  skip_to_main: "Μετάβαση στο κύριο περιεχόμενο"
+
+search:
+  open_button_title: "Αναζήτηση (/)"
+  close_button_title: "Κλείσιμο (Esc)"
+  input_placeholder: "Αναζήτηση"
+
+sharing:
+  email: "Αποστολή μέσω email"
+  facebook: "Κοινοποίηση στο Facebook"
+  line: "Κοινοποίηση στο LINE"
+  linkedin: "Κοινοποίηση στο LinkedIn"
+  pinterest: "Καρφίτσωμα στο Pinterest"
+  reddit: "Υποβολή στο Reddit"
+  twitter: "Δημοσίευση στο Twitter"
+  bluesky: "Δημοσίευση στο Bluesky"
+  whatsapp: "Κοινοποίηση μέσω WhatsApp"
+  telegram: "Κοινοποίηση μέσω Telegram"
+  mastodon: "Κοινοποίηση μέσω Mastodon"
+
+shortcode:
+  recent_articles: "Πρόσφατα"
+
+recent:
+  show_more: "Περισσότερα"
+
+admonition:
+  abstract: "Περίληψη"
+  bug: "Σφάλμα"
+  caution: "Προσοχή"
+  danger: "Κίνδυνος"
+  example: "Παράδειγμα"
+  failure: "Αποτυχία"
+  important: "Σημαντικό"
+  info: "Πληροφορίες"
+  note: "Σημείωση"
+  question: "Ερώτηση"
+  quote: "Παράθεση"
+  success: "Επιτυχία"
+  tip: "Συμβουλή"
+  todo: "Εκκρεμότητα"
+  warning: "Προειδοποίηση"
