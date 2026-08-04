@@ -1,8 +1,6 @@
-/* Google Fonts の css2 API は、複数フォントを1回で要求するとき
-   フォント名をアルファベット順に並べることを要求する。
-   順序が違うとリクエスト全体が失敗し、どのフォントも読み込まれない。
-   Noto Serif → Noto Serif KR → SC → TC → Zen Old Mincho の順。 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+TC:wght@400;600;700&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap");
+/* フォントの読み込みは layouts/partials/extend-head.html の <link> で行う。
+   @import はスタイルシートの先頭になければ無視される規則があり、
+   テーマがCSSを束ねる場合に効かなくなるため。 */
 
 /* ============================================================
    独自のスタイル調整
@@ -267,9 +265,16 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
    ハングルは Zen Old Mincho に無く（ゴシックに落ちていた）、
    簡体字の「龙」なども無い（見出し内で書体が混ざる）ため。
    :lang() は html の lang 属性（isoCode）で判定される。 */
-:lang(ko)    { --orita-serif-local: "Noto Serif KR"; }   /* 명조체 */
-:lang(zh-CN) { --orita-serif-local: "Noto Serif SC"; }   /* 宋体 */
-:lang(zh-TW) { --orita-serif-local: "Noto Serif TC"; }   /* 明體 */
+/* :lang() と lang属性の両方で狙う。lang の値は大文字小文字を区別するため
+   属性セレクタには i 修飾子を付ける（zh-cn / zh-CN どちらでも当たる）。 */
+:lang(ko),
+html[lang^="ko" i]        { --orita-serif-local: "Noto Serif KR"; }   /* 명조체 */
+:lang(zh-CN),
+html[lang="zh-cn" i],
+html[lang="zh-Hans" i]    { --orita-serif-local: "Noto Serif SC"; }   /* 宋体 */
+:lang(zh-TW),
+html[lang="zh-tw" i],
+html[lang="zh-Hant" i]    { --orita-serif-local: "Noto Serif TC"; }   /* 明體 */
 .dark {
   --orita-accent: #a9d5bd;   /* ミルキーグリーン */
   --orita-link:   #c3d8cd;   /* 本文リンク（明るすぎない淡緑） */

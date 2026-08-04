@@ -1,3 +1,17 @@
+{{/* --- フォントの読み込み ---
+     Google Fonts の css2 API は、複数フォントを1回で要求するとき
+     フォント名をアルファベット順に並べる必要がある（順序が違うと全体が失敗）。
+       Noto Serif      … 欧文・ギリシャ文字・キリル文字
+       Noto Serif KR   … ハングル（명조체）
+       Noto Serif SC   … 簡体字（宋体）
+       Noto Serif TC   … 繁体字（明體）
+       Zen Old Mincho  … 日本語（明朝体）
+     CSS の @import ではなくここに置くのは、@import がスタイルシートの
+     先頭になければ無視されるため。 */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+TC:wght@400;600;700&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap">
+
 {{/*
   iOS Safari は本文中の数字の並びを電話番号・日付・住所と判定して
   勝手にリンクにする。略歴の「2017.8 – 2018.3」が電話番号扱いされるため、
