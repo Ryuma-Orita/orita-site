@@ -222,13 +222,23 @@ main h1 ~ nav { margin-top: 0.9rem; }
 
 /* --- リンク（サイト全体のホバー色） --- */
 /* テーマ既定の明るい青緑は浮くので、ホバーはアクセント色に統一。
-   ヘッダーのメニュー、一覧のタイトル、フッターにも効かせる。 */
+   ヘッダーのメニュー、一覧のタイトル、フッターにも効かせる。
+
+   メニューの文字は <a> の中の <span> に入っており、そちらにも
+   テーマの色指定があるため、子要素まで届かせる必要がある。
+   ただし SVG アイコンは公式ロゴの色を保つため除外する。 */
 main a:hover,
 main a:focus-visible,
 header a:hover,
 header a:focus-visible,
 footer a:hover,
-footer a:focus-visible {
+footer a:focus-visible,
+main a:hover *:not(svg):not(svg *),
+main a:focus-visible *:not(svg):not(svg *),
+header a:hover *:not(svg):not(svg *),
+header a:focus-visible *:not(svg):not(svg *),
+footer a:hover *:not(svg):not(svg *),
+footer a:focus-visible *:not(svg):not(svg *) {
   color: var(--orita-accent) !important;
 }
 
