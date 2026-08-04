@@ -5,7 +5,7 @@
       from { transform: translate(0px, 0px); }
       to   { transform: translate(-720px, 720px); }
     }
-    .bars { animation: orita-drift 15s linear infinite; }
+    .bars { animation: orita-drift 7.5s linear infinite; }
     @media (prefers-reduced-motion: reduce) { .bars { animation: none; } }
   </style>
   <defs>

@@ -7,8 +7,13 @@
 #                congo, fire, autumn, github, terminal
 colorScheme = "forest"
 
-defaultAppearance = "light"      # 既定はライト。dark にすると既定がダーク
-autoSwitchAppearance = true      # OSの設定に自動追従
+defaultAppearance = "dark"       # 既定はダーク（light にするとライト）
+autoSwitchAppearance = false     # OSの設定には追従しない。
+                                 # true にすると閲覧者のOS設定に合わせて切り替わる。
+                                 # どちらの場合も右上のボタンで手動切り替えは可能。
+
+# プロフィール写真などをクリックしても拡大しないようにする
+disableImageZoom = true
 
 enableSearch = true
 disableImageOptimization = true  # SVGをそのまま使うために必要

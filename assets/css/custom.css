@@ -38,7 +38,7 @@ body::before {
   background-size: 720px 720px;
 
   opacity: 0.24;   /* ライトは控えめに（本文と競わせない） */
-  animation: orita-bg-drift 15s linear infinite;
+  animation: orita-bg-drift 7.5s linear infinite;
   will-change: transform;
 }
 
@@ -141,9 +141,11 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
 
 /* 論文一覧の各項目に添える arXiv リンク */
 .orita-arxiv-link {
-  display: inline-block;
-  margin-top: 0.4rem;
+  display: block;          /* タイトル行に食い込ませない */
+  width: fit-content;
+  margin-top: 0.45rem;
   line-height: 1;
+  text-decoration: none;
 }
 .orita-arxiv-link svg {
   display: block;
@@ -188,9 +190,20 @@ main h1 { font-weight: 700; }
   background-position: left bottom;
 }
 
-/* --- 本文中のリンク --- */
-/* テーマ既定の明るい青緑は本文の中で浮くので、文字色に近い深緑にし、
-   下線で区別する。テーマ側の指定に確実に勝たせるため !important を付ける。 */
+/* --- リンクの色（サイト全体） --- */
+/* テーマ既定の明るい青緑は本文でもメニューでも浮くので、
+   文字色に近い深緑にする。.prose の中だけでなく、
+   ヘッダーのメニューや一覧のタイトルにも効かせる。 */
+main a:hover,
+main a:focus-visible,
+header a:hover,
+header a:focus-visible,
+footer a:hover,
+footer a:focus-visible {
+  color: var(--orita-accent) !important;
+}
+
+/* 本文中のリンクは平常時も落ち着いた色 + 下線で示す */
 .prose a {
   color: var(--orita-link) !important;
   text-decoration: underline;
@@ -198,9 +211,13 @@ main h1 { font-weight: 700; }
   text-decoration-thickness: 1px;
   text-decoration-color: color-mix(in oklab, currentColor 32%, transparent);
 }
-.prose a:hover {
-  color: var(--orita-accent) !important;
-  text-decoration-color: var(--orita-accent);
+.prose a:hover { text-decoration-color: var(--orita-accent); }
+
+/* 一覧のタイトルや見出しの中のリンクは、下線を付けず文字色のまま。
+   マウスを乗せたときだけ色が変わる。 */
+main h1 a, main h2 a, main h3 a,
+main article a:not(.prose a) {
+  text-decoration: none;
 }
 
 /* アイコンだけのリンクは色を変えず、下線も引かない */
@@ -213,4 +230,18 @@ main h1 { font-weight: 700; }
 /* --- 文字選択の色 --- */
 ::selection {
   background: color-mix(in oklab, var(--orita-accent) 26%, transparent);
+}
+
+
+/* ------------------------------------------------------------
+   6. プロフィール写真
+
+   params.toml の disableImageZoom = true で拡大は止まるが、
+   テーマ側の実装が変わっても効くよう、クリック自体も無効にしておく。
+   （プロフィール写真はリンクではないので、押せなくて困らない）
+   ------------------------------------------------------------ */
+
+img[src*="author"] {
+  pointer-events: none;
+  cursor: default;
 }
