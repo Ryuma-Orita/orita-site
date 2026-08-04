@@ -17,7 +17,7 @@ summary: Ryuma Orita — Journal of Symplectic Geometry, vol. 17 (2019), no. 6, 
 {{< katex >}}
 Ryuma Orita  
 Journal of Symplectic Geometry, vol. **17** (2019), no. 6, pp. 1893–1927  
-[arXiv](https://arxiv.org/abs/1703.01731) · [Journal Page](https://dx.doi.org/10.4310/JSG.2019.v17.n6.a9)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1703.01731 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.4310/JSG.2019.v17.n6.a9 "DOI")
 
 ## 概要
 

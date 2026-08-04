@@ -18,7 +18,7 @@ summary: Morimichi Kawasaki, Ryuma Orita — Communications in Contemporary Math
 {{< katex >}}
 Morimichi Kawasaki, Ryuma Orita  
 Communications in Contemporary Mathematics, vol. **23** (2021), no. 5, 2050047  
-[arXiv](https://arxiv.org/abs/1901.09395) · [Journal Page](https://dx.doi.org/10.1142/S0219199720500479)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1901.09395 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.1142/S0219199720500479 "DOI")
 
 ## 概要
 

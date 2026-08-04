@@ -17,7 +17,7 @@ summary: Kanta Koeda, Ryuma Orita, Kanon Yashiro — arXiv:2312.07847
 {{< katex >}}
 Kanta Koeda, Ryuma Orita, Kanon Yashiro  
 arXiv:2312.07847  
-[arXiv](https://doi.org/10.48550/arXiv.2312.07847)
+[{{< icon "arxiv" >}}](https://doi.org/10.48550/arXiv.2312.07847 "arXiv")
 
 ## 概要
 

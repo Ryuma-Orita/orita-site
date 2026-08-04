@@ -1,0 +1,16 @@
+{{/*
+  一覧ページの各項目のうしろに arXiv へのリンクを添える。
+  front matter の links に name: arXiv があるページだけに出る。
+
+  Blowfish が用意している拡張ポイント（extend-article-link）を使っているので、
+  テーマ本体は一切編集していない。
+*/}}
+{{- $url := "" -}}
+{{- range .Params.links -}}
+  {{- if eq (lower (.name | default "")) "arxiv" -}}{{- $url = .url -}}{{- end -}}
+{{- end -}}
+{{- with $url -}}
+<a class="orita-arxiv-link" href="{{ . }}" title="arXiv" rel="noopener" aria-label="arXiv">
+  {{- with resources.Get "icons/arxiv.svg" }}{{ .Content | safeHTML }}{{ end -}}
+</a>
+{{- end -}}

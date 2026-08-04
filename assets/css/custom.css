@@ -36,7 +36,7 @@ body::before {
   background-size: 720px 720px;
 
   opacity: 0.5;
-  animation: orita-bg-drift 90s linear infinite;
+  animation: orita-bg-drift 45s linear infinite;
   will-change: transform;
 }
 
@@ -77,18 +77,25 @@ body::before {
 /* ------------------------------------------------------------
    4. アイコン
 
-   viewBox で狙い撃ちしているので、テーマの class 名に依存しない。
-     24x24 … 本文中の YouTube アイコン
-     64x24 … プロフィールの arXiv ワードマーク（横長）
+   本文中のアイコンリンク（YouTube / arXiv / DOI）と
+   プロフィール欄のリンクアイコンの調整。
+   テーマの class 名ではなく viewBox で狙い撃ちしているので、
+   テーマを更新しても壊れない。
    ------------------------------------------------------------ */
 
-/* 本文中のアイコンリンク（授業ページの YouTube など） */
-.prose a svg[viewBox="0 0 24 24"] {
+/* 本文中のアイコン全般：文字と同じ高さに揃える */
+.prose a svg {
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.14em;   /* 文字のベースラインに合わせる */
+  height: 1.05em;
+  width: auto;
+  vertical-align: -0.16em;
   margin-inline: 0.1em;
+}
+
+/* arXiv のロゴマークは縦長なので少しだけ大きく */
+.prose a svg[viewBox="0 0 17.732 24.269"] {
+  height: 1.25em;
+  vertical-align: -0.28em;
 }
 
 /* アイコンだけのリンクは下線を引かない */
@@ -102,8 +109,18 @@ body::before {
   vertical-align: baseline;
 }
 
-/* プロフィールの arXiv は横長なので正方形に潰させない */
-svg[viewBox="0 0 64 24"] {
-  width: auto !important;
-  aspect-ratio: 64 / 24;
+/* プロフィール欄：縦長の arXiv ロゴを正方形に潰させない */
+svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
+
+/* 論文一覧の各項目に添える arXiv リンク */
+.orita-arxiv-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  line-height: 1;
 }
+.orita-arxiv-link svg {
+  display: block;
+  height: 1.15rem;
+  width: auto;
+}
+.orita-arxiv-link:hover { opacity: 0.65; }

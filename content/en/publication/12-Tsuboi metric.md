@@ -22,7 +22,7 @@ summary: Morimichi Kawasaki, Mitsuaki Kimura, Hiroki Kodama, Yoshifumi Matsuda, 
 {{< katex >}}
 Morimichi Kawasaki, Mitsuaki Kimura, Hiroki Kodama, Yoshifumi Matsuda, Takahiro Matsushita, Ryuma Orita  
 Journal of Topology and Analysis, Online Ready  
-[arXiv](https://doi.org/10.48550/arXiv.2412.00839) · [Journal Page](https://doi.org/10.1142/S1793525326500445)
+[{{< icon "arxiv" >}}](https://doi.org/10.48550/arXiv.2412.00839 "arXiv") · [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ## Abstract
 

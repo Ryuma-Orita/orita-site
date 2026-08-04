@@ -11,7 +11,7 @@ defaultAppearance = "light"      # 既定はライト。dark にすると既定�
 autoSwitchAppearance = true      # OSの設定に自動追従
 
 enableSearch = true
-disableImageOptimization = true  # SVG背景をそのまま使うために必要
+disableImageOptimization = true  # SVGをそのまま使うために必要
 enableCodeCopy = false
 mainSections = ["publication", "talk"]
 
@@ -26,11 +26,14 @@ mainSections = ["publication", "talk"]
   showScrollToTop = true
 
 # --- トップページ（写真・肩書・リンク・本文）---
+# 背景はサイト全体で1枚（assets/css/custom.css）にしているので、
+# トップページ専用の背景画像は使わない。
+# 使いたくなったら以下の3行のコメントを外し、custom.css の body::before を消すこと。
 [homepage]
-  layout = "background"                  # 公式サイトと同じ、全面背景のレイアウト
-  homepageImage = "img/background.svg"   # 動きを内蔵した背景（静止画にするなら .jpg に）
-  layoutBackgroundBlur = true            # スクロールすると背景がぼける
-  disableHeroImageFilter = false         # 背景に暗めのフィルタをかける
+  layout = "profile"
+  # layout = "background"
+  # homepageImage = "img/background.svg"
+  # layoutBackgroundBlur = true
   showRecent = false
 
 # --- 個別ページ ---

@@ -16,7 +16,7 @@ summary: Ryuma Orita — Bulletin of the London Mathematical Society, vol. 49 (2
 ---
 Ryuma Orita  
 Bulletin of the London Mathematical Society, vol. **49** (2017), no. 4, pp. 571–580  
-[arXiv](https://arxiv.org/abs/1604.06177) · [Journal Page](https://dx.doi.org/10.1112/blms.12054)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1604.06177 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.1112/blms.12054 "DOI")
 
 ## 概要
 

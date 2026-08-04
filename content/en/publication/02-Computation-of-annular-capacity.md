@@ -18,7 +18,7 @@ summary: Morimichi Kawasaki, Ryuma Orita — Journal of Modern Dynamics, vol. 11
 {{< katex >}}
 Morimichi Kawasaki, Ryuma Orita  
 Journal of Modern Dynamics, vol. **11** (2017), pp. 313–339  
-[arXiv](https://arxiv.org/abs/1703.01730) · [Journal Page](https://dx.doi.org/10.3934/jmd.2017013)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1703.01730 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.3934/jmd.2017013 "DOI")
 
 ## Abstract
 

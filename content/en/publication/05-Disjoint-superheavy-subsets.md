@@ -18,7 +18,7 @@ summary: Morimichi Kawasaki, Ryuma Orita — Journal of Topology and Analysis, v
 {{< katex >}}
 Morimichi Kawasaki, Ryuma Orita  
 Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468  
-[arXiv](https://arxiv.org/abs/1901.01647) · [Journal Page](https://doi.org/10.1142/S179352532050017X)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1901.01647 "arXiv") · [{{< icon "doi" >}}](https://doi.org/10.1142/S179352532050017X "DOI")
 
 ## Abstract
 

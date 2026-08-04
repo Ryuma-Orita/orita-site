@@ -15,7 +15,7 @@ summary: Ryuma Orita, Kanon Yashiro — arXiv:2504.16962
 ---
 Ryuma Orita, Kanon Yashiro  
 arXiv:2504.16962  
-[arXiv](https://arxiv.org/abs/2504.16962)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/2504.16962 "arXiv")
 
 ## Abstract
 

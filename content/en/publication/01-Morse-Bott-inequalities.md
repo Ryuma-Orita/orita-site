@@ -16,7 +16,7 @@ summary: Ryuma Orita — Tokyo Journal of Mathematics, vol. 41 (2018), no. 1, pp
 ---
 Ryuma Orita  
 Tokyo Journal of Mathematics, vol. **41** (2018), no. 1, pp. 113–130  
-[arXiv](https://arxiv.org/abs/1609.02381) · [Journal Page](https://dx.doi.org/10.3836/tjm/1502179256)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1609.02381 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.3836/tjm/1502179256 "DOI")
 
 ## Abstract
 

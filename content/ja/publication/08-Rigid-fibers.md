@@ -17,7 +17,7 @@ summary: Morimichi Kawasaki, Ryuma Orita — Journal of the Mathematical Society
 ---
 Morimichi Kawasaki, Ryuma Orita  
 Journal of the Mathematical Society of Japan, vol. **74** (2022), no. 3, pp. 829–847  
-[arXiv](https://arxiv.org/abs/1905.13112) · [Journal Page](https://doi.org/10.2969/jmsj/84278427)
+[{{< icon "arxiv" >}}](https://arxiv.org/abs/1905.13112 "arXiv") · [{{< icon "doi" >}}](https://doi.org/10.2969/jmsj/84278427 "DOI")
 
 ## 概要
 
