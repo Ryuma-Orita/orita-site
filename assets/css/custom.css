@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Noto+Serif:wght@400;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap");
 
 /* ============================================================
    独自のスタイル調整
@@ -257,7 +257,15 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
 :root {
   --orita-accent: #2f7d63;   /* ビリジアン（罫・ホバー） */
   --orita-link:   #2a5445;   /* 本文リンク（文字色に近い深緑） */
+  --orita-serif-local: "Zen Old Mincho";   /* その言語の明朝体（既定は日本語） */
 }
+/* 韓国語・中国語のページでは、それぞれの明朝体系フォントを先頭にする。
+   ハングルは Zen Old Mincho に無く（ゴシックに落ちていた）、
+   簡体字の「龙」なども無い（見出し内で書体が混ざる）ため。
+   :lang() は html の lang 属性（isoCode）で判定される。 */
+:lang(ko)    { --orita-serif-local: "Noto Serif KR"; }   /* 명조체 */
+:lang(zh-CN) { --orita-serif-local: "Noto Serif SC"; }   /* 宋体 */
+:lang(zh-TW) { --orita-serif-local: "Noto Serif TC"; }   /* 明體 */
 .dark {
   --orita-accent: #a9d5bd;   /* ミルキーグリーン */
   --orita-link:   #c3d8cd;   /* 本文リンク（明るすぎない淡緑） */
@@ -285,7 +293,8 @@ body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
      （Ελληνικά のアクセントが離れて見える等）。
      欧文セリフ体を先に挟んで、これらの文字を正しく描かせる。
      日本語・中国語の字は欧文フォントに無いので Zen Old Mincho に回る。 */
-  font-family: "Zen Old Mincho", "Noto Serif", "Times New Roman",
+  font-family: var(--orita-serif-local, "Zen Old Mincho"),
+               "Zen Old Mincho", "Noto Serif", "Times New Roman",
                "Noto Serif JP", "Yu Mincho", Georgia, serif;
   letter-spacing: 0.015em;
 }
