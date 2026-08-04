@@ -18,6 +18,10 @@ title = "折田 龍馬"
   headline = "新潟大学理学部 准教授"
   bio = "シンプレクティック多様体上のハミルトン力学系について研究しています。"
   links = [
+    # ↓ ダミーのURL。実際のアドレスは書かない（迷惑メール対策）。
+    #   layouts/partials/extend-footer.html の JavaScript が
+    #   閲覧時に mailto: へ差し替える。
+    { email = "https://example.invalid/mail" },
     { arxiv = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R" },
     { "google-scholar" = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ" },
     { researchgate = "https://www.researchgate.net/profile/Ryuma_Orita" },

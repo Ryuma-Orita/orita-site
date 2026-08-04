@@ -16,7 +16,9 @@ autoSwitchAppearance = false     # OSの設定には追従しない。
 disableImageZoom = true
 
 enableSearch = true
-disableImageOptimization = true  # SVGをそのまま使うために必要
+# 画像を Hugo に最適化させる（表示サイズに合わせて縮小・WebP化）。
+# ※ homepage.layout = "background" で SVG を背景に使う場合は true にすること。
+disableImageOptimization = false
 enableCodeCopy = false
 mainSections = ["publication", "talk"]
 defaultSocialImage = "img/ogp.png"  # 共有時のプレビュー画像

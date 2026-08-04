@@ -794,3 +794,68 @@ img[src*="author"] { pointer-events: none; }
 数値は `assets/css/custom.css` の `main h1` 付近です。
 まだ詰まって見える／空きすぎる場合は `margin-bottom` と
 `margin-top` の値を増減してください。
+
+### 2026-08-04 (29回目) — 最終点検と最適化
+
+機械的な点検で見つかった3点を修正しました。
+
+**1. 画像最適化を有効に戻した**
+
+`disableImageOptimization = true` は、トップページの背景に SVG を使うために
+入れた設定でしたが、その方式をやめたので不要になっていました。
+`false` に戻し、Hugo が表示サイズに合わせて画像を縮小・WebP化するようにしています。
+
+※ 将来 `homepage.layout = "background"` に戻す場合は `true` に戻してください。
+
+**2. 顔写真のサイズを適正化**
+
+1000×1024px（261KB）→ **720×720px（139KB）**。
+表示は最大でも 320px 程度なので、720px で 2倍解像度として十分です。
+上の最適化と合わせて、実際に配信されるのはさらに小さくなります。
+
+**3. 未使用ファイルの削除**
+
+- `assets/img/author-silhouette.jpg`（緑シルエット、参照ゼロ）
+- `layouts/partials/extend-article-link/simple.html`（重複。本体だけで動作確認済み）
+- `themes/ここにblowfishを入れます.txt`（設置完了済みのため）
+
+**点検して問題がなかったもの**
+
+- TOML 全8ファイル、front matter 全201ファイル、CSS の括弧対応
+- 日英の論文14本・講演40件がすべて対応（欠けなし）
+- 全ページに `summary` と本文あり
+- `themes/` は未編集（テーマを安全に更新できる状態）
+
+### 2026-08-04 (30回目) — 連絡先（メール）の追加
+
+プロフィールのリンク欄の先頭にメールアイコンを追加しました。
+
+**迷惑メール対策**
+
+アドレスは**サイトのどこにも文字列として書かれていません。**
+
+1. 設定ファイルにはダミーのURL（`https://example.invalid/mail`）だけを書く
+2. `layouts/partials/extend-footer.html` の JavaScript が、閲覧時に
+   断片（`orita` / `math` / `sc` / `niigata-u` / `ac` / `jp`）を組み立てて
+   `mailto:` に差し替える
+3. `@` も文字として書かず `String.fromCharCode(64)` で生成
+
+収集ボットはページのHTMLを読むだけなので、この形なら拾えません。
+HTML、RSS、サイトマップのいずれにもアドレスは現れません。
+
+**アドレスを変更するとき**
+
+`layouts/partials/extend-footer.html` の
+
+```js
+var u = "orita", d = ["math", "sc", "niigata-u", "ac", "jp"].join(".");
+```
+
+の部分を書き換えてください。
+
+**制約**
+
+JavaScript を切っている閲覧者にはリンクが機能しません（ダミーURLのまま）。
+ただし現在ほぼ全ての閲覧者で有効なので、実害はほぼありません。
+確実性を優先するなら、アドレスを平文で書く方法もありますが、
+迷惑メールとの引き換えになります。

@@ -30,3 +30,25 @@
   else { window.addEventListener("load", render); }
 })();
 </script>
+
+{{/*
+  メールアドレスの迷惑メール対策。
+
+  HTML には一切アドレスを書かず、断片から JavaScript で組み立てる。
+  収集ボットはページのソースを読むだけなので拾えない。
+  リンク先は data-* 属性の断片だけで、そこにも完全な形では現れない。
+
+  アドレスを変えるときは下の user / domain の値を書き換える。
+*/}}
+<script>
+(function () {
+  var u = "orita", d = ["math", "sc", "niigata-u", "ac", "jp"].join(".");
+  var sel = 'a[data-mail], a[href*="example.invalid"]';
+  document.querySelectorAll(sel).forEach(function (a) {
+    a.setAttribute("href", "ma" + "ilto:" + u + String.fromCharCode(64) + d);
+    a.setAttribute("title", "メールを送る");
+    a.removeAttribute("data-mail");
+    if (a.dataset.mailText !== undefined) { a.textContent = u + String.fromCharCode(64) + d; }
+  });
+})();
+</script>
