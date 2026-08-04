@@ -98,9 +98,34 @@ body::before {
 .prose table th:first-child,
 .prose table td:first-child { white-space: nowrap; }
 
-/* 職位・所属の列が痩せすぎないように */
-.prose table td:nth-child(2) { min-width: 12em; }
-.prose table td:nth-child(3) { min-width: 14em; }
+/* 職位・所属の列が痩せすぎないように（広い画面のみ） */
+@media (min-width: 641px) {
+  .prose table td:nth-child(2) { min-width: 12em; }
+  .prose table td:nth-child(3) { min-width: 14em; }
+}
+
+/* 狭い画面（スマートフォン）では折り返しを許す。
+   和文を折らない設定のままだと、長い所属名が画面からはみ出して
+   途中が読めなくなるため。 */
+@media (max-width: 640px) {
+  .prose table th,
+  .prose table td {
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: auto;
+    padding-right: 0.5rem;
+  }
+  .prose table td:first-child { white-space: nowrap; }
+}
+
+/* iOS が数字の並びを電話番号と誤認してリンクにすることがある。
+   extend-head.html で無効にしているが、万一リンク化されても
+   本文と同じ見た目になるようにしておく。 */
+a[href^="tel:"] {
+  color: inherit !important;
+  text-decoration: none !important;
+  pointer-events: none;
+}
 
 
 /* ------------------------------------------------------------
