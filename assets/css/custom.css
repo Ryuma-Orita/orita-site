@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&display=swap");
 
 /* ============================================================
    独自のスタイル調整
@@ -185,11 +185,38 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
   --orita-link:   #c3d8cd;   /* 本文リンク（明るすぎない淡緑） */
 }
 
-/* --- 見出しを明朝体に --- */
+/* --- 明朝体を使う箇所 ---
+
+   見出しと、ヘッダー（サイト名とメニュー）。
+   本文とフッターはゴシックのまま（長文の読みやすさを優先）。
+
+   ヘッダーの狙い方について
+     Blowfish のヘッダーは <header> ではなく
+     <div class="fixed inset-x-0 z-100"> という要素。
+     id も付いていないので、class の組み合わせで指定している。
+     テーマ更新で class が変わった場合は明朝体が外れるだけで、
+     表示が壊れることはない。 */
 main h1, main h2, main h3,
-.prose h1, .prose h2, .prose h3 {
+.prose h1, .prose h2, .prose h3,
+header,
+body > div[class~="fixed"][class~="inset-x-0"],
+body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
   font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", Georgia, serif;
   letter-spacing: 0.015em;
+}
+
+/* ヘッダーの中身（サイト名・メニュー）にも確実に届かせる。
+   テーマ側がメニューの <span> などに独自のフォントを指定していても
+   上書きできるよう、子孫まで指定する。 */
+body > div[class~="fixed"][class~="inset-x-0"] *,
+body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) * {
+  font-family: inherit;
+}
+
+/* メニューの文字は小さいので、字間を少しだけ空けて締める */
+body > div[class~="fixed"][class~="inset-x-0"],
+body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
+  letter-spacing: 0.04em;
 }
 
 /* トップページの名前。明朝体は字面が大きいので、
