@@ -1,0 +1,30 @@
+# ============================================================
+#  サイト全体の設定
+#  ★印は現行サイトのURLを保つための設定。変更しないこと。
+# ============================================================
+
+baseURL = "https://ryuma-orita.netlify.app/"
+theme = "blowfish"
+
+# ★ 英語をサブフォルダなしのルートに置く（/publication/... のまま）
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+# ★ ファイル名からURLを作るときの規則。現行と同じにする
+removePathAccents = true
+
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 0
+
+[pagination]
+  pagerSize = 100          # 論文・講演を1ページに全部出す
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON は検索機能に必要
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5

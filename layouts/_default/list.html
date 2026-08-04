@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{ partial "orita-styles.html" . }}
+{{ $lang := .Site.Language.Lang }}
+<article class="orita">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="orita-prose">{{ . }}</div>{{ end }}
+
+  {{ if eq .Section "publication" }}
+    {{ range .Pages.GroupByDate "2006" }}
+    <section class="orita-group">
+      <h2 class="orita-year">{{ .Key }}</h2>
+      <ul class="orita-items">
+        {{ range .Pages }}
+        <li class="orita-item">
+          <h3 class="orita-item-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params.pubtype }}<span class="orita-chip">{{ partial "orita-kind.html" (dict "kind" . "lang" $lang) }}</span>{{ end }}
+          </h3>
+          {{ with .Params.authors }}<p class="orita-authors">{{ delimit . ", " }}</p>{{ end }}
+          {{ with .Params.citation }}<p class="orita-cite">{{ . | markdownify }}</p>{{ end }}
+          {{ with .Params.links }}
+          <ul class="orita-links">
+            {{ range . }}<li><a href="{{ .url }}" rel="noopener">{{ .name }}</a></li>{{ end }}
+          </ul>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+
+  {{ else if or (eq .Section "talk") (eq .Section "lecture") }}
+    {{ range .Pages.GroupByDate "2006" }}
+    <section class="orita-group">
+      <h2 class="orita-year">{{ .Key }}</h2>
+      <ul class="orita-items">
+        {{ range .Pages }}
+        <li class="orita-item">
+          <h3 class="orita-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ with .Params.event }}<p class="orita-cite">{{ . }}</p>{{ end }}
+          {{ with .Params.summary }}<p class="orita-cite">{{ . }}</p>{{ end }}
+          <p class="orita-meta">
+            {{ partial "orita-daterange.html" . }}
+            {{ with .Params.location }} &middot; {{ . }}{{ end }}
+          </p>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+
+  {{ else }}
+    <ul class="orita-items">
+      {{ range .Pages.ByDate.Reverse }}
+      <li class="orita-item">
+        <h3 class="orita-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</article>
+{{ end }}

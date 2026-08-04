@@ -1,0 +1,34 @@
+locale = "ja"
+contentDir = "content/ja"   # ★ この言語の原稿の置き場所
+label = "日本語"
+weight = 2
+title = "折田 龍馬"
+
+[params]
+  displayName = "JA"
+  isoCode = "ja"
+  rtl = false
+  dateFormat = "2006年1月2日"
+  description = "折田 龍馬 — 新潟大学理学部 准教授。シンプレクティック幾何学・ハミルトン力学系。"
+
+[params.author]
+  name = "折田 龍馬"
+  image = "img/author.jpg"
+  headline = "新潟大学理学部 准教授"
+  bio = "シンプレクティック多様体上のハミルトン力学系について研究しています。"
+
+[[params.profileLinks]]
+  name = "arXiv"
+  url = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R"
+
+[[params.profileLinks]]
+  name = "Google Scholar"
+  url = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ"
+
+[[params.profileLinks]]
+  name = "ResearchGate"
+  url = "https://www.researchgate.net/profile/Ryuma_Orita"
+
+[[params.profileLinks]]
+  name = "ORCID"
+  url = "https://orcid.org/0000-0002-0475-7030"

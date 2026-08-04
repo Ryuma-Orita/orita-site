@@ -1,0 +1,8 @@
+{{- $fmt := "2006-01-02" -}}
+{{- $s := .Date.Format $fmt -}}
+{{- with .Params.date_end -}}
+  {{- $e := dateFormat $fmt . -}}
+  {{- if eq $s $e }}{{ $s }}{{ else }}{{ $s }} – {{ $e }}{{ end -}}
+{{- else -}}
+  {{- $s -}}
+{{- end -}}

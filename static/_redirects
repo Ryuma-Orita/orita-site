@@ -1,0 +1,8 @@
+# Academic テーマが自動生成していた索引ページの受け皿。
+# これらのURLにアクセスがあっても404にならず、適切なページへ転送される。
+/authors/*              /               301
+/ja/authors/*           /ja/            301
+/publication_types/*    /publication/   301
+/ja/publication_types/* /ja/publication/ 301
+/categories/*           /               301
+/ja/categories/*        /ja/            301

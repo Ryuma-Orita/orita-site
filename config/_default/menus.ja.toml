@@ -1,0 +1,19 @@
+[[main]]
+  name = "論文"
+  url = "/ja/publication/"
+  weight = 10
+
+[[main]]
+  name = "講演"
+  url = "/ja/talk/"
+  weight = 20
+
+[[main]]
+  name = "授業"
+  url = "/ja/lecture/"
+  weight = 30
+
+[[main]]
+  name = "ゼミ"
+  url = "/ja/zemi/"
+  weight = 40

@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ partial "orita-styles.html" . }}
+{{ $lang := .Site.Language.Lang }}
+<article class="orita">
+  <h1>{{ .Title }}</h1>
+
+  {{ if eq .Section "publication" }}
+    <div class="orita-single-meta">
+      {{ with .Params.authors }}<p class="orita-authors">{{ delimit . ", " }}</p>{{ end }}
+      {{ with .Params.citation_full }}<p class="orita-cite">{{ . | markdownify }}</p>
+      {{ else }}{{ with .Params.citation }}<p class="orita-cite">{{ . | markdownify }}</p>{{ end }}{{ end }}
+      <p class="orita-meta">
+        {{ .Date.Format "2006-01-02" }}
+        {{ with .Params.pubtype }}<span class="orita-chip">{{ partial "orita-kind.html" (dict "kind" . "lang" $lang) }}</span>{{ end }}
+      </p>
+      {{ with .Params.links }}
+      <ul class="orita-links">
+        {{ range . }}<li><a href="{{ .url }}" rel="noopener">{{ .name }}</a></li>{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+
+  {{ else if or (eq .Section "talk") (eq .Section "lecture") }}
+    <div class="orita-single-meta">
+      {{ with .Params.event }}<p class="orita-cite">{{ . }}</p>{{ end }}
+      {{ with .Params.summary }}<p class="orita-cite">{{ . }}</p>{{ end }}
+      <p class="orita-meta">
+        {{ partial "orita-daterange.html" . }}
+        {{ with .Params.location }} &middot; {{ . }}{{ end }}
+      </p>
+      {{ with .Params.event_url }}
+      <ul class="orita-links">
+        <li><a href="{{ . }}" rel="noopener">{{ if eq $lang "ja" }}イベントページ{{ else }}Event page{{ end }}</a></li>
+      </ul>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ with .Params.abstract }}
+  <section class="orita-abstract">
+    <h2>{{ if eq $lang "ja" }}概要{{ else }}Abstract{{ end }}</h2>
+    <p>{{ . | markdownify }}</p>
+  </section>
+  {{ end }}
+
+  <div class="orita-prose">{{ .Content }}</div>
+</article>
+{{ end }}

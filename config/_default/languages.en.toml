@@ -1,0 +1,34 @@
+locale = "en"
+contentDir = "content/en"   # ★ この言語の原稿の置き場所
+label = "English"
+weight = 1
+title = "Ryuma ORITA"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Ryuma Orita — Associate Professor of Mathematics, Niigata University. Symplectic geometry and Hamiltonian dynamics."
+
+[params.author]
+  name = "Ryuma ORITA"
+  image = "img/author.jpg"
+  headline = "Associate Professor, Department of Mathematics, Niigata University"
+  bio = "My research interests include Hamiltonian dynamics in symplectic geometry."
+
+[[params.profileLinks]]
+  name = "arXiv"
+  url = "https://arxiv.org/search/?searchtype=author&query=Orita%2C+R"
+
+[[params.profileLinks]]
+  name = "Google Scholar"
+  url = "https://scholar.google.co.uk/citations?user=I417yJYAAAAJ"
+
+[[params.profileLinks]]
+  name = "ResearchGate"
+  url = "https://www.researchgate.net/profile/Ryuma_Orita"
+
+[[params.profileLinks]]
+  name = "ORCID"
+  url = "https://orcid.org/0000-0002-0475-7030"

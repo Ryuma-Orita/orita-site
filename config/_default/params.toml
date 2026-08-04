@@ -1,0 +1,57 @@
+# ============================================================
+#  テーマ (Blowfish) の見た目・機能の設定
+#  好みに応じて値を変えて構いません。
+# ============================================================
+
+colorScheme = "slate"        # 他の候補: blowfish, ocean, forest, noir, one-light
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = false
+mainSections = ["publication", "talk"]
+
+[header]
+  layout = "fixed-fill-blur"
+
+[footer]
+  showMenu = false
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+# --- トップページ: プロフィール型（写真・肩書・自己紹介・リンク）---
+[homepage]
+  layout = "custom"
+  showRecent = false
+
+# --- 個別ページ ---
+[article]
+  showDate = true
+  showAuthor = false
+  showBreadcrumbs = false
+  showDraftLabel = false
+  showHeadingAnchors = true
+  showPagination = false
+  showReadingTime = false
+  showTableOfContents = false
+  showTaxonomies = false
+  showWordCount = false
+  showComments = false
+  showZenMode = false
+  sharingLinks = false
+
+# --- 一覧ページ ---
+[list]
+  showBreadcrumbs = false
+  showSummary = false
+  showCards = false
+  groupByYear = true
+  constrainItemsWidth = true
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true

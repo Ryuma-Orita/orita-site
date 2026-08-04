@@ -1,0 +1,9 @@
+{{/* 出版種別の表示名を言語別に返す。使い方: {{ partial "orita-kind.html" (dict "kind" .Params.kind "lang" $.Site.Language.Lang) }} */}}
+{{- $all := dict
+  "en" (dict "journal" "Journal article" "preprint" "Preprint" "conference" "Conference paper"
+             "book" "Book" "chapter" "Book chapter" "thesis" "Thesis" "report" "Report" "other" "Other")
+  "ja" (dict "journal" "学術論文" "preprint" "プレプリント" "conference" "国際会議論文"
+             "book" "書籍" "chapter" "分担執筆" "thesis" "学位論文" "report" "報告" "other" "その他")
+-}}
+{{- $labels := index $all .lang | default (index $all "en") -}}
+{{- index $labels .kind | default .kind -}}

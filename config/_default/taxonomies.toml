@@ -1,0 +1,2 @@
+# タグだけ使う。Academic が作っていた authors / publication_types は廃止。
+tag = "tags"
