@@ -37,12 +37,12 @@ body::before {
   background-repeat: repeat;
   background-size: 720px 720px;
 
-  opacity: 0.5;
-  animation: orita-bg-drift 45s linear infinite;
+  opacity: 0.24;   /* ライトは控えめに（本文と競わせない） */
+  animation: orita-bg-drift 15s linear infinite;
   will-change: transform;
 }
 
-.dark body::before { opacity: 0.22; }
+.dark body::before { opacity: 0.30; }   /* ダークはもう少し出す */
 
 @media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
 @media print { body::before { display: none; } }
@@ -58,8 +58,17 @@ body::before {
 
 .prose { text-align: left; }
 
-/* 表は幅いっぱいに広げ、行間を少し詰める */
-.prose table { width: 100%; }
+/* トップページの経歴・学位の表は、見出し行を出さない
+   （「年 学位 大学」のような行が不要なため）。
+   一覧やほかのページの表には影響しない。 */
+.prose table thead { display: none; }
+
+/* 表は幅いっぱいに。狭い画面でも崩れないよう横スクロールを許す */
+.prose table { width: 100%; display: block; overflow-x: auto; }
+.prose table th, .prose table td { white-space: normal; }
+/* 期間・年の列は折り返さない */
+.prose table td:first-child,
+.prose table th:first-child { white-space: nowrap; }
 .prose table td,
 .prose table th { padding-top: 0.45rem; padding-bottom: 0.45rem; }
 

@@ -14,6 +14,7 @@ title = "折田 龍馬"
 [params.author]
   name = "折田 龍馬"
   image = "img/author.jpg"
+  imageQuality = 96
   headline = "新潟大学理学部 准教授"
   bio = "シンプレクティック多様体上のハミルトン力学系について研究しています。"
   links = [

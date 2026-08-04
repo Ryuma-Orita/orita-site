@@ -14,6 +14,7 @@ title = "Ryuma ORITA"
 [params.author]
   name = "Ryuma ORITA"
   image = "img/author.jpg"
+  imageQuality = 96
   headline = "Associate Professor, Department of Mathematics, Niigata University"
   bio = "My research interests include Hamiltonian dynamics in symplectic geometry."
   links = [
