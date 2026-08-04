@@ -275,8 +275,10 @@ summary:not(#no-such-id):hover *,
 [role="button"]:not(#no-such-id):hover,
 [role="button"]:not(#no-such-id):hover * {
   color: var(--orita-accent) !important;
+  /* テーマは下線の色も別クラス（hover:decoration-primary-400）で
+     指定しているので、こちらも揃える */
+  text-decoration-color: var(--orita-accent) !important;
 }
-.prose a:hover { text-decoration-color: var(--orita-accent); }
 
 /* (4) アイコンだけのリンクは色を変えない。ホバーは薄くするだけ。
    (3) より強い指定にするため、こちらにも :not(#no-such-id) を重ねる。 */
