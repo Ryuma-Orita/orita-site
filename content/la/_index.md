@@ -1,28 +1,28 @@
 ---
-title: "Ryuma ORITA"
-description: "Professor extraordinarius mathematicae in Universitate Niigatensi"
+title: "Ryūma ORITA"
+description: "Professor extrāōrdinārius mathēmaticae in Ūniversitāte Niigatēnsī"
 ---
 
-Mathematicam in Universitate Niigatensi doceo atque investigo.
-Studia mea ad topologiam et geometriam symplecticam pertinent.
+Mathēmaticam in Ūniversitāte Niigatēnsī doceō atque investīgō.
+Studia mea ad topologiam et geōmetriam symplecticam pertinent.
 
 ### Studia
 
-- Theoria Morsiana et theoria Floeriana
-- Moduli persistentiae
-- Complexitas topologica
+- Theōria Morsiāna et theōria Floeriāna
+- Modulī persistentiae
+- Complexitās topologica
 
-### Munera et gradus
+### Mūnera et gradūs
 
-| Tempus | Munus vel gradus | Institutum |
+| Tempus | Mūnus vel gradus | Īnstitūtum |
 |---|---|---|
-| 2024.7 – | Professor extraordinarius | [Universitas Niigatensis](https://www.niigata-u.ac.jp/en/) |
-| 2020.3 – 2024.6 | Professor adiunctus | [Universitas Niigatensis](https://www.niigata-u.ac.jp/en/) |
-| 2018.4 – 2020.2 | Investigator JSPS (PD) | [Universitas Metropolitana Tokiensis](https://www.tmu.ac.jp/english/index.html) |
-| 2017.8 – 2018.3 | Investigator post doctoratum | [Centrum Nationale Scientiarum Theoreticarum (NCTS)](http://www.ncts.ntu.edu.tw/) |
-| 2017.3 | Doctor scientiarum mathematicarum | [Universitas Tokiensis](https://www.u-tokyo.ac.jp/en/) |
-| 2014.4 – 2017.3 | Investigator JSPS (DC1) | [Universitas Tokiensis](https://www.u-tokyo.ac.jp/en/) |
-| 2014.3 | Magister scientiarum mathematicarum | [Universitas Tokiensis](https://www.u-tokyo.ac.jp/en/) |
-| 2012.3 | Baccalaureus scientiarum | [Universitas Kyushuensis](https://www.kyushu-u.ac.jp/en/) |
+| 2024.7 – | Professor extrāōrdinārius | [Ūniversitās Niigatēnsis](https://www.niigata-u.ac.jp/en/) |
+| 2020.3 – 2024.6 | Professor adiūnctus | [Ūniversitās Niigatēnsis](https://www.niigata-u.ac.jp/en/) |
+| 2018.4 – 2020.2 | Investīgātor JSPS (PD) | [Ūniversitās Mētropolītāna Tōkiēnsis](https://www.tmu.ac.jp/english/index.html) |
+| 2017.8 – 2018.3 | Investīgātor post doctōrātum | [Centrum Nātiōnāle Scientiārum Theōrēticārum (NCTS)](http://www.ncts.ntu.edu.tw/) |
+| 2017.3 | Doctor scientiārum mathēmaticārum | [Ūniversitās Tōkiēnsis](https://www.u-tokyo.ac.jp/en/) |
+| 2014.4 – 2017.3 | Investīgātor JSPS (DC1) | [Ūniversitās Tōkiēnsis](https://www.u-tokyo.ac.jp/en/) |
+| 2014.3 | Magister scientiārum mathēmaticārum | [Ūniversitās Tōkiēnsis](https://www.u-tokyo.ac.jp/en/) |
+| 2012.3 | Baccalaureus scientiārum | [Ūniversitās Kyūshūēnsis](https://www.kyushu-u.ac.jp/en/) |
 
-*Paginae pleniores (scripta, acroases, doctrina) Anglice et Iaponice praesto sunt.*
+*Pāginae plēniōrēs (scrīpta, acroāsēs, doctrīna) Anglicē et Iaponicē praestō sunt.*

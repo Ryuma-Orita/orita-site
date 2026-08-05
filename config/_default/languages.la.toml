@@ -2,21 +2,21 @@ locale = "la"
 contentDir = "content/la"   # ★ この言語の原稿の置き場所
 label = "Latina"
 weight = 10
-title = "Ryuma ORITA"
+title = "Ryūma ORITA"
 
 [params]
   displayName = "Latina"
   isoCode = "la"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Ryuma Orita — professor extraordinarius mathematicae in Universitate Niigatensi."
+  description = "Ryūma Orita — professor extrāōrdinārius mathēmaticae in Ūniversitāte Niigatēnsī."
 
 [params.author]
-  name = "Ryuma ORITA"
+  name = "Ryūma ORITA"
   image = "img/author.jpg"
   imageQuality = 96
-  headline = "Professor extraordinarius, Institutum Mathematicum, Universitas Niigatensis"
-  bio = "De systematibus dynamicis Hamiltonianis in geometria symplectica investigo."
+  headline = "Professor extrāōrdinārius, Īnstitūtum Mathēmaticum, Ūniversitās Niigatēnsis"
+  bio = "Dē systēmatibus dynamicīs Hamiltoniānīs in geōmetriā symplecticā investīgō."
   links = [
     # ↓ ダミーのURL。実際のアドレスは書かない（迷惑メール対策）。
     { email = "https://example.invalid/mail" },

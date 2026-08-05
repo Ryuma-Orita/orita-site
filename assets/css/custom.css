@@ -287,7 +287,14 @@ html[lang^="el" i]        { --orita-serif-local: "Noto Serif"; }
 :lang(ru),
 html[lang^="ru" i]        { --orita-serif-local: "Noto Serif"; }
 :lang(he),
-html[lang^="he" i]        { --orita-serif-local: "Noto Serif"; }   /* 明體 */
+html[lang^="he" i]        { --orita-serif-local: "Noto Serif"; }
+
+/* ラテン語版は母音の長短をマクロン（ā ē ī ō ū）で明記している。
+   Zen Old Mincho にこれらの字があるとは限らず、無ければ別のフォントから
+   合成されて字体が混ざる（ギリシャ文字と同じ型の問題）。
+   マクロンを確実に持つ欧文セリフ体を先に置く。 */
+:lang(la),
+html[lang^="la" i]        { --orita-serif-local: "Noto Serif"; }   /* 明體 */
 .dark {
   --orita-accent: #a9d5bd;   /* ミルキーグリーン */
   --orita-link:   #c3d8cd;   /* 本文リンク（明るすぎない淡緑） */

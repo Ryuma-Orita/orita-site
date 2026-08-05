@@ -1,17 +1,17 @@
 # この言語はトップページのみ。メニューは英語ページへ誘導する。
 
 [[main]]
-  name = "Scripta"
+  name = "Scrīpta"
   url = "/publication/"
   weight = 10
 
 [[main]]
-  name = "Acroases"
+  name = "Acroāsēs"
   url = "/talk/"
   weight = 20
 
 [[main]]
-  name = "Doctrina"
+  name = "Doctrīna"
   url = "/lecture/"
   weight = 30
 

@@ -1,68 +1,70 @@
 # ラテン語のUI文言。テーマに存在しないため全文をサイト側で提供する。
+# 母音の長短はマクロンで明記する（ラテン語では長短が語を弁別するため）。
+# 二重母音 ae, au, oe には慣習どおりマクロンを付けない。
 global:
   language: "LA"
 
 article:
   anchor_label: "Ancora"
   date: "{{ .Date }}"
-  date_updated: "Renovatum: {{ .Date }}"
-  draft: "Adumbratio"
-  edit_title: "Contenta recensere"
+  date_updated: "Renovātum: {{ .Date }}"
+  draft: "Adumbrātiō"
+  edit_title: "Contenta recēnsēre"
   reading_time:
-    one: "{{ .Count }} minutum"
-    other: "{{ .Count }} minuta"
-  reading_time_title: "Tempus legendi"
+    one: "{{ .Count }} minūtum"
+    other: "{{ .Count }} minūta"
+  reading_time_title: "Tempus legendī"
   table_of_contents: "Index capitum"
   word_count:
     one: "{{ .Count }} verbum"
     other: "{{ .Count }} verba"
   views:
-    one: "{{ .Count }} visio"
-    other: "{{ .Count }} visiones"
+    one: "{{ .Count }} vīsiō"
+    other: "{{ .Count }} vīsiōnēs"
   likes:
     one: "{{ .Count }} «placet»"
     other: "{{ .Count }} «placet»"
-  part_of_series: "Hic articulus pars seriei est."
+  part_of_series: "Hic articulus pars seriēī est."
   part: "Pars"
   this_article: "Hic articulus"
-  related_articles: "Affinia"
-  reply_by_email: "Per litteras electronicas respondere"
-  reply_to: "Respondere ad {{ .Title }}"
+  related_articles: "Affīnia"
+  reply_by_email: "Per litterās ēlectronicās respondēre"
+  reply_to: "Respondēre ad {{ .Title }}"
   zen_mode_title:
-    enable: "Modum zen inire"
+    enable: "Modum zen inīre"
     disable: "Modum zen relinquere"
 
 a11y:
-  title: "Optiones accessibilitatis"
+  title: "Optiōnēs accessibilitātis"
   disable_blur: "Nebulam tollere"
-  disable_images: "Imaginem subiectam tollere"
-  show_link_underline: "Nexus sublineare"
-  font_size: "Magnitudo litterarum"
+  disable_images: "Imāginem subiectam tollere"
+  show_link_underline: "Nexūs sublineāre"
+  font_size: "Magnitūdō litterārum"
 
 author:
   byline_title: "Auctor"
 
 code:
-  copy: "Exscribere"
-  copied: "Exscriptum"
+  copy: "Exscrībere"
+  copied: "Exscrīptum"
 
 error:
-  404_title: "Pagina non inventa :confused:"
+  404_title: "Pāgina nōn inventa :confused:"
   404_error: "Error 404"
-  404_description: "Pagina quam petivisti non exstare videtur."
+  404_description: "Pāgina quam petīvistī nōn exstāre vidētur."
 
 footer:
-  dark_appearance: "Ad speciem obscuram mutare"
-  light_appearance: "Ad speciem claram mutare"
-  powered_by: "Confectum per {{ .Hugo }} &amp; {{ .Theme }}"
+  dark_appearance: "Ad speciem obscūram mūtāre"
+  light_appearance: "Ad speciem clāram mūtāre"
+  powered_by: "Cōnfectum per {{ .Hugo }} &amp; {{ .Theme }}"
 
 list:
   externalurl_title: "Nexus ad situm externum"
-  no_articles: "Nulli articuli adhuc hic sunt."
+  no_articles: "Nūllī articulī adhūc hīc sunt."
 
 nav:
   scroll_to_top_title: "Ad summum volvere"
-  skip_to_main: "Ad contenta principalia transire"
+  skip_to_main: "Ad contenta prīncipālia trānsīre"
 
 search:
   open_button_title: "Quaerere (/)"
@@ -70,37 +72,37 @@ search:
   input_placeholder: "Quaerere"
 
 sharing:
-  email: "Per litteras electronicas mittere"
-  facebook: "Apud Facebook communicare"
-  line: "Apud LINE communicare"
-  linkedin: "Apud LinkedIn communicare"
-  pinterest: "Apud Pinterest affigere"
-  reddit: "Apud Reddit proponere"
-  twitter: "Apud Twitter divulgare"
-  bluesky: "Apud Bluesky divulgare"
-  whatsapp: "Per WhatsApp communicare"
-  telegram: "Per Telegram communicare"
-  mastodon: "Per Mastodon communicare"
+  email: "Per litterās ēlectronicās mittere"
+  facebook: "Apud Facebook commūnicāre"
+  line: "Apud LINE commūnicāre"
+  linkedin: "Apud LinkedIn commūnicāre"
+  pinterest: "Apud Pinterest affīgere"
+  reddit: "Apud Reddit prōpōnere"
+  twitter: "Apud Twitter dīvulgāre"
+  bluesky: "Apud Bluesky dīvulgāre"
+  whatsapp: "Per WhatsApp commūnicāre"
+  telegram: "Per Telegram commūnicāre"
+  mastodon: "Per Mastodon commūnicāre"
 
 shortcode:
   recent_articles: "Recentia"
 
 recent:
-  show_more: "Plura monstrare"
+  show_more: "Plūra mōnstrāre"
 
 admonition:
-  abstract: "Summarium"
+  abstract: "Summārium"
   bug: "Mendum"
-  caution: "Cautio"
-  danger: "Periculum"
+  caution: "Cautiō"
+  danger: "Perīculum"
   example: "Exemplum"
-  failure: "Defectus"
-  important: "Magni momenti"
-  info: "Notitia"
+  failure: "Dēfectus"
+  important: "Magnī mōmentī"
+  info: "Nōtitia"
   note: "Nota"
-  question: "Quaestio"
-  quote: "Citatio"
+  question: "Quaestiō"
+  quote: "Citātiō"
   success: "Successus"
-  tip: "Consilium"
+  tip: "Cōnsilium"
   todo: "Agenda"
   warning: "Monitum"

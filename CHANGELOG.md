@@ -3146,3 +3146,47 @@ a[href$="/zh-tw/"] { font-family: "Noto Serif TC", serif !important; }
 
 **教訓**：「ページの言語」と「そこに書かれている文字の言語」は別物。
 多言語サイトでは、**言語切替の一覧だけが常に例外**になる。
+
+### 2026-08-05 (102回目) — ラテン語版に母音の長短（マクロン）を明記
+
+ラテン語は母音の長短が語を弁別する言語のため（malum 悪 / mālum 林檎）、
+学術的な版では長母音をマクロンで示す。ラテン語版の**全文**に適用した。
+
+**適用範囲と個数**
+
+| ファイル | マクロン |
+|---|---|
+| content/la/_index.md | 96 |
+| config/_default/languages.la.toml | 30 |
+| config/_default/menus.la.toml | 4 |
+| i18n/la.yaml（UI文言73項目） | 94 |
+| **合計** | **224** |
+
+**表記の方針**
+
+- **ラテン語本来の語** … 古典期の音量に従う
+  （mūnus, ūniversitās, investīgō, extrāōrdinārius, mathēmatica,
+  geōmetria, theōria, nātiōnālis, magnitūdō, perīculum …）
+- **ギリシャ語由来** … 元の η ω を長音として反映
+  （mathēmatica ← μαθηματικά、geōmetria ← γεωμετρία、
+  theōrēticus ← θεωρητικός、mētropolītānus ← μητρόπολις）
+- **日本由来の固有名** … 日本語の発音に従う
+  （**Ryūma**、Tōkiēnsis、Kyūshūēnsis。Niigata は ii が二拍を表すため据置）
+- **二重母音 ae, au, oe** … 慣習どおりマクロンを付けない
+  （Pāginae, Baccalaureus, Quaerere, Cautiō）
+- 一方で **Iaponia** は日本語の直接転写ではなくラテン語の語なので、
+  確実な副詞語尾のみを示して Iaponicē とした
+
+**あわせてフォントを指定**
+
+ラテン語ページの既定フォントは Zen Old Mincho だが、日本語フォントに
+ā ē ī ō ū があるとは限らず、無ければ別フォントから合成されて字体が混ざる
+（100回目のギリシャ文字と同じ型の問題）。**先回りして** `:lang(la)` に
+Noto Serif を指定した。
+
+**検証**：i18n 73項目の過不足なし / すべて合成済み文字（NFC）で
+結合文字ゼロ / TOML 32・YAML 14・front matter 解析OK /
+ページ構造は他言語と同一（見出し2・項目3・表8行・リンク8・注記1）。
+
+**注記**：新ラテン語の造語（persistentia, ēlectronicus, sublineāre 等）や
+日本の地名の音量は慣習によるところがあり、絶対的な典拠はない。
