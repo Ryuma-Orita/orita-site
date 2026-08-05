@@ -337,6 +337,24 @@ body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) * {
   font-family: inherit;
 }
 
+/* --- 言語一覧の各項目 ---
+
+   一覧は「その言語の文字」で書かれるが、ページ自体の言語は別のこと
+   （フランス語のページでギリシャ語の項目を見る等）。そのため
+   :lang() では狙えず、上の指定でページの言語のフォントが当たってしまう。
+   例：仏語ページの「Ελληνικά」が Zen Old Mincho の斜体ギリシャ文字になる。
+
+   リンク先（/el/ など）で項目を特定して、その言語の文字に合う
+   フォントを当てる。ヘッダー全体への指定より後から優先させる必要が
+   あるため !important を使う（この用途に限る）。
+   テーマ側のリンクの書き方が変わっても、当たらなくなるだけで壊れない。 */
+a[href$="/el/"],
+a[href$="/ru/"],
+a[href$="/he/"]    { font-family: "Noto Serif", "Times New Roman", serif !important; }
+a[href$="/ko/"]    { font-family: "Noto Serif KR", serif !important; }
+a[href$="/zh-cn/"] { font-family: "Noto Serif SC", serif !important; }
+a[href$="/zh-tw/"] { font-family: "Noto Serif TC", serif !important; }
+
 /* メニューの文字は小さいので、字間を少しだけ空けて締める */
 body > div[class~="fixed"][class~="inset-x-0"],
 body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
