@@ -287,7 +287,7 @@ html[lang^="el" i]        { --orita-serif-local: "Noto Serif"; }
 :lang(ru),
 html[lang^="ru" i]        { --orita-serif-local: "Noto Serif"; }
 :lang(he),
-html[lang^="he" i]        { --orita-serif-local: "Noto Serif"; }
+html[lang^="he" i]        { --orita-serif-local: "Noto Serif Hebrew"; }
 
 /* ラテン語版は母音の長短をマクロン（ā ē ī ō ū）で明記している。
    Zen Old Mincho にこれらの字があるとは限らず、無ければ別のフォントから
@@ -331,6 +331,7 @@ body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
   font-family: var(--orita-serif-local, "Zen Old Mincho"),
                "Zen Old Mincho", "Noto Serif", "Times New Roman",
                "Noto Serif JP", "Yu Mincho",
+               "Noto Serif Hebrew",
                "Noto Serif KR", "Noto Serif SC", "Noto Serif TC",
                Georgia, serif;
   letter-spacing: 0.015em;
@@ -356,8 +357,8 @@ body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) * {
    あるため !important を使う（この用途に限る）。
    テーマ側のリンクの書き方が変わっても、当たらなくなるだけで壊れない。 */
 a[href$="/el/"],
-a[href$="/ru/"],
-a[href$="/he/"]    { font-family: "Noto Serif", "Times New Roman", serif !important; }
+a[href$="/ru/"]    { font-family: "Noto Serif", "Times New Roman", serif !important; }
+a[href$="/he/"]    { font-family: "Noto Serif Hebrew", "Times New Roman", serif !important; }
 a[href$="/ko/"]    { font-family: "Noto Serif KR", serif !important; }
 a[href$="/zh-cn/"] { font-family: "Noto Serif SC", serif !important; }
 a[href$="/zh-tw/"] { font-family: "Noto Serif TC", serif !important; }
