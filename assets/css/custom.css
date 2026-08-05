@@ -274,7 +274,20 @@ html[lang="zh-cn" i],
 html[lang="zh-Hans" i]    { --orita-serif-local: "Noto Serif SC"; }   /* 宋体 */
 :lang(zh-TW),
 html[lang="zh-tw" i],
-html[lang="zh-Hant" i]    { --orita-serif-local: "Noto Serif TC"; }   /* 明體 */
+html[lang="zh-Hant" i]    { --orita-serif-local: "Noto Serif TC"; }
+
+/* ギリシャ語・ロシア語・ヘブライ語
+   Zen Old Mincho は日本のJIS規格由来でギリシャ文字・キリル文字を含むが、
+   小文字が数式用の斜体で設計されている（α, β, γ を変数として使う慣習）。
+   そのため「Ελληνικά」は大文字 Ε だけ直立し、小文字が斜体に見える。
+   欧文セリフ体を先に置いて正しい字体で描かせる。
+   ヘブライ文字は Noto Serif にも無いが、後続の Times New Roman に落ちる。 */
+:lang(el),
+html[lang^="el" i]        { --orita-serif-local: "Noto Serif"; }
+:lang(ru),
+html[lang^="ru" i]        { --orita-serif-local: "Noto Serif"; }
+:lang(he),
+html[lang^="he" i]        { --orita-serif-local: "Noto Serif"; }   /* 明體 */
 .dark {
   --orita-accent: #a9d5bd;   /* ミルキーグリーン */
   --orita-link:   #c3d8cd;   /* 本文リンク（明るすぎない淡緑） */
