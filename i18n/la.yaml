@@ -49,9 +49,9 @@ code:
   copied: "Exscrīptum"
 
 error:
-  404_title: "Pāgina nōn inventa :confused:"
+  404_title: "Pāgina nōn inventa"
   404_error: "Error 404"
-  404_description: "Pāgina quam petīvistī nōn exstāre vidētur."
+  404_description: "Haec īnscrīptiō ad regiōnem dēfīnītiōnis huius sitūs pertinēre nōn vidētur."
 
 footer:
   dark_appearance: "Ad speciem obscūram mūtāre"

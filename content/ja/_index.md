@@ -30,3 +30,5 @@ description: "新潟大学理学部 准教授"
 | 2014.4 – 2017.3 | 日本学術振興会 特別研究員‑DC1 | [東京大学](https://www.u-tokyo.ac.jp/) |
 | 2014.3 | 修士 (数理科学) 取得 | [東京大学](https://www.u-tokyo.ac.jp/) |
 | 2012.3 | 学士 (理学) 取得 | [九州大学](https://www.kyushu-u.ac.jp/) |
+
+*[このサイトについて](/ja/about-site/)*
