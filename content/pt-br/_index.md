@@ -4,13 +4,13 @@ description: "Professor associado de matemática, Universidade de Niigata"
 ---
 
 Sou professor associado no Departamento de Matemática da Universidade de Niigata.
-Minha pesquisa trata da dinâmica hamiltoniana em geometria simplética.
+Minha pesquisa está na topologia e na geometria simplética.
+Interesso-me em particular pela teoria de Morse, pela dinâmica hamiltoniana, pelos módulos de persistência e pela complexidade topológica.
 
-### Áreas de pesquisa
+### Novidades
 
-- Teoria de Morse e teoria de Floer
-- Módulos de persistência
-- Complexidade topológica
+- 23 de julho de 2026 · "Maximal topological complexity of monotone symplectic 4-manifolds" foi disponibilizado no arXiv. [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 30 de junho de 2026 · "Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric" foi publicado no periódico *Journal of Topology and Analysis*. [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### Formação e cargos
 

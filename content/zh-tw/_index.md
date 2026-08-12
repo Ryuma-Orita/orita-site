@@ -4,13 +4,13 @@ description: "新潟大學理學部 副教授"
 ---
 
 我在新潟大學理學部從事數學的教學與研究。
-研究領域為拓撲學與辛幾何，尤其關注莫爾斯理論、哈密頓動力系統與持續模。
+研究領域為拓撲學與辛幾何。
+尤其關注莫爾斯理論、哈密頓動力系統、持續模與拓撲複雜度。
 
-### 研究領域
+### 最新消息
 
-- 莫爾斯理論與弗洛爾理論
-- 持續模
-- 拓撲複雜度
+- 2026年7月23日 · 將 Maximal topological complexity of monotone symplectic 4-manifolds 投稿至 arXiv。 [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 2026年6月30日 · Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric 發表於 Journal of Topology and Analysis。 [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### 簡歷
 

@@ -4,13 +4,13 @@ description: "פרופסור חבר למתמטיקה, אוניברסיטת נִ�
 ---
 
 אני פרופסור חבר בחוג למתמטיקה באוניברסיטת נִיאִיגָטָה.
-תחומי המחקר שלי כוללים דינמיקה המילטונית בגאומטריה סימפלקטית.
+המחקר שלי עוסק בטופולוגיה ובגאומטריה סימפלקטית.
+מעניינים אותי במיוחד תורת מורס, דינמיקה המילטונית, מודולי פרסיסטנטיות ומורכבות טופולוגית.
 
-### תחומי מחקר
+### חדשות
 
-- תורת מורס ותורת פלואר
-- מודולי פרסיסטנטיות
-- מורכבות טופולוגית
+- <span dir="ltr">23.7.2026</span> · המאמר <span dir="ltr">"Maximal topological complexity of monotone symplectic 4-manifolds"</span> הועלה ל־<span dir="ltr">arXiv</span>. [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- <span dir="ltr">30.6.2026</span> · המאמר <span dir="ltr">"Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric"</span> פורסם בכתב העת <span dir="ltr">Journal of Topology and Analysis</span>. [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### השכלה ותפקידים
 

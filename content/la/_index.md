@@ -5,12 +5,12 @@ description: "Professor extrāōrdinārius mathēmaticae in Ūniversitāte Niiga
 
 Mathēmaticam in Ūniversitāte Niigatēnsī doceō atque investīgō.
 Studia mea ad topologiam et geōmetriam symplecticam pertinent.
+Praecipuē mē dēlectant theōria Morsiāna, dynamica Hamiltoniāna, modulī persistentiae, complexitās topologica.
 
-### Studia
+### Nūntiī
 
-- Theōria Morsiāna et theōria Floeriāna
-- Modulī persistentiae
-- Complexitās topologica
+- 23 Iūliī 2026 · Scrīptum «Maximal topological complexity of monotone symplectic 4-manifolds» in arXiv prōpositum est. [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 30 Iūniī 2026 · Scrīptum «Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric» in *Journal of Topology and Analysis* ēditum est. [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### Mūnera et gradūs
 

@@ -4,13 +4,13 @@ description: "니가타대학 이학부 부교수"
 ---
 
 니가타대학 이학부에서 수학을 가르치며 연구하고 있습니다.
-전공은 위상수학과 심플렉틱 기하학이며, 특히 모스 이론, 해밀턴 역학계, 지속성 가군에 관심이 있습니다.
+전공은 위상수학과 심플렉틱 기하학입니다.
+특히 모스 이론, 해밀턴 역학계, 지속성 가군, 위상적 복잡도에 관심이 있습니다.
 
-### 연구 관심 분야
+### 소식
 
-- 모스 이론과 플로어 이론
-- 지속성 가군
-- 위상적 복잡도
+- 2026년 7월 23일 · "Maximal topological complexity of monotone symplectic 4-manifolds" 논문을 arXiv에 공개했습니다. [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 2026년 6월 30일 · "Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric" 논문이 Journal of Topology and Analysis에 게재되었습니다. [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### 약력
 

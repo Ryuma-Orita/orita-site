@@ -4,13 +4,13 @@ description: "Außerordentlicher Professor für Mathematik, Universität Niigata
 ---
 
 Ich bin außerordentlicher Professor am Institut für Mathematik der Universität Niigata.
-Meine Forschung befasst sich mit hamiltonscher Dynamik in der symplektischen Geometrie.
+Meine Forschung liegt in der Topologie und der symplektischen Geometrie.
+Besonders interessieren mich die Morse-Theorie, hamiltonsche Dynamik, Persistenzmoduln und topologische Komplexität.
 
-### Forschungsinteressen
+### Neuigkeiten
 
-- Morse-Theorie und Floer-Theorie
-- Persistenzmoduln
-- Topologische Komplexität
+- 23. Juli 2026 · „Maximal topological complexity of monotone symplectic 4-manifolds“ wurde auf arXiv veröffentlicht. [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 30. Juni 2026 · „Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric“ ist in *Journal of Topology and Analysis* erschienen. [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### Werdegang
 
