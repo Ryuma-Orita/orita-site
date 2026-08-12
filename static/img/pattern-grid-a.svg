@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-    <!-- grid を2層に分けたうちの奥（ゆっくり・小さく）。
-       縦線と横線で分ける。規則正しい格子なので太さで分けると
-       律動が乱れるが、向きで分ければ互いに干渉せず、
-       縦線は左へ、横線は下へ流れて読みやすい。 -->
+    <!-- grid を2層に分けたうちの奥（細い・ゆっくり・小さい）。
+       縦線・横線それぞれの太い半分を手前へ。こうすると
+       両層とも「格子」の形を保ったまま、太さ・大きさ・速さ・濃さで
+       前後に分かれる。向きで分けると同じ形が2つの速さで動かず、
+       視差として読めない（110回目の失敗）。 -->
   <g>
-    <line x1="0" y1="-720" x2="0" y2="1440" stroke="#fff" stroke-width="22" stroke-opacity="0.75"/>
     <line x1="120" y1="-720" x2="120" y2="1440" stroke="#fff" stroke-width="9" stroke-opacity="0.38"/>
-    <line x1="240" y1="-720" x2="240" y2="1440" stroke="#fff" stroke-width="15" stroke-opacity="0.55"/>
     <line x1="360" y1="-720" x2="360" y2="1440" stroke="#fff" stroke-width="9" stroke-opacity="0.38"/>
     <line x1="600" y1="-720" x2="600" y2="1440" stroke="#fff" stroke-width="11" stroke-opacity="0.44"/>
-    <line x1="480" y1="-720" x2="480" y2="1440" stroke="#fff" stroke-width="26" stroke-opacity="0.82"/>
+    <line x1="-720" y1="0" x2="1440" y2="0" stroke="#fff" stroke-width="13" stroke-opacity="0.46"/>
+    <line x1="-720" y1="240" x2="1440" y2="240" stroke="#fff" stroke-width="9" stroke-opacity="0.34"/>
+    <line x1="-720" y1="480" x2="1440" y2="480" stroke="#fff" stroke-width="11" stroke-opacity="0.4"/>
   </g>
 </svg>
