@@ -4,13 +4,13 @@ description: "Associate Professor of Mathematics, Niigata University"
 ---
 
 I am an Associate Professor in the Department of Mathematics at Niigata University.
-My research interests include Hamiltonian dynamics in symplectic geometry.
+My research is in topology and symplectic geometry.
+In particular, I am interested in Morse theory, Hamiltonian dynamics, persistence modules, and topological complexity.
 
-### Research interests
+### News
 
-- Morse theory and Floer theory
-- Persistence modules
-- Topological complexity
+- July 23, 2026 · "Maximal topological complexity of monotone symplectic 4-manifolds" was posted on arXiv. [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- June 30, 2026 · "Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric" was published in *Journal of Topology and Analysis*. [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### Education and positions
 

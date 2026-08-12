@@ -5,13 +5,12 @@ description: "新潟大学理学部 准教授"
 
 新潟大学理学部にて，数学の教育・研究を行っています。
 専門はトポロジーやシンプレクティック幾何学です。
-特に，Morse理論，ハミルトン力学系，パーシステンス加群に興味があります。
+特に，Morse理論，ハミルトン力学系，パーシステンス加群，Topological complexityに興味があります。
 
-### 研究興味
+### ニュース
 
-- Morse理論とFloer理論
-- パーシステンス加群
-- Topological complexity
+- 2026年7月23日　Maximal topological complexity of monotone symplectic 4-manifoldsをarXivに投稿しました。 [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 2026年6月30日　Relative simplicity of the universal coverings of transformation groups and Tsuboi's metricがJournal of Topology and Analysisにて出版されました。 [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### 関連リンク
 
