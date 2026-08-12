@@ -2,6 +2,27 @@
    @import はスタイルシートの先頭になければ無視される規則があり、
    テーマがCSSを束ねる場合に効かなくなるため。 */
 
+/* ------------------------------------------------------------
+   訓민정음（훈민정음）の書体
+
+   「한컴 훈민정음」＝ ハングルとコンピュータ社が윤디자인그룹と共同で
+   訓民正音解例本の字形を復元した書体。ウェブでの利用・埋め込みが
+   ライセンスで明示的に許諾されている（改変と再配布は不可）。
+   配信は눈누（noonnu）が用意している jsDelivr の公開URLを使う。
+   フォントファイル自体は改変していない（ライセンス順守）。
+
+   unicode-range でハングルに限定してあるので、韓国語以外のページでは
+   そもそも読み込まれない。font-display: swap により、読み込みが
+   終わるまでは下の Noto Serif KR で表示される。
+   ------------------------------------------------------------ */
+@font-face {
+  font-family: "HancomHunminjeongeum";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomHoonminjeongeumH.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7FF;
+}
+
 /* ============================================================
    独自のスタイル調整
 
@@ -310,7 +331,7 @@ svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
 /* :lang() と lang属性の両方で狙う。lang の値は大文字小文字を区別するため
    属性セレクタには i 修飾子を付ける（zh-cn / zh-CN どちらでも当たる）。 */
 :lang(ko),
-html[lang^="ko" i]        { --orita-serif-local: "Noto Serif KR"; }   /* 명조체 */
+html[lang^="ko" i]        { --orita-serif-local: "HancomHunminjeongeum"; }  /* 훈민정음체 */
 :lang(zh-CN),
 html[lang="zh-cn" i],
 html[lang="zh-Hans" i]    { --orita-serif-local: "Noto Serif SC"; }   /* 宋体 */
@@ -401,6 +422,9 @@ body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) * {
 a[href$="/el/"],
 a[href$="/ru/"]    { font-family: "Noto Serif", "Times New Roman", serif !important; }
 a[href$="/he/"]    { font-family: "Noto Serif Hebrew", "Times New Roman", serif !important; }
+/* 言語一覧の「한국어」だけは訓民정음にしない。ここは全14言語の
+   ページに出るため、訓民正음を当てると韓国語以外のページでも
+   フォントを読み込むことになる。 */
 a[href$="/ko/"]    { font-family: "Noto Serif KR", serif !important; }
 a[href$="/zh-cn/"] { font-family: "Noto Serif SC", serif !important; }
 a[href$="/zh-tw/"] { font-family: "Noto Serif TC", serif !important; }
