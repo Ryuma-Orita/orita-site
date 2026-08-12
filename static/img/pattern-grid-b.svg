@@ -1,8 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-    <!-- grid を2層に分けたうちの手前（太い・濃い／速い）。
-       継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
+    <!-- grid を2層に分けたうちの手前（速く・大きく）。
+       縦線と横線で分ける。規則正しい格子なので太さで分けると
+       律動が乱れるが、向きで分ければ互いに干渉せず、
+       縦線は左へ、横線は下へ流れて読みやすい。 -->
   <g>
-    <line x1="480" y1="-720" x2="480" y2="1440" stroke="#fff" stroke-width="26" stroke-opacity="0.82"/>
+    <line x1="-720" y1="0" x2="1440" y2="0" stroke="#fff" stroke-width="13" stroke-opacity="0.46"/>
+    <line x1="-720" y1="120" x2="1440" y2="120" stroke="#fff" stroke-width="24" stroke-opacity="0.78"/>
+    <line x1="-720" y1="240" x2="1440" y2="240" stroke="#fff" stroke-width="9" stroke-opacity="0.34"/>
+    <line x1="-720" y1="360" x2="1440" y2="360" stroke="#fff" stroke-width="18" stroke-opacity="0.62"/>
+    <line x1="-720" y1="480" x2="1440" y2="480" stroke="#fff" stroke-width="11" stroke-opacity="0.4"/>
     <line x1="-720" y1="600" x2="1440" y2="600" stroke="#fff" stroke-width="28" stroke-opacity="0.85"/>
   </g>
 </svg>

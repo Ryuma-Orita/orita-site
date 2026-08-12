@@ -48,6 +48,16 @@
 @keyframes orita-drift-left  { to { transform: translate3d(-720px,     0, 0); } }   /* 左へ */
 @keyframes orita-drift-right { to { transform: translate3d( 720px,     0, 0); } }   /* 右へ */
 
+/* 奥の層は模様を 0.75 倍に縮めてある（遠いものほど小さく見える）。
+   タイル1枚が 540px になるので、移動距離もそれに合わせる。
+   こうすると奥も手前もそれぞれ継ぎ目なくつながる。 */
+@keyframes orita-drift-dl-far    { to { transform: translate3d(-540px,  540px, 0); } }
+@keyframes orita-drift-dr-far    { to { transform: translate3d( 540px,  540px, 0); } }
+@keyframes orita-drift-up-far    { to { transform: translate3d(    0,  -540px, 0); } }
+@keyframes orita-drift-down-far  { to { transform: translate3d(    0,   540px, 0); } }
+@keyframes orita-drift-left-far  { to { transform: translate3d(-540px,     0, 0); } }
+@keyframes orita-drift-right-far { to { transform: translate3d( 540px,     0, 0); } }
+
 /* 模様は2層。奥（細い図形）をゆっくり、手前（太い図形）を速く流す。
    向きは同じなので、速さの差だけが遠近感になる。
      ::before … 奥の層（--orita-pattern    = pattern-*-a.svg）
@@ -69,8 +79,9 @@ body::after {
   background-color: var(--orita-bar, #5f9c82);
   background-repeat: var(--orita-bar-repeat, repeat);
   background-size: var(--orita-bar-size, auto);
-  -webkit-mask-size: 720px 720px;
-          mask-size: 720px 720px;
+  /* 模様1枚の大きさ。奥は小さく（遠く見える）、手前は大きく。 */
+  -webkit-mask-size: var(--orita-tile, 720px) var(--orita-tile, 720px);
+          mask-size: var(--orita-tile, 720px) var(--orita-tile, 720px);
   -webkit-mask-repeat: repeat;
           mask-repeat: repeat;
 
@@ -87,21 +98,23 @@ body::after {
 body::before {
   content: "";
   --orita-layer: var(--orita-depth-far, 0.735);    /* 奥 = 淡い */
+  --orita-tile:  540px;   /* 奥 = 小さい。変えるときは orita-drift-*-far の移動距離も同じ値に */
   background-image: var(--orita-bar-image, none);
   -webkit-mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
           mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
-  animation: var(--orita-drift, orita-drift-dl)
-             var(--orita-drift-sec, 41s) linear infinite;
+  animation: var(--orita-drift, orita-drift-dl-far)
+             var(--orita-drift-sec, 39s) linear infinite;
 }
 
 /* 手前の層。同じ向きに、より速く流す。 */
 body::after {
   content: var(--orita-content-2, "");
   --orita-layer: var(--orita-depth-near, 1.25);    /* 手前 = 濃い */
+  --orita-tile:  720px;   /* 手前 = 大きい。変えるときは orita-drift-* の移動距離も同じ値に */
   -webkit-mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
           mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
-  animation: var(--orita-drift, orita-drift-dl)
-             var(--orita-drift-sec-2, 16s) linear infinite;
+  animation: var(--orita-drift-2, orita-drift-dl)
+             var(--orita-drift-sec-2, 19s) linear infinite;
 }
 
 .dark body::before,
