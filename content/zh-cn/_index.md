@@ -9,8 +9,8 @@ description: "新潟大学理学部 副教授"
 
 ### 最新动态
 
-- 2026年7月23日 · 将 Maximal topological complexity of monotone symplectic 4-manifolds 投稿至 arXiv。 [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
-- 2026年6月30日 · Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric 发表于 Journal of Topology and Analysis。 [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
+- 2026年7月23日 · 将《Maximal topological complexity of monotone symplectic 4-manifolds》投稿至 arXiv。 [{{< icon "arxiv" >}}](https://arxiv.org/abs/2607.20886 "arXiv")
+- 2026年6月30日 · 《Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric》发表于《Journal of Topology and Analysis》。 [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
 ### 简历
 

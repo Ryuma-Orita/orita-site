@@ -23,7 +23,7 @@ Term 3, Mon. Period 3 · Faculty of Science, Niigata University
 
 **Course contents**
 1. Definition of manifolds
-2. Examples of manifolds (on-demand lecture)
+2. Examples of manifolds
 3. $C^{\infty}$ functions
 4. $C^{\infty}$ maps
 5. Tangent spaces
