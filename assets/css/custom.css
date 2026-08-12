@@ -426,6 +426,15 @@ a[href$="/he/"]    { font-family: "Noto Serif Hebrew", "Times New Roman", serif 
    ページに出るため、訓民正음を当てると韓国語以外のページでも
    フォントを読み込むことになる。 */
 a[href$="/ko/"]    { font-family: "Noto Serif KR", serif !important; }
+
+/* ただし韓国語のページ自身では、サイト名（ヘッダー左の氏名）も
+   /ko/ へのリンクなので上の指定に巻き込まれてしまう。
+   このページでは訓民正音を既に読み込んでいるので、
+   /ko/ へのリンクすべてを訓民正音に戻す。 */
+:lang(ko) a[href$="/ko/"],
+html[lang^="ko" i] a[href$="/ko/"] {
+  font-family: "HancomHunminjeongeum", "Noto Serif KR", serif !important;
+}
 a[href$="/zh-cn/"] { font-family: "Noto Serif SC", serif !important; }
 a[href$="/zh-tw/"] { font-family: "Noto Serif TC", serif !important; }
 
