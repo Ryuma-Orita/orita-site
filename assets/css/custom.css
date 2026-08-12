@@ -74,13 +74,19 @@ body::after {
   -webkit-mask-repeat: repeat;
           mask-repeat: repeat;
 
-  opacity: var(--orita-bar-opacity, 0.24);   /* 配色ごとに変わる */
+  /* 濃さ = 配色ごとの値 × 層ごとの係数。
+     手前ほど濃く、奥ほど淡くして遠近感を出す。地の色との差が
+     大きいものほど近くに見えるため、ライトでは手前が深い色に、
+     ダークでは手前が明るい色になる（どちらも手前が際立つ）。
+     係数は合計の濃さが従来と変わらないように選んである。 */
+  opacity: calc(var(--orita-bar-opacity, 0.24) * var(--orita-layer, 1));
   will-change: transform;
 }
 
 /* 奥の層。ミッフィー風はここだけを使い、マスクを外して色付きの模様を敷く。 */
 body::before {
   content: "";
+  --orita-layer: var(--orita-depth-far, 0.735);    /* 奥 = 淡い */
   background-image: var(--orita-bar-image, none);
   -webkit-mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
           mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
@@ -91,6 +97,7 @@ body::before {
 /* 手前の層。同じ向きに、より速く流す。 */
 body::after {
   content: var(--orita-content-2, "");
+  --orita-layer: var(--orita-depth-near, 1.25);    /* 手前 = 濃い */
   -webkit-mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
           mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
   animation: var(--orita-drift, orita-drift-dl)
@@ -99,7 +106,7 @@ body::after {
 
 .dark body::before,
 .dark body::after {
-  opacity: var(--orita-bar-opacity-dark, 0.30);
+  opacity: calc(var(--orita-bar-opacity-dark, 0.30) * var(--orita-layer, 1));
 }
 /* ミッフィー風だけ、ダークでは色を絞った模様に差し替える
    （白と黄は白文字と競うため） */
@@ -114,9 +121,9 @@ body::after {
    その場合は模様を消して、地の色だけにする（ブルーナ風の平塗り）。 */
 @media (max-width: 1100px) {
   body::before,
-  body::after       { opacity: var(--orita-bar-opacity-narrow, var(--orita-bar-opacity, 0.24)); }
+  body::after       { opacity: calc(var(--orita-bar-opacity-narrow, var(--orita-bar-opacity, 0.24)) * var(--orita-layer, 1)); }
   .dark body::before,
-  .dark body::after { opacity: var(--orita-bar-opacity-narrow-dark, var(--orita-bar-opacity-dark, 0.30)); }
+  .dark body::after { opacity: calc(var(--orita-bar-opacity-narrow-dark, var(--orita-bar-opacity-dark, 0.30)) * var(--orita-layer, 1)); }
 }
 
 

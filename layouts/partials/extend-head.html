@@ -101,6 +101,10 @@
       + ';--orita-pattern:'   + (p.p === 'none' ? 'none' : 'url("/img/pattern-' + p.p + '-a.svg")')
       + ';--orita-pattern-2:' + (p.p === 'none' ? 'none' : 'url("/img/pattern-' + p.p + '-b.svg")')
       + ';--orita-content-2:' + (p.p === 'none' ? 'none' : '""')
+      /* 層ごとの濃さの係数。手前を濃く、奥を淡くして遠近感を出す。
+         静止の配色は1層だけなので係数を掛けない。 */
+      + ';--orita-depth-far:'  + (p.p === 'none' ? '1' : '0.735')
+      + ';--orita-depth-near:' + (p.p === 'none' ? '1' : '1.25')
       + ';--orita-drift:' + (p.d === 'none' ? 'none' : 'orita-drift-' + p.d)
       + ';--orita-drift-sec:'   + p.sec
       + ';--orita-drift-sec-2:' + p.sec2
