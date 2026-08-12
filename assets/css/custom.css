@@ -85,7 +85,7 @@ body::before {
   -webkit-mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
           mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
   animation: var(--orita-drift, orita-drift-dl)
-             var(--orita-drift-sec, 30s) linear infinite;
+             var(--orita-drift-sec, 41s) linear infinite;
 }
 
 /* 手前の層。同じ向きに、より速く流す。 */
@@ -94,7 +94,7 @@ body::after {
   -webkit-mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
           mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
   animation: var(--orita-drift, orita-drift-dl)
-             var(--orita-drift-sec-2, 19s) linear infinite;
+             var(--orita-drift-sec-2, 16s) linear infinite;
 }
 
 .dark body::before,
