@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-  <!-- pattern-bars を2層に分けたうちの奥（細い・薄い／ゆっくり） -->
+    <!-- bars を2層に分けたうちの奥（細い・薄い／ゆっくり）。
+       継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g stroke="#fff" stroke-linecap="round" fill="none">
     <line x1="-691" y1="-407" x2="-282" y2="-816" stroke-width="40" stroke-opacity="0.55"/>
     <line x1="-904" y1="-48" x2="-400" y2="-552" stroke-width="58" stroke-opacity="0.18"/>
@@ -56,5 +57,13 @@
     <line x1="749" y1="1033" x2="1158" y2="624" stroke-width="40" stroke-opacity="0.55"/>
     <line x1="926" y1="1603" x2="1328" y2="1201" stroke-width="40" stroke-opacity="0.44"/>
     <line x1="1029" y1="958" x2="1234" y2="753" stroke-width="40" stroke-opacity="0.43"/>
+    <line x1="536" y1="672" x2="1040" y2="168" stroke-width="58" stroke-opacity="0.18"/>
+    <line x1="912" y1="796" x2="1099" y2="609" stroke-width="58" stroke-opacity="0.3"/>
+    <line x1="682" y1="226" x2="965" y2="-57" stroke-width="58" stroke-opacity="0.21"/>
+    <line x1="1254" y1="391" x2="1515" y2="130" stroke-width="58" stroke-opacity="0.5"/>
+    <line x1="536" y1="1392" x2="1040" y2="888" stroke-width="58" stroke-opacity="0.18"/>
+    <line x1="912" y1="1516" x2="1099" y2="1329" stroke-width="58" stroke-opacity="0.3"/>
+    <line x1="682" y1="946" x2="965" y2="663" stroke-width="58" stroke-opacity="0.21"/>
+    <line x1="1254" y1="1111" x2="1515" y2="850" stroke-width="58" stroke-opacity="0.5"/>
   </g>
 </svg>

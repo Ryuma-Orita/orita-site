@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-  <!-- pattern-grid を2層に分けたうちの奥（細い・薄い／ゆっくり） -->
+    <!-- grid を2層に分けたうちの奥（細い・薄い／ゆっくり）。
+       継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g>
     <line x1="0" y1="-720" x2="0" y2="1440" stroke="#fff" stroke-width="22" stroke-opacity="0.75"/>
     <line x1="-720" y1="0" x2="1440" y2="0" stroke="#fff" stroke-width="13" stroke-opacity="0.46"/>

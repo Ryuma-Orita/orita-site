@@ -1,20 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-  <!-- pattern-stripes を2層に分けたうちの手前（太い・濃い／速い） -->
+    <!-- stripes を2層に分けたうちの手前（太い・濃い／速い）。
+       継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g stroke="#fff" fill="none">
     <line x1="-960" y1="-1440" x2="1200" y2="720" stroke-width="60" stroke-opacity="0.46"/>
     <line x1="-960" y1="-720" x2="1200" y2="1440" stroke-width="60" stroke-opacity="0.46"/>
     <line x1="-960" y1="0" x2="1200" y2="2160" stroke-width="60" stroke-opacity="0.46"/>
-    <line x1="-720" y1="-1440" x2="1440" y2="720" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="-240" y1="-1440" x2="1920" y2="720" stroke-width="60" stroke-opacity="0.46"/>
-    <line x1="-720" y1="-720" x2="1440" y2="1440" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="-240" y1="-720" x2="1920" y2="1440" stroke-width="60" stroke-opacity="0.46"/>
-    <line x1="-720" y1="0" x2="1440" y2="2160" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="-240" y1="0" x2="1920" y2="2160" stroke-width="60" stroke-opacity="0.46"/>
-    <line x1="0" y1="-1440" x2="2160" y2="720" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="480" y1="-1440" x2="2640" y2="720" stroke-width="60" stroke-opacity="0.46"/>
-    <line x1="0" y1="-720" x2="2160" y2="1440" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="480" y1="-720" x2="2640" y2="1440" stroke-width="60" stroke-opacity="0.46"/>
-    <line x1="0" y1="0" x2="2160" y2="2160" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="480" y1="0" x2="2640" y2="2160" stroke-width="60" stroke-opacity="0.46"/>
   </g>
 </svg>

@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-  <!-- pattern-vstripes を2層に分けたうちの奥（細い・薄い／ゆっくり） -->
+    <!-- vstripes を2層に分けたうちの奥（細い・薄い／ゆっくり）。
+       継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g fill="#fff" stroke="none">
     <rect x="-720" y="-1440" width="60" height="2160" fill-opacity="0.44"/>
     <rect x="-592" y="-1440" width="28" height="2160" fill-opacity="0.61"/>
@@ -47,5 +48,13 @@
     <rect x="1040" y="0" width="44" height="2160" fill-opacity="0.45"/>
     <rect x="1120" y="0" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="1216" y="0" width="44" height="2160" fill-opacity="0.59"/>
+    <rect x="-720" y="-720" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="-720" y="0" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="0" y="-1440" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="0" y="-720" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="0" y="0" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="720" y="-1440" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="720" y="-720" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="720" y="0" width="60" height="2160" fill-opacity="0.44"/>
   </g>
 </svg>

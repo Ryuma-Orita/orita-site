@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-  <!-- pattern-dots を2層に分けたうちの奥（細い・薄い／ゆっくり） -->
+    <!-- dots を2層に分けたうちの奥（細い・薄い／ゆっくり）。
+       継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g fill="#fff" stroke="none">
     <circle cx="-711" cy="-639" r="25" fill-opacity="0.76"/>
     <circle cx="-620" cy="-639" r="20" fill-opacity="0.79"/>
@@ -13,7 +14,6 @@
     <circle cx="-195" cy="-580" r="34" fill-opacity="0.55"/>
     <circle cx="-690" cy="-478" r="23" fill-opacity="0.63"/>
     <circle cx="-5" cy="-151" r="22" fill-opacity="0.53"/>
-    <circle cx="-271" cy="-327" r="35" fill-opacity="0.49"/>
     <circle cx="-581" cy="-57" r="32" fill-opacity="0.76"/>
     <circle cx="-6" cy="-578" r="27" fill-opacity="0.81"/>
     <circle cx="-400" cy="-152" r="31" fill-opacity="0.5"/>
@@ -26,7 +26,6 @@
     <circle cx="-129" cy="-505" r="18" fill-opacity="0.65"/>
     <circle cx="-343" cy="-204" r="28" fill-opacity="0.77"/>
     <circle cx="-384" cy="-624" r="16" fill-opacity="0.8"/>
-    <circle cx="-184" cy="-41" r="35" fill-opacity="0.71"/>
     <circle cx="-600" cy="-106" r="16" fill-opacity="0.64"/>
     <circle cx="-619" cy="-446" r="22" fill-opacity="0.64"/>
     <circle cx="-208" cy="-330" r="20" fill-opacity="0.8"/>
@@ -50,7 +49,6 @@
     <circle cx="-195" cy="140" r="34" fill-opacity="0.55"/>
     <circle cx="-690" cy="242" r="23" fill-opacity="0.63"/>
     <circle cx="-5" cy="569" r="22" fill-opacity="0.53"/>
-    <circle cx="-271" cy="393" r="35" fill-opacity="0.49"/>
     <circle cx="-581" cy="663" r="32" fill-opacity="0.76"/>
     <circle cx="-6" cy="142" r="27" fill-opacity="0.81"/>
     <circle cx="-400" cy="568" r="31" fill-opacity="0.5"/>
@@ -63,7 +61,6 @@
     <circle cx="-129" cy="215" r="18" fill-opacity="0.65"/>
     <circle cx="-343" cy="516" r="28" fill-opacity="0.77"/>
     <circle cx="-384" cy="96" r="16" fill-opacity="0.8"/>
-    <circle cx="-184" cy="679" r="35" fill-opacity="0.71"/>
     <circle cx="-600" cy="614" r="16" fill-opacity="0.64"/>
     <circle cx="-619" cy="274" r="22" fill-opacity="0.64"/>
     <circle cx="-208" cy="390" r="20" fill-opacity="0.8"/>
@@ -87,7 +84,6 @@
     <circle cx="-195" cy="860" r="34" fill-opacity="0.55"/>
     <circle cx="-690" cy="962" r="23" fill-opacity="0.63"/>
     <circle cx="-5" cy="1289" r="22" fill-opacity="0.53"/>
-    <circle cx="-271" cy="1113" r="35" fill-opacity="0.49"/>
     <circle cx="-581" cy="1383" r="32" fill-opacity="0.76"/>
     <circle cx="-6" cy="862" r="27" fill-opacity="0.81"/>
     <circle cx="-400" cy="1288" r="31" fill-opacity="0.5"/>
@@ -315,5 +311,11 @@
     <circle cx="920" cy="851" r="13" fill-opacity="0.67"/>
     <circle cx="934" cy="1061" r="12" fill-opacity="0.45"/>
     <circle cx="993" cy="1265" r="22" fill-opacity="0.86"/>
+    <circle cx="106" cy="-187" r="35" fill-opacity="0.51"/>
+    <circle cx="106" cy="533" r="35" fill-opacity="0.51"/>
+    <circle cx="106" cy="1253" r="35" fill-opacity="0.51"/>
+    <circle cx="826" cy="-187" r="35" fill-opacity="0.51"/>
+    <circle cx="826" cy="533" r="35" fill-opacity="0.51"/>
+    <circle cx="826" cy="1253" r="35" fill-opacity="0.51"/>
   </g>
 </svg>
