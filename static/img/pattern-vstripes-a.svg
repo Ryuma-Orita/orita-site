@@ -1,60 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-    <!-- vstripes を2層に分けたうちの奥（細い・薄い／ゆっくり）。
+    <!-- vstripes を2層に分けたうちの奥（ゆっくり）。
+       規則正しい縞なので「1本おき」に分ける。こうすると
+       各層それ自体が等間隔の縞になり、2枚が擦れ違って奥行きが出る。
        継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g fill="#fff" stroke="none">
-    <rect x="-720" y="-1440" width="60" height="2160" fill-opacity="0.44"/>
     <rect x="-592" y="-1440" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="-512" y="-1440" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="-400" y="-1440" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="-320" y="-1440" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="-224" y="-1440" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="-592" y="-720" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="-512" y="-720" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="-400" y="-720" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="-320" y="-720" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="-224" y="-720" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="-592" y="0" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="-512" y="0" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="-400" y="0" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="-320" y="0" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="-224" y="0" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="128" y="-1440" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="208" y="-1440" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="320" y="-1440" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="400" y="-1440" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="496" y="-1440" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="128" y="-720" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="208" y="-720" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="320" y="-720" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="400" y="-720" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="496" y="-720" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="128" y="0" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="208" y="0" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="320" y="0" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="400" y="0" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="496" y="0" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="848" y="-1440" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="928" y="-1440" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="1040" y="-1440" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="1120" y="-1440" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="1216" y="-1440" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="848" y="-720" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="928" y="-720" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="1040" y="-720" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="1120" y="-720" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="1216" y="-720" width="44" height="2160" fill-opacity="0.59"/>
     <rect x="848" y="0" width="28" height="2160" fill-opacity="0.61"/>
-    <rect x="928" y="0" width="44" height="2160" fill-opacity="0.32"/>
     <rect x="1040" y="0" width="44" height="2160" fill-opacity="0.45"/>
-    <rect x="1120" y="0" width="44" height="2160" fill-opacity="0.52"/>
     <rect x="1216" y="0" width="44" height="2160" fill-opacity="0.59"/>
-    <rect x="-720" y="-720" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="-720" y="0" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="0" y="-1440" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="0" y="-720" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="0" y="0" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="720" y="-1440" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="720" y="-720" width="60" height="2160" fill-opacity="0.44"/>
-    <rect x="720" y="0" width="60" height="2160" fill-opacity="0.44"/>
+    <rect x="-16" y="-1440" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="-16" y="-720" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="-16" y="0" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="704" y="-1440" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="704" y="-720" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="704" y="0" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="1424" y="-1440" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="1424" y="-720" width="76" height="2160" fill-opacity="0.6"/>
+    <rect x="1424" y="0" width="76" height="2160" fill-opacity="0.6"/>
   </g>
 </svg>

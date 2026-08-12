@@ -1,51 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
-    <!-- stripes を2層に分けたうちの奥（細い・薄い／ゆっくり）。
+    <!-- stripes を2層に分けたうちの奥（ゆっくり）。
+       規則正しい縞なので「1本おき」に分ける。こうすると
+       各層それ自体が等間隔の縞になり、2枚が擦れ違って奥行きが出る。
        継ぎ目をまたぐ図形の複製は必ず同じ層に入れてある。 -->
   <g stroke="#fff" fill="none">
-    <line x1="-1440" y1="-1440" x2="720" y2="720" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="-1320" y1="-1440" x2="840" y2="720" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="-1200" y1="-1440" x2="960" y2="720" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="-1080" y1="-1440" x2="1080" y2="720" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="-840" y1="-1440" x2="1320" y2="720" stroke-width="34" stroke-opacity="0.3"/>
-    <line x1="-1440" y1="-720" x2="720" y2="1440" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="-1320" y1="-720" x2="840" y2="1440" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="-1200" y1="-720" x2="960" y2="1440" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="-1080" y1="-720" x2="1080" y2="1440" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="-840" y1="-720" x2="1320" y2="1440" stroke-width="34" stroke-opacity="0.3"/>
-    <line x1="-1440" y1="0" x2="720" y2="2160" stroke-width="54" stroke-opacity="0.42"/>
     <line x1="-1320" y1="0" x2="840" y2="2160" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="-1200" y1="0" x2="960" y2="2160" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="-1080" y1="0" x2="1080" y2="2160" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="-840" y1="0" x2="1320" y2="2160" stroke-width="34" stroke-opacity="0.3"/>
     <line x1="-600" y1="-1440" x2="1560" y2="720" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="-480" y1="-1440" x2="1680" y2="720" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="-360" y1="-1440" x2="1800" y2="720" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="-120" y1="-1440" x2="2040" y2="720" stroke-width="34" stroke-opacity="0.3"/>
     <line x1="-600" y1="-720" x2="1560" y2="1440" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="-480" y1="-720" x2="1680" y2="1440" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="-360" y1="-720" x2="1800" y2="1440" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="-120" y1="-720" x2="2040" y2="1440" stroke-width="34" stroke-opacity="0.3"/>
     <line x1="-600" y1="0" x2="1560" y2="2160" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="-480" y1="0" x2="1680" y2="2160" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="-360" y1="0" x2="1800" y2="2160" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="-120" y1="0" x2="2040" y2="2160" stroke-width="34" stroke-opacity="0.3"/>
     <line x1="120" y1="-1440" x2="2280" y2="720" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="240" y1="-1440" x2="2400" y2="720" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="360" y1="-1440" x2="2520" y2="720" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="600" y1="-1440" x2="2760" y2="720" stroke-width="34" stroke-opacity="0.3"/>
     <line x1="120" y1="-720" x2="2280" y2="1440" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="240" y1="-720" x2="2400" y2="1440" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="360" y1="-720" x2="2520" y2="1440" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="600" y1="-720" x2="2760" y2="1440" stroke-width="34" stroke-opacity="0.3"/>
     <line x1="120" y1="0" x2="2280" y2="2160" stroke-width="30" stroke-opacity="0.26"/>
-    <line x1="240" y1="0" x2="2400" y2="2160" stroke-width="44" stroke-opacity="0.36"/>
     <line x1="360" y1="0" x2="2520" y2="2160" stroke-width="22" stroke-opacity="0.2"/>
     <line x1="600" y1="0" x2="2760" y2="2160" stroke-width="34" stroke-opacity="0.3"/>
-    <line x1="-720" y1="-1440" x2="1440" y2="720" stroke-width="54" stroke-opacity="0.42"/>
-    <line x1="-720" y1="-720" x2="1440" y2="1440" stroke-width="54" stroke-opacity="0.42"/>
-    <line x1="-720" y1="0" x2="1440" y2="2160" stroke-width="54" stroke-opacity="0.42"/>
-    <line x1="0" y1="-1440" x2="2160" y2="720" stroke-width="54" stroke-opacity="0.42"/>
-    <line x1="0" y1="-720" x2="2160" y2="1440" stroke-width="54" stroke-opacity="0.42"/>
-    <line x1="0" y1="0" x2="2160" y2="2160" stroke-width="54" stroke-opacity="0.42"/>
   </g>
 </svg>
