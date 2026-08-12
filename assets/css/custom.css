@@ -48,8 +48,14 @@
 @keyframes orita-drift-left  { to { transform: translate3d(-720px,     0, 0); } }   /* 左へ */
 @keyframes orita-drift-right { to { transform: translate3d( 720px,     0, 0); } }   /* 右へ */
 
-body::before {
-  content: "";
+/* 模様は2層。奥（細い図形）をゆっくり、手前（太い図形）を速く流す。
+   向きは同じなので、速さの差だけが遠近感になる。
+     ::before … 奥の層（--orita-pattern    = pattern-*-a.svg）
+     ::after  … 手前の層（--orita-pattern-2 = pattern-*-b.svg）
+   静止の配色（ミッフィー風）は --orita-content-2 を none にして
+   手前の層そのものを作らない。 */
+body::before,
+body::after {
   position: fixed;
   /* 動く配色は画面より広く取る（端が見えないように）。
      静止の配色（ミッフィー風）は画面ぴったりにして、
@@ -61,40 +67,56 @@ body::before {
   /* 色は塗り、形はマスクで抜く。
      こうすると模様のSVGは色を持たず、配色だけ差し替えられる。 */
   background-color: var(--orita-bar, #5f9c82);
-  background-image: var(--orita-bar-image, none);
   background-repeat: var(--orita-bar-repeat, repeat);
   background-size: var(--orita-bar-size, auto);
-  /* --orita-pattern が none の配色（ミッフィー風）は、
-     マスクを使わず色付きの模様をそのまま敷く。 */
-  -webkit-mask-image: var(--orita-pattern, url("/img/pattern-bars.svg"));
-          mask-image: var(--orita-pattern, url("/img/pattern-bars.svg"));
   -webkit-mask-size: 720px 720px;
           mask-size: 720px 720px;
   -webkit-mask-repeat: repeat;
           mask-repeat: repeat;
 
   opacity: var(--orita-bar-opacity, 0.24);   /* 配色ごとに変わる */
-
-  animation: var(--orita-drift, orita-drift-dl)
-             var(--orita-drift-sec, 30s) linear infinite;
   will-change: transform;
 }
 
-.dark body::before {
+/* 奥の層。ミッフィー風はここだけを使い、マスクを外して色付きの模様を敷く。 */
+body::before {
+  content: "";
+  background-image: var(--orita-bar-image, none);
+  -webkit-mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
+          mask-image: var(--orita-pattern, url("/img/pattern-bars-a.svg"));
+  animation: var(--orita-drift, orita-drift-dl)
+             var(--orita-drift-sec, 30s) linear infinite;
+}
+
+/* 手前の層。同じ向きに、より速く流す。 */
+body::after {
+  content: var(--orita-content-2, "");
+  -webkit-mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
+          mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
+  animation: var(--orita-drift, orita-drift-dl)
+             var(--orita-drift-sec-2, 19s) linear infinite;
+}
+
+.dark body::before,
+.dark body::after {
   opacity: var(--orita-bar-opacity-dark, 0.30);
-  /* ミッフィー風だけ、ダークでは色を絞った模様に差し替える
-     （白と黄は白文字と競うため） */
+}
+/* ミッフィー風だけ、ダークでは色を絞った模様に差し替える
+   （白と黄は白文字と競うため） */
+.dark body::before {
   background-image: var(--orita-bar-image-dark, var(--orita-bar-image, none));
 }
 
-@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
-@media print { body::before { display: none; } }
+@media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
+@media print { body::before, body::after { display: none; } }
 
 /* 画面が狭いと本文が横幅いっぱいに広がり、左右の余白が無くなる。
    その場合は模様を消して、地の色だけにする（ブルーナ風の平塗り）。 */
 @media (max-width: 1100px) {
-  body::before      { opacity: var(--orita-bar-opacity-narrow, var(--orita-bar-opacity, 0.24)); }
-  .dark body::before { opacity: var(--orita-bar-opacity-narrow-dark, var(--orita-bar-opacity-dark, 0.30)); }
+  body::before,
+  body::after       { opacity: var(--orita-bar-opacity-narrow, var(--orita-bar-opacity, 0.24)); }
+  .dark body::before,
+  .dark body::after { opacity: var(--orita-bar-opacity-narrow-dark, var(--orita-bar-opacity-dark, 0.30)); }
 }
 
 
