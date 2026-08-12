@@ -22,3 +22,20 @@ RIMS Kôkyûroku, vol. **2098** (2018), pp. 57–59
 ## 概要
 
 ハミルトン関数 $H$ に対するある $C^0$-robust な条件が，ハミルトン微分同相写像 $\varphi_H$ によって元の点から $\varepsilon$ だけ動かされる点の存在を導くことを証明します。この考察に関連して，ハミルトン擬回転 (pseudo-rotation) に関する問題を提示します。
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{kawasaki2018application,
+  author  = {Kawasaki, Morimichi and Orita, Ryuma},
+  title   = {{Application of fragmentation norms to transported points by Hamiltonian isotopies}},
+  journal = {RIMS Kôkyûroku},
+  volume  = {2098},
+  pages   = {57--59},
+  year    = {2018},
+  url     = {http://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/2098.html}
+}
+```
+
+</details>

@@ -21,3 +21,23 @@ Bulletin of the London Mathematical Society, vol. **49** (2017), no. 4, pp. 571â
 ## Abstract
 
 We show that the presence of one non-degenerate, non-contractible periodic orbit of a Hamiltonian on the standard symplectic torus implies the existence of infinitely many simple non-contractible periodic orbits.
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{orita2017noncontractible,
+  author        = {Orita, Ryuma},
+  title         = {{Non-contractible periodic orbits in Hamiltonian dynamics on tori}},
+  journal       = {Bulletin of the London Mathematical Society},
+  volume        = {49},
+  number        = {4},
+  pages         = {571--580},
+  year          = {2017},
+  doi           = {10.1112/blms.12054},
+  eprint        = {1604.06177},
+  archivePrefix = {arXiv}
+}
+```
+
+</details>

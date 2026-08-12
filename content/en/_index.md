@@ -24,5 +24,3 @@ In particular, I am interested in Morse theory, Hamiltonian dynamics, persistenc
 | 2014.4 – 2017.3 | JSPS Research Fellow (DC1) | [The University of Tokyo](https://www.u-tokyo.ac.jp/en/) |
 | 2014.3 | Master of Mathematical Sciences | [The University of Tokyo](https://www.u-tokyo.ac.jp/en/) |
 | 2012.3 | Bachelor of Science | [Kyushu University](https://www.kyushu-u.ac.jp/en/) |
-
-*[About this site](/about-site/)*

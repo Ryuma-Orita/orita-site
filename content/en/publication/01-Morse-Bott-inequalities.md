@@ -21,3 +21,23 @@ Tokyo Journal of Mathematics, vol. **41** (2018), no. 1, pp. 113–130
 ## Abstract
 
 In the present paper, we define Morse–Bott functions on manifolds with boundary which are generalizations of Morse functions and show Morse–Bott inequalities for these manifolds.
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{orita2018morsebott,
+  author        = {Orita, Ryuma},
+  title         = {{Morse-Bott inequalities for manifolds with boundary}},
+  journal       = {Tokyo Journal of Mathematics},
+  volume        = {41},
+  number        = {1},
+  pages         = {113--130},
+  year          = {2018},
+  doi           = {10.3836/tjm/1502179256},
+  eprint        = {1609.02381},
+  archivePrefix = {arXiv}
+}
+```
+
+</details>

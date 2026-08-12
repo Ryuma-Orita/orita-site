@@ -28,3 +28,20 @@ Journal of Topology and Analysis, Online Ready
 ## 概要
 
 多様体上の変換群の多くは単純群ですが，その普遍被覆は単純ではありません。この論文では，最大の真の正規部分群をもつ群，すなわちrelatively simple群という概念を研究します。閉シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群の普遍被覆 $\widetilde{\mathrm{Ham}}(M,\omega)$ を含め，変換群の普遍被覆の多くがrelatively simple群であることを示します。坪井氏は単純群 $G$ に対して距離空間 $\mathcal{M}(G)$ を構成しました。この構成をrelatively simple群へ一般化し，その大域的な幾何構造を調べます。特に，任意の閉シンプレクティック多様体 $(M,\omega)$ に対して，$\widetilde{\mathrm{Ham}}(M,\omega)$ の坪井距離空間は半直線と擬等長ではありません。
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{kawasaki2026relative,
+  author        = {Kawasaki, Morimichi and Kimura, Mitsuaki and Kodama, Hiroki and Matsuda, Yoshifumi and Matsushita, Takahiro and Orita, Ryuma},
+  title         = {{Relative simplicity of the universal coverings of transformation groups and Tsuboi's metric}},
+  journal       = {Journal of Topology and Analysis},
+  year          = {2026},
+  doi           = {10.1142/S1793525326500445},
+  eprint        = {2412.00839},
+  archivePrefix = {arXiv}
+}
+```
+
+</details>

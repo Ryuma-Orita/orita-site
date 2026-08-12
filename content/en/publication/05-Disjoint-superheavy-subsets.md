@@ -23,3 +23,23 @@ Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468
 ## Abstract
 
 We present a lower bound for a fragmentation norm and construct a bi-Lipschitz embedding $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ with respect to the fragmentation norm on the group $\mathrm{Ham}(M)$ of Hamiltonian diffeomorphisms of a symplectic manifold $(M,\omega)$. As an application, we provide an answer to Brandenbursky's question on fragmentation norms on $\mathrm{Ham}(\Sigma_g)$, where $\Sigma_g$ is a closed Riemannian surface of genus $g\geq 2$.
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{kawasaki2021disjoint,
+  author        = {Kawasaki, Morimichi and Orita, Ryuma},
+  title         = {{Disjoint superheavy subsets and fragmentation norms}},
+  journal       = {Journal of Topology and Analysis},
+  volume        = {13},
+  number        = {2},
+  pages         = {443--468},
+  year          = {2021},
+  doi           = {10.1142/S179352532050017X},
+  eprint        = {1901.01647},
+  archivePrefix = {arXiv}
+}
+```
+
+</details>

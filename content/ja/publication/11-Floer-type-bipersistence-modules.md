@@ -23,3 +23,19 @@ arXiv:2312.07847
 ## 概要
 
 この論文では，interlevelフィルトレーション付きFloerホモロジーによって定義される各点有限次元な2パラメータパーシステンス加群 $\mathbb{HF}_{\ast}^{(\bullet,\bullet]}$ が長方形分解可能であることを示します。これにより，この双パーシステンス加群に付随して，$\mathbb{R}^2$ 内の長方形のみからなるバーコードを定義できます。この長方形バーコードが，Usherのboundary depthや，Oh，Schwarz，Viterboによるスペクトル不変量の情報を含むことを観察します。さらに，長方形バーコードから新しい不変量を取り出し，これがハミルトン系の周期解の検出に有効であることを示します。加えて，ボトルネック距離とHofer距離に関する安定性の結果も確立します。
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@misc{koeda2023floertype,
+  author        = {Koeda, Kanta and Orita, Ryuma and Yashiro, Kanon},
+  title         = {{Floer-type bipersistence modules and rectangle barcodes}},
+  year          = {2023},
+  eprint        = {2312.07847},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2312.07847}
+}
+```
+
+</details>

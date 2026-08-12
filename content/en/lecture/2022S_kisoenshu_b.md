@@ -19,4 +19,4 @@ Term 2, Fri. Period 4 (co-taught) · Faculty of Science, Niigata University
 
 **Textbooks**
 1. Y. Takahashi and M. Kato, "微分積分概論 [新訂版]" (in Japanese), Saiensu-sha
-2. T. Tanaka, H. Kojima, A. Hoshi, R. Orita, N. Innami, and H. Yoshihara, "要点明解 線形代数 三訂版" (in Japanese), Baifukan
+2. T. Tanaka, H. Kojima, A. Hoshi, R. Orita, N. Innami, and H. Yoshihara, "要点明解 線形数学 三訂版" (in Japanese), Baifukan

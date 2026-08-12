@@ -23,3 +23,23 @@ Journal of Symplectic Geometry, vol. **17** (2019), no. 6, pp. 1893–1927
 ## 概要
 
 連結な閉シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像が非可縮な1周期軌道を1つ持つならば，非可縮な単純周期軌道が無限個存在することを示します。ただし，シンプレクティック形式 $\omega$ が非球面的 (aspherical) であり，かつ基本群 $\pi_1(M)$ がvirtually abelian群 または $\mathrm{R}$-群であることを仮定します。また，基本群に同じ条件を課したうえで，閉単調および負単調なシンプレクティック多様体のハミルトン微分同相写像についても同様の主張が成り立つことを示します。これらはGinzburgとGürelの結果の一般化になっています。証明には，非可縮周期軌道に対するフィルトレーション付きFloer–Novikovホモロジーを用います。
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{orita2019existence,
+  author        = {Orita, Ryuma},
+  title         = {{On the existence of infinitely many non-contractible periodic orbits of Hamiltonian diffeomorphisms of closed symplectic manifolds}},
+  journal       = {Journal of Symplectic Geometry},
+  volume        = {17},
+  number        = {6},
+  pages         = {1893--1927},
+  year          = {2019},
+  doi           = {10.4310/JSG.2019.v17.n6.a9},
+  eprint        = {1703.01731},
+  archivePrefix = {arXiv}
+}
+```
+
+</details>

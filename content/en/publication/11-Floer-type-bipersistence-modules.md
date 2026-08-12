@@ -22,3 +22,19 @@ arXiv:2312.07847
 ## Abstract
 
 In this paper, we show that the pointwise finite-dimensional two-parameter persistence module $\mathbb{HF}_{\ast}^{(\bullet,\bullet]}$, defined in terms of interlevel filtered Floer homology, is rectangle-decomposable. This allows for the definition of a barcode consisting only of rectangles in $\mathbb{R}^2$ associated with the bipersistence module. We observe that this rectangle barcode contains information about Usher's boundary depth and spectral invariants developed by Oh, Schwarz, and Viterbo. Moreover, we introduce a novel invariant extracted from the rectangle barcode, which proves instrumental in detecting periodic solutions of Hamiltonian systems. Additionally, we establish relevant stability results, particularly concerning the bottleneck distance and Hofer's distance.
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@misc{koeda2023floertype,
+  author        = {Koeda, Kanta and Orita, Ryuma and Yashiro, Kanon},
+  title         = {{Floer-type bipersistence modules and rectangle barcodes}},
+  year          = {2023},
+  eprint        = {2312.07847},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2312.07847}
+}
+```
+
+</details>

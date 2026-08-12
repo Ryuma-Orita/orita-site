@@ -22,3 +22,23 @@ Journal of the Mathematical Society of Japan, vol. **74** (2022), no. 3, pp. 829
 ## Abstract
 
 (Non-)displaceability of fibers of integrable systems has been an important problem in symplectic geometry. In this paper, for a large class of classical Liouville integrable systems containing the Lagrangian top, the Kovalevskaya top and the C. Neumann problem, we find a non-displaceable fiber for each of them. Moreover, we show that the non-displaceable fiber which we detect is the unique fiber which is non-displaceable from the zero-section. As a special case of this result, we also show the existence of a singular level set of a convex Hamiltonian, which is non-displaceable from the zero-section. To prove these results, we use the notion of superheaviness introduced by Entov and Polterovich.
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{kawasaki2022rigid,
+  author        = {Kawasaki, Morimichi and Orita, Ryuma},
+  title         = {{Rigid fibers of integrable systems on cotangent bundles}},
+  journal       = {Journal of the Mathematical Society of Japan},
+  volume        = {74},
+  number        = {3},
+  pages         = {829--847},
+  year          = {2022},
+  doi           = {10.2969/jmsj/84278427},
+  eprint        = {1905.13112},
+  archivePrefix = {arXiv}
+}
+```
+
+</details>
