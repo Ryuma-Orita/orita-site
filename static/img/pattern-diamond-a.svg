@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
+  <!-- diamond（菱形の斜め格子）を2層に分けたうちの奥（細い・ゆっくり・小さい）。
+       傾き±2の直線2組が交差して 60×120 の縦長の菱を作る。
+       切片は120刻み（720を割り切るので継ぎ目が合う）。
+       太い3本／細い3本を交互に分けたので、各層それ自体が
+       完全な菱格子になる。継ぎ目をまたぐ複製は同じ層に入れてある。 -->
+  <g stroke="#fff" fill="none">
+    <line x1="-400" y1="-2120" x2="1120" y2="920" stroke-width="7" stroke-opacity="0.38"/>
+    <line x1="-400" y1="-1880" x2="1120" y2="1160" stroke-width="6" stroke-opacity="0.32"/>
+    <line x1="-400" y1="-1640" x2="1120" y2="1400" stroke-width="8" stroke-opacity="0.44"/>
+    <line x1="-400" y1="-1400" x2="1120" y2="1640" stroke-width="7" stroke-opacity="0.38"/>
+    <line x1="-400" y1="-1160" x2="1120" y2="1880" stroke-width="6" stroke-opacity="0.32"/>
+    <line x1="-400" y1="-920" x2="1120" y2="2120" stroke-width="8" stroke-opacity="0.44"/>
+    <line x1="-400" y1="-680" x2="1120" y2="2360" stroke-width="7" stroke-opacity="0.38"/>
+    <line x1="-400" y1="-440" x2="1120" y2="2600" stroke-width="6" stroke-opacity="0.32"/>
+    <line x1="-400" y1="-200" x2="1120" y2="2840" stroke-width="8" stroke-opacity="0.44"/>
+    <line x1="-400" y1="920" x2="1120" y2="-2120" stroke-width="7" stroke-opacity="0.4"/>
+    <line x1="-400" y1="1160" x2="1120" y2="-1880" stroke-width="6" stroke-opacity="0.34"/>
+    <line x1="-400" y1="1400" x2="1120" y2="-1640" stroke-width="9" stroke-opacity="0.46"/>
+    <line x1="-400" y1="1640" x2="1120" y2="-1400" stroke-width="7" stroke-opacity="0.4"/>
+    <line x1="-400" y1="1880" x2="1120" y2="-1160" stroke-width="6" stroke-opacity="0.34"/>
+    <line x1="-400" y1="2120" x2="1120" y2="-920" stroke-width="9" stroke-opacity="0.46"/>
+    <line x1="-400" y1="2360" x2="1120" y2="-680" stroke-width="7" stroke-opacity="0.4"/>
+    <line x1="-400" y1="2600" x2="1120" y2="-440" stroke-width="6" stroke-opacity="0.34"/>
+    <line x1="-400" y1="2840" x2="1120" y2="-200" stroke-width="9" stroke-opacity="0.46"/>
+  </g>
+</svg>
