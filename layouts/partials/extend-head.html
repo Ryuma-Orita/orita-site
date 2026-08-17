@@ -127,4 +127,33 @@
   document.head.appendChild(el);
   document.documentElement.setAttribute('data-orita-palette', p.n);
 })();
+
+/* --- iPhone・iPad で明暗を切り替えたときの描画の取りこぼし対策 ---
+
+   iOS のブラウザ（Safari も Chrome も中身は同じ描画エンジン）では、
+   明暗を切り替えたときに画面の一部が古い表示のまま残ることがある。
+   背景の2層が画面より大きい固定要素であるため、描画の区画の
+   作り直しが一部で漏れるものと思われる。
+
+   テーマの切り替えは <html> の class の変化として現れるので、
+   それを見て 1フレームだけ本文を隠し、描画をやり直させる。
+   16ミリ秒ほどなので目には見えない。
+   配色の切り替えは data-orita-palette 属性なので、ここには反応しない。 */
+(function () {
+  if (!window.MutationObserver || !window.requestAnimationFrame) return;
+  var busy = false;
+  new MutationObserver(function () {
+    var b = document.body;
+    if (busy || !b) return;
+    busy = true;
+    var keep = b.style.visibility;
+    b.style.visibility = 'hidden';
+    requestAnimationFrame(function () {
+      b.style.visibility = keep;
+      busy = false;
+    });
+  }).observe(document.documentElement, {
+    attributes: true, attributeFilter: ['class']
+  });
+})();
 </script>
