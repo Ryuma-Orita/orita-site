@@ -172,8 +172,9 @@
       + ';--orita-icon-hover:' + p.iD + ' !important'
       + (p.gD ? ';--orita-bar-image-dark:' + p.gD : '') + '}'
     /* 明暗の切り替え中は背景の層をまるごと消す（対処⑤）。
-       この class は、下の「対処⑤」のスクリプトが OS の明暗変化を
-       受けて 1.5秒だけ <html> に付ける。 */
+       この class は、下の「対処⑤」のスクリプトが明暗の切り替え
+       （OS 追従でもヘッダーの手動ボタンでも）を受けて
+       1.5秒だけ <html> に付ける。 */
     + 'html.orita-switching body::before,html.orita-switching body::after{display:none}';
   var el = document.createElement('style');
   el.id = 'orita-palette';
@@ -182,20 +183,34 @@
   document.documentElement.setAttribute('data-orita-palette', p.n);
 
   /* --- 対処⑤: 明暗の切り替え中だけ、背景の層を消す ------------
-     2026-08-17 の実機切り分け（CHANGELOG 135・136回目）の結論:
+     2026-08-17 の実機切り分け（CHANGELOG 135〜137回目）の結論:
        ・層が実質無いミッフィー風では起きない
        ・動く層のある配色では起きる
        ・層を小さくしても（④）起きる
      つまり引き金は層の「大きさ」ではなく、「切り替えの瞬間に
      動く合成層が存在すること」そのものとみられる。そこで、
-     OS の明暗が変わったのを検知したら 1.5秒だけ層を display:none
-     にして、切り替えの瞬間を、起きないと確定しているミッフィー風と
-     同じ「層なし」の条件にする。層は復帰時に一から作り直されるので、
+     明暗が切り替わったら 1.5秒だけ層を display:none にして、
+     切り替えの瞬間を、起きないと確定しているミッフィー風と同じ
+     「層なし」の条件にする。層は復帰時に一から作り直されるので、
      色も新しいものになる。ブラウザが裏に回っている間に切り替わった
      場合は、表に戻ってから 0.8秒後に復帰させる。
-     見え方: 切り替えた直後に模様が一拍ふっと消え、少しして戻る。 */
+     見え方: 切り替えた直後に模様が一拍ふっと消え、少しして戻る。
+
+     検知は <html> の class `dark` の変化そのもの（MutationObserver）。
+     はじめは matchMedia（OS の明暗変化）で検知していたが、それだと
+     ヘッダーの手動ボタン（OS 設定を変えずに class を直接付け外しする）
+     の経路を拾えず、そこでだけ再現した（137回目）。class の変化は
+     経路によらず必ず起きるので、これを直接見る。
+     ②も MutationObserver を使っていたが、②の敗因は検知ではなく
+     対処（1フレームの visibility:hidden）だったので、検知としては
+     採用し直した。対処（層を1.5秒消す）は (b) で効果を確認済み。
+     自分が付け外しする orita-switching でも observer は発火するが、
+     dark の有無が変わったときだけ反応するので空振りするだけ。
+     監視の開始は DOMContentLoaded 後。テーマが読み込み時に dark を
+     付ける初期化を「切り替え」と誤認して、ダークで開くたびに模様が
+     1.5秒消えるのを防ぐため（現状はテーマの初期化のほうが先に走る
+     順序なので、これは保険）。 */
   try {
-    var mq = matchMedia('(prefers-color-scheme: dark)');
     var tShow = 0, pend = false;
     var show = function () {
       document.documentElement.classList.remove('orita-switching');
@@ -206,8 +221,19 @@
       if (document.visibilityState === 'hidden') { pend = true; }
       else { pend = false; tShow = setTimeout(show, 1500); }
     };
-    if (mq.addEventListener) { mq.addEventListener('change', hide); }
-    else if (mq.addListener) { mq.addListener(hide); }  /* 古い Safari 用 */
+    var start = function () {
+      try {
+        var el = document.documentElement;
+        var wasDark = el.classList.contains('dark');
+        new MutationObserver(function () {
+          var isDark = el.classList.contains('dark');
+          if (isDark !== wasDark) { wasDark = isDark; hide(); }
+        }).observe(el, { attributes: true, attributeFilter: ['class'] });
+      } catch (e) { /* 監視できない環境では何もしない（従来どおり） */ }
+    };
+    if (document.readyState === 'loading') {
+      addEventListener('DOMContentLoaded', start);
+    } else { start(); }
     addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'visible' && pend) {
         pend = false;
