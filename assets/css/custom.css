@@ -89,9 +89,16 @@ body::before,
 body::after {
   position: fixed;
   /* 動く配色は画面より広く取る（端が見えないように）。
-     静止の配色（ミッフィー風）は画面ぴったりにして、
-     左右の余白と中央の位置を画面幅に合わせる。 */
-  inset: var(--orita-inset, -50vmax);
+     広げる幅は extend-head.html が「流れる向き」から計算して与える。
+     継ぎ目なくループするのに余分が要るのは「進んで行く先と反対の
+     1辺」だけ（奥540px・手前720px）で、残りの辺は余白200px。
+     以前は全周 min(-50vmax,-800px) で、スマホでは約2000×2400pxの
+     巨大な層になっていたが、それが iPhone で明暗切替時に画面の一部が
+     古いまま残る不具合の原因だと実機の切り分けで確定した
+     （2026-08-17、CHANGELOG 135回目）ため、必要最小限に縮めた。
+     静止の配色（ミッフィー風）は画面ぴったり（inset: 0）。
+     下の既定値は、この仕組みが働かなかったときの保険（従来の値）。 */
+  inset: var(--orita-inset, min(-50vmax, -800px));
   z-index: -10;
   pointer-events: none;
 
@@ -137,6 +144,8 @@ body::after {
   content: var(--orita-content-2, "");
   --orita-layer: var(--orita-depth-near, 1.25);    /* 手前 = 濃い */
   --orita-tile:  720px;   /* 手前 = 大きい。変えるときは orita-drift-* の移動距離も同じ値に */
+  /* 手前は1周の移動距離が奥と違う（720px）ので、はみ出し幅も別に受け取る */
+  inset: var(--orita-inset-2, var(--orita-inset, min(-50vmax, -800px)));
   -webkit-mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
           mask-image: var(--orita-pattern-2, url("/img/pattern-bars-b.svg"));
   animation: var(--orita-drift-2, orita-drift-dl)
