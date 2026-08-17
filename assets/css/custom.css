@@ -401,16 +401,19 @@ html[lang^="la" i]        { --orita-serif-local: "Noto Serif"; }   /* 明體 */
    本文とフッターはゴシックのまま（長文の読みやすさを優先）。
 
    ヘッダーの狙い方について
-     Blowfish のヘッダーは <header> ではなく
-     <div class="fixed inset-x-0 z-100"> という要素。
-     id も付いていないので、class の組み合わせで指定している。
-     テーマ更新で class が変わった場合は明朝体が外れるだけで、
+     Blowfish 2.106.0 から、ヘッダーは <header> で囲まれるようになった。
+     それ以前は <div class="fixed inset-x-0 z-100"> が直接 body の子で、
+     id も無かったので class の組み合わせで指定していた。
+     どちらの版でも効くよう、両方の書き方を並べてある
+     （当たらない側は無視されるだけ）。
+     テーマ更新で class や構造が変わった場合は明朝体が外れるだけで、
      表示が壊れることはない。 */
 main h1, main h2, main h3,
 .prose h1, .prose h2, .prose h3,
 header,
 body > div[class~="fixed"][class~="inset-x-0"],
-body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
+body > div[class*="fixed"]:not(#search-wrapper):not(#the-top),
+header > div[class~="fixed"][class~="inset-x-0"] {
   /* Zen Old Mincho は日本語用のため、ギリシャ文字・キリル文字・
      ヘブライ文字のアクセント付き字を持たない。そのままだと
      システムが別のフォントから合成し、字体が不自然になる
@@ -435,6 +438,7 @@ body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
 /* ヘッダーの中身（サイト名・メニュー）にも確実に届かせる。
    テーマ側がメニューの <span> などに独自のフォントを指定していても
    上書きできるよう、子孫まで指定する。 */
+header *,
 body > div[class~="fixed"][class~="inset-x-0"] *,
 body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) * {
   font-family: inherit;
