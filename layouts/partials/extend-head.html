@@ -30,6 +30,8 @@
   緑系の固定配色に戻る。本体には手を入れていない。
 
   1色だけに固定したいとき: 下の PAL 配列から不要な行を消す。
+  一時的に1色を確かめたいとき: アドレスに ?palette=miffy などを付ける
+  （名前の一覧はスクリプト内の「切り分け・確認用」の説明を参照）。
   どの配色が出ているかは、開発者ツールで <html> の
   data-orita-palette 属性を見れば分かる。
 */}}
@@ -63,11 +65,30 @@
   var KEY = 'orita-palette', KEY_AT = 'orita-palette-left-at';
   var p = null;
 
+  /* --- 切り分け・確認用：URLで配色を指定する --------------------
+     アドレスの末尾に ?palette=名前 を付けると、その配色で表示される。
+       aka(赤) daidai(橙) ki(黄) midori(緑)
+       ao(青) ai(藍) murasaki(紫) miffy(ミッフィー風原色)
+     例: https://ryuma-orita.netlify.app/?palette=miffy
+     付けなければ従来どおり。不具合の切り分けや、
+     特定の配色を確かめたいときに使う。 */
+  try {
+    var q = (location.search.match(/[?&]palette=([^&]*)/) || [])[1];
+    var want = ({aka:"赤系", daidai:"橙系", ki:"黄系", midori:"緑系",
+                 ao:"青系", ai:"藍系", murasaki:"紫系",
+                 miffy:"ミッフィー風原色系"})[(q || '').toLowerCase()];
+    if (want) {
+      for (var j = 0; j < PAL.length; j++) {
+        if (PAL[j].n === want) { p = PAL[j]; break; }
+      }
+    }
+  } catch (e) { /* 指定が読めなければ従来どおり */ }
+
   try {
     var saved = sessionStorage.getItem(KEY);
     var leftAt = parseInt(sessionStorage.getItem(KEY_AT) || '0', 10);
     var away = Date.now() - leftAt;
-    if (saved && leftAt && away < GAP) {
+    if (!p && saved && leftAt && away < GAP) {
       for (var i = 0; i < PAL.length; i++) {
         if (PAL[i].n === saved) { p = PAL[i]; break; }
       }
@@ -126,34 +147,5 @@
   el.textContent = css;
   document.head.appendChild(el);
   document.documentElement.setAttribute('data-orita-palette', p.n);
-})();
-
-/* --- iPhone・iPad で明暗を切り替えたときの描画の取りこぼし対策 ---
-
-   iOS のブラウザ（Safari も Chrome も中身は同じ描画エンジン）では、
-   明暗を切り替えたときに画面の一部が古い表示のまま残ることがある。
-   背景の2層が画面より大きい固定要素であるため、描画の区画の
-   作り直しが一部で漏れるものと思われる。
-
-   テーマの切り替えは <html> の class の変化として現れるので、
-   それを見て 1フレームだけ本文を隠し、描画をやり直させる。
-   16ミリ秒ほどなので目には見えない。
-   配色の切り替えは data-orita-palette 属性なので、ここには反応しない。 */
-(function () {
-  if (!window.MutationObserver || !window.requestAnimationFrame) return;
-  var busy = false;
-  new MutationObserver(function () {
-    var b = document.body;
-    if (busy || !b) return;
-    busy = true;
-    var keep = b.style.visibility;
-    b.style.visibility = 'hidden';
-    requestAnimationFrame(function () {
-      b.style.visibility = keep;
-      busy = false;
-    });
-  }).observe(document.documentElement, {
-    attributes: true, attributeFilter: ['class']
-  });
 })();
 </script>
