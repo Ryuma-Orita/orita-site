@@ -34,6 +34,10 @@
   （名前の一覧はスクリプト内の「切り分け・確認用」の説明を参照）。
   どの配色が出ているかは、開発者ツールで <html> の
   data-orita-palette 属性を見れば分かる。
+
+  あわせて、iOS で明暗を切り替えたときに画面の一部が古いまま残る
+  不具合への対処（⑤）もこのスクリプトが行う。詳しくはスクリプト末尾の
+  「対処⑤」の説明を参照。
 */}}
 <script>
 (function () {
@@ -166,11 +170,51 @@
       + ';--orita-link:'      + p.lD + ' !important'
       + ';--orita-bar:'       + p.bD + ' !important'
       + ';--orita-icon-hover:' + p.iD + ' !important'
-      + (p.gD ? ';--orita-bar-image-dark:' + p.gD : '') + '}';
+      + (p.gD ? ';--orita-bar-image-dark:' + p.gD : '') + '}'
+    /* 明暗の切り替え中は背景の層をまるごと消す（対処⑤）。
+       この class は、下の「対処⑤」のスクリプトが OS の明暗変化を
+       受けて 1.5秒だけ <html> に付ける。 */
+    + 'html.orita-switching body::before,html.orita-switching body::after{display:none}';
   var el = document.createElement('style');
   el.id = 'orita-palette';
   el.textContent = css;
   document.head.appendChild(el);
   document.documentElement.setAttribute('data-orita-palette', p.n);
+
+  /* --- 対処⑤: 明暗の切り替え中だけ、背景の層を消す ------------
+     2026-08-17 の実機切り分け（CHANGELOG 135・136回目）の結論:
+       ・層が実質無いミッフィー風では起きない
+       ・動く層のある配色では起きる
+       ・層を小さくしても（④）起きる
+     つまり引き金は層の「大きさ」ではなく、「切り替えの瞬間に
+     動く合成層が存在すること」そのものとみられる。そこで、
+     OS の明暗が変わったのを検知したら 1.5秒だけ層を display:none
+     にして、切り替えの瞬間を、起きないと確定しているミッフィー風と
+     同じ「層なし」の条件にする。層は復帰時に一から作り直されるので、
+     色も新しいものになる。ブラウザが裏に回っている間に切り替わった
+     場合は、表に戻ってから 0.8秒後に復帰させる。
+     見え方: 切り替えた直後に模様が一拍ふっと消え、少しして戻る。 */
+  try {
+    var mq = matchMedia('(prefers-color-scheme: dark)');
+    var tShow = 0, pend = false;
+    var show = function () {
+      document.documentElement.classList.remove('orita-switching');
+    };
+    var hide = function () {
+      clearTimeout(tShow);
+      document.documentElement.classList.add('orita-switching');
+      if (document.visibilityState === 'hidden') { pend = true; }
+      else { pend = false; tShow = setTimeout(show, 1500); }
+    };
+    if (mq.addEventListener) { mq.addEventListener('change', hide); }
+    else if (mq.addListener) { mq.addListener(hide); }  /* 古い Safari 用 */
+    addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible' && pend) {
+        pend = false;
+        clearTimeout(tShow);
+        tShow = setTimeout(show, 800);
+      }
+    });
+  } catch (e) { /* 検知できない環境では何もしない（従来どおり） */ }
 })();
 </script>
