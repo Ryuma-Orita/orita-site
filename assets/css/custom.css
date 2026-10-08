@@ -93,9 +93,9 @@ body::after {
      継ぎ目なくループするのに余分が要るのは「進んで行く先と反対の
      1辺」だけ（奥540px・手前720px）で、残りの辺は余白200px。
      以前は全周 min(-50vmax,-800px) で、スマホでは約2000×2400pxの
-     巨大な層になっていたが、それが iPhone で明暗切替時に画面の一部が
-     古いまま残る不具合の原因だと実機の切り分けで確定した
-     （2026-08-17、CHANGELOG 135回目）ため、必要最小限に縮めた。
+     大きな層になっていたため、メモリ使用量を減らす目的で縮めた。
+     縮小だけでは iOS の明暗切替不具合は解消せず、別途
+     extend-head.html で切替中の層を一時的に非表示にして対処している。
      静止の配色（ミッフィー風）は画面ぴったり（inset: 0）。
      下の既定値は、この仕組みが働かなかったときの保険（従来の値）。 */
   inset: var(--orita-inset, min(-50vmax, -800px));
@@ -165,8 +165,7 @@ body::after {
 @media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
 @media print { body::before, body::after { display: none; } }
 
-/* 画面が狭いと本文が横幅いっぱいに広がり、左右の余白が無くなる。
-   その場合は模様を消して、地の色だけにする（ブルーナ風の平塗り）。 */
+/* 狭い画面でも模様を維持し、本文が読みやすいよう濃度を調整する。 */
 @media (max-width: 1100px) {
   body::before,
   body::after       { opacity: calc(var(--orita-bar-opacity-narrow, var(--orita-bar-opacity, 0.24)) * var(--orita-layer, 1)); }
@@ -191,7 +190,7 @@ body::after {
 .prose details { margin-top: 2rem; }
 .prose details > summary {
   cursor: pointer;
-  display: inline-block;
+  display: list-item;
   font-size: 0.85em;
   letter-spacing: 0.05em;
   opacity: 0.7;
@@ -301,7 +300,19 @@ body::after {
     display: block;
     width: 100%;
   }
-  .prose .lecture-schedule thead { display: none; }
+  /* 列見出しは見た目だけ隠し、読み上げ用の情報を残す。 */
+  .prose .lecture-schedule thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
   .prose .lecture-schedule tbody tr {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -341,7 +352,7 @@ a[href^="tel:"] {
 .prose li { line-height: 1.9; }
 
 /* 和文には斜体が無いので、強調は太字で表現する */
-.prose em { font-style: normal; font-weight: 600; }
+html:lang(ja) .prose em { font-style: normal; font-weight: 600; }
 
 /* テーマ標準の引用枠の斜体を日本語ページでは使わない。 */
 html:lang(ja) .prose blockquote { font-style: normal; }
@@ -671,6 +682,10 @@ summary:not(#no-such-id):hover *,
 .prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover *,
 .prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover * {
   color: inherit !important;
+}
+/* 不透明度は親子で掛け合わされるため、リンク本体だけに指定する。 */
+.prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover,
+.prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover {
   opacity: 0.6;
 }
 

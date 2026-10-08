@@ -3,18 +3,18 @@
 
   Blowfish の {{< katex >}} は KaTeX を読み込むが、
   インラインの $...$ を既定で拾わない場合があるため、
-  読み込み完了後に $...$ を含めて描き直す。
+  DOM の準備ができた時点で $...$ を補う。
+  テーマが既に描画した数式は再処理しない。
 
   KaTeX が読み込まれていないページでは何もしない。
 */}}
 <script>
 (function () {
-  var tries = 0;
+  /* この partial は全ページで共有されるため、ページごとの判定は DOM で行う。 */
+  if (!document.getElementById("katex-render")) { return; }
   function render() {
-    if (typeof window.renderMathInElement !== "function") {
-      if (++tries < 40) { setTimeout(render, 100); }
-      return;
-    }
+    /* KaTeX は defer で読み込まれ、DOMContentLoaded より先に実行される。 */
+    if (typeof window.renderMathInElement !== "function") { return; }
     window.renderMathInElement(document.body, {
       delimiters: [
         { left: "$$",  right: "$$",  display: true  },
@@ -23,11 +23,13 @@
         { left: "\\(", right: "\\)", display: false }
       ],
       throwOnError: false,
-      ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
+      ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"],
+      ignoredClasses: ["katex"]
     });
   }
-  if (document.readyState === "complete") { render(); }
-  else { window.addEventListener("load", render); }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", render, { once: true });
+  } else { render(); }
 })();
 </script>
 

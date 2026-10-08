@@ -10,7 +10,8 @@ colorScheme = "forest"
 # 閲覧者の端末（OS）のライト/ダーク設定に自動で合わせる。
 # 端末が判定できない場合は defaultAppearance が使われる。
 # どちらの場合も、右上のボタンで手動切り替えは可能。
-defaultAppearance = "dark"
+# 初期値を light にしておくと、未保存時は OS の明暗判定が正しく優先される。
+defaultAppearance = "light"
 autoSwitchAppearance = true
 
 # プロフィール写真などをクリックしても拡大しないようにする

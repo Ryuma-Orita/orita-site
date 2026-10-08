@@ -104,9 +104,11 @@
   try {
     sessionStorage.setItem(KEY, p.n);
     /* ページを離れる瞬間に時刻を記録する */
-    var mark = function () { sessionStorage.setItem(KEY_AT, String(Date.now())); };
+    var mark = function () {
+      try { sessionStorage.setItem(KEY_AT, String(Date.now())); }
+      catch (e) { /* 閲覧中に保存が使えなくなっても表示を続ける */ }
+    };
     addEventListener('pagehide', mark);
-    addEventListener('beforeunload', mark);
     /* タブを裏に回した時点でも記録しておく（戻るときの取りこぼし防止） */
     addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'hidden') { mark(); }
@@ -221,13 +223,24 @@
       if (document.visibilityState === 'hidden') { pend = true; }
       else { pend = false; tShow = setTimeout(show, 1500); }
     };
+    var syncThemeColor = function () {
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta && document.body) {
+        meta.setAttribute('content', getComputedStyle(document.body).backgroundColor);
+      }
+    };
     var start = function () {
       try {
         var el = document.documentElement;
         var wasDark = el.classList.contains('dark');
         new MutationObserver(function () {
           var isDark = el.classList.contains('dark');
-          if (isDark !== wasDark) { wasDark = isDark; hide(); }
+          if (isDark !== wasDark) {
+            wasDark = isDark;
+            hide();
+            /* OS 追従でも、ブラウザの枠色を本文の背景色と同期する。 */
+            syncThemeColor();
+          }
         }).observe(el, { attributes: true, attributeFilter: ['class'] });
       } catch (e) { /* 監視できない環境では何もしない（従来どおり） */ }
     };

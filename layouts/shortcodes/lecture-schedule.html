@@ -1,3 +1,10 @@
+{{- /* スマートフォンでは行をCSS Gridにするため、表の役割を明示する。 */ -}}
+{{- $table := .Inner | markdownify -}}
+{{- $table = replaceRE `<table(\s|>)` `<table role="table"$1` $table -}}
+{{- $table = replaceRE `<(thead|tbody)(\s|>)` `<$1 role="rowgroup"$2` $table -}}
+{{- $table = replaceRE `<tr(\s|>)` `<tr role="row"$1` $table -}}
+{{- $table = replaceRE `<th(\s|>)` `<th scope="col" role="columnheader"$1` $table -}}
+{{- $table = replaceRE `<td(\s|>)` `<td role="cell"$1` $table -}}
 <div class="lecture-schedule">
-  {{ .Inner | markdownify }}
+  {{ $table | safeHTML }}
 </div>
