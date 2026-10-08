@@ -203,9 +203,8 @@ body::after {
 /* start = 書字方向の先頭。RTL（ヘブライ語）では自動的に右揃えになる */
 .prose { text-align: start; }
 
-/* 表の見出し行（「年 学位 大学」など）を出さない。
-   ※ .prose 内の全ての表に効く。現在、表があるのはトップページだけだが、
-     将来の記事で見出し行を出したくなったら、この1行を削除すること。 */
+/* プロフィール等の表では見出し行（「年 学位 大学」など）を出さない。
+   授業の日程表は .lecture-schedule の専用設定で上書きする。 */
 .prose table thead { display: none; }
 
 /* 幅いっぱいに使い、狭い画面では横スクロールで逃がす */
@@ -252,6 +251,77 @@ body::after {
   .prose table td:first-child { white-space: nowrap; }
 }
 
+/* 授業日程：画面内で本文を折り返し、横スクロールを不要にする。
+   プロフィールの列幅・折り返し設定をここに持ち込まない。 */
+.prose .lecture-schedule {
+  width: 100%;
+  min-width: 0;
+}
+.prose .lecture-schedule table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  overflow: visible;
+}
+.prose .lecture-schedule thead { display: table-header-group; }
+.prose .lecture-schedule th,
+.prose .lecture-schedule td {
+  min-width: 0;
+  padding: 0.8rem 0.5rem;
+  vertical-align: top;
+  text-align: start;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
+  line-height: 1.8;
+}
+.prose .lecture-schedule th:first-child,
+.prose .lecture-schedule td:first-child {
+  width: 4.5rem;
+  padding-inline-start: 0;
+  white-space: nowrap;
+}
+.prose .lecture-schedule th:nth-child(2),
+.prose .lecture-schedule td:nth-child(2) {
+  width: 8.5rem;
+  min-width: 0;
+}
+.prose .lecture-schedule th:nth-child(3),
+.prose .lecture-schedule td:nth-child(3) {
+  min-width: 0;
+  padding-inline-end: 0;
+}
+
+/* スマートフォンでは各回を2段にし、内容の列に画面幅を使う。 */
+@media (max-width: 640px) {
+  .prose .lecture-schedule table,
+  .prose .lecture-schedule tbody {
+    display: block;
+    width: 100%;
+  }
+  .prose .lecture-schedule thead { display: none; }
+  .prose .lecture-schedule tbody tr {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    padding-block: 1rem;
+  }
+  .prose .lecture-schedule td,
+  .prose .lecture-schedule td:first-child,
+  .prose .lecture-schedule td:nth-child(2),
+  .prose .lecture-schedule td:nth-child(3) {
+    display: block;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+  }
+  .prose .lecture-schedule td:nth-child(2) { text-align: end; }
+  .prose .lecture-schedule td:nth-child(3) { grid-column: 1 / -1; }
+}
+
 /* iOS が数字の並びを電話番号と誤認してリンクにすることがある。
    extend-head.html で無効にしているが、万一リンク化されても
    本文と同じ見た目になるようにしておく。 */
@@ -272,6 +342,9 @@ a[href^="tel:"] {
 
 /* 和文には斜体が無いので、強調は太字で表現する */
 .prose em { font-style: normal; font-weight: 600; }
+
+/* テーマ標準の引用枠の斜体を日本語ページでは使わない。 */
+html:lang(ja) .prose blockquote { font-style: normal; }
 
 
 /* ------------------------------------------------------------
