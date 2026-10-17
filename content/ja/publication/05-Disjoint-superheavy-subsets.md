@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*J. Topol. Anal.*, vol. **13**, no. 2, pp. 443–468'
 citation_full: Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468
-abstract: fragmentationノルムの下からの評価を与え，シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群 $\mathrm{Ham}(M)$ 上のfragmentationノルムに関して，bi-Lipschitz埋め込み $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ を構成します。応用として，種数 $g\geq 2$ の閉Riemann面 $\Sigma_g$ に対する $\mathrm{Ham}(\Sigma_g)$ 上のfragmentationノルムについて，Brandenburskyの問いに答えます。
+abstract: 'fragmentationノルムは，ハミルトン微分同相写像を局所的な変換の合成として表すとき，何個の変換が必要になるかを測ります。具体的には，許された開集合に台をもつ変換へ分解したときの，因子の個数の最小値です。このノルムを通じて，ハミルトン微分同相群 $\mathrm{Ham}(M)$ の幾何を調べます。 それぞれ適切な不変量に関してsuperheavyである，互いに交わらない部分集合を用いて，fragmentationノルムの下からの評価を与えます。さらに，スペクトル不変量に関する仮定のもとで，bi-Lipschitz埋め込み $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ を構成します。種数 $g\geq 2$ の閉曲面 $\Sigma_g$ では，可縮な開集合に対応するfragmentationノルムに関して，任意の正整数 $n$ に対する埋め込みが得られます。これらの埋め込みを整数格子に制限することで，Brandenburskyの問いにも答えます。'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1901.01647
@@ -23,7 +23,9 @@ Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468
 
 ## 概要
 
-fragmentationノルムの下からの評価を与え，シンプレクティック多様体 $(M,\omega)$ のハミルトン微分同相写像のなす群 $\mathrm{Ham}(M)$ 上のfragmentationノルムに関して，bi-Lipschitz埋め込み $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ を構成します。応用として，種数 $g\geq 2$ の閉Riemann面 $\Sigma_g$ に対する $\mathrm{Ham}(\Sigma_g)$ 上のfragmentationノルムについて，Brandenburskyの問いに答えます。
+fragmentationノルムは，ハミルトン微分同相写像を局所的な変換の合成として表すとき，何個の変換が必要になるかを測ります。具体的には，許された開集合に台をもつ変換へ分解したときの，因子の個数の最小値です。このノルムを通じて，ハミルトン微分同相群 $\mathrm{Ham}(M)$ の幾何を調べます。
+
+それぞれ適切な不変量に関してsuperheavyである，互いに交わらない部分集合を用いて，fragmentationノルムの下からの評価を与えます。さらに，スペクトル不変量に関する仮定のもとで，bi-Lipschitz埋め込み $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ を構成します。種数 $g\geq 2$ の閉曲面 $\Sigma_g$ では，可縮な開集合に対応するfragmentationノルムに関して，任意の正整数 $n$ に対する埋め込みが得られます。これらの埋め込みを整数格子に制限することで，Brandenburskyの問いにも答えます。
 
 <details>
 <summary>BibTeX</summary>

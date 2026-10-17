@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*Commun. Contemp. Math.*, vol. **23**, no. 5, 2050047'
 citation_full: Communications in Contemporary Mathematics, vol. **23** (2021), no. 5, 2050047
-abstract: この論文では，閉シンプレクティック多様体の閉部分集合に対してpseudoheavy性という概念を導入し，運動量写像のpseudoheavyなファイバーが存在することを証明します。特に，非交叉配置不可能なファイバーの存在を保証するEntov–Polterovichの定理を一般化します。応用として，heavyなファイバーの存在を問う彼らの問題に部分的な解答を与えます。さらに，$S^2\times S^2$ 内に，さまざまな剛性をもつ特異Lagrange部分多様体の族を得ます。
+abstract: 'Poisson可換な関数からなる運動量写像のファイバーは，それらの関数の共通レベル集合です。EntovとPolterovichは，閉シンプレクティック多様体上では，自分自身と交わらない位置へハミルトン微分同相写像で移せないファイバーが少なくとも1つ存在することを示しました。さらに，より強いheavy性をもつファイバーが存在するかを問いました。 本研究では，heavy性より弱く，それでも非交叉配置不可能性を導くpseudoheavy性を導入します。閉シンプレクティック多様体上の任意の部分シンプレクティック擬状態に対して，有限個のPoisson可換な関数からなる運動量写像にはpseudoheavyなファイバーが存在することを証明します。擬状態がsimpleならば，このファイバーはheavyとなり，彼らの問いに部分的な解答が得られます。また，$S^2\times S^2$ 内に，他のLagrange部分多様体との非交叉配置可能性が異なる，特異Lagrange部分多様体の族を構成します。'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1901.09395
@@ -23,7 +23,9 @@ Communications in Contemporary Mathematics, vol. **23** (2021), no. 5, 2050047
 
 ## 概要
 
-この論文では，閉シンプレクティック多様体の閉部分集合に対してpseudoheavy性という概念を導入し，運動量写像のpseudoheavyなファイバーが存在することを証明します。特に，非交叉配置不可能なファイバーの存在を保証するEntov–Polterovichの定理を一般化します。応用として，heavyなファイバーの存在を問う彼らの問題に部分的な解答を与えます。さらに，$S^2\times S^2$ 内に，さまざまな剛性をもつ特異Lagrange部分多様体の族を得ます。
+Poisson可換な関数からなる運動量写像のファイバーは，それらの関数の共通レベル集合です。EntovとPolterovichは，閉シンプレクティック多様体上では，自分自身と交わらない位置へハミルトン微分同相写像で移せないファイバーが少なくとも1つ存在することを示しました。さらに，より強いheavy性をもつファイバーが存在するかを問いました。
+
+本研究では，heavy性より弱く，それでも非交叉配置不可能性を導くpseudoheavy性を導入します。閉シンプレクティック多様体上の任意の部分シンプレクティック擬状態に対して，有限個のPoisson可換な関数からなる運動量写像にはpseudoheavyなファイバーが存在することを証明します。擬状態がsimpleならば，このファイバーはheavyとなり，彼らの問いに部分的な解答が得られます。また，$S^2\times S^2$ 内に，他のLagrange部分多様体との非交叉配置可能性が異なる，特異Lagrange部分多様体の族を構成します。
 
 <details>
 <summary>BibTeX</summary>

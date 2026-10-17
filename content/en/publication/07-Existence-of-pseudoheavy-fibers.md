@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*Commun. Contemp. Math.*, vol. **23**, no. 5, 2050047'
 citation_full: Communications in Contemporary Mathematics, vol. **23** (2021), no. 5, 2050047
-abstract: In this paper, we introduce the notion of pseudoheaviness of closed subsets of closed symplectic manifolds and prove the existence of pseudoheavy fibers of moment maps. In particular, we generalize Entov and Polterovich's theorem, which ensures the existence of non-displaceable fibers. As its application, we provide a partial answer to a problem posed by them, which asks the existence of heavy fibers. Moreover, we obtain a family of singular Lagrangian submanifolds in $S^2\times S^2$ with various rigidities.
+abstract: 'A moment map formed from Poisson-commuting functions organizes a symplectic manifold into their common level sets, or fibers. Entov and Polterovich proved that, on a closed symplectic manifold, at least one fiber cannot be displaced from itself by a Hamiltonian diffeomorphism. They also asked whether one can find a fiber satisfying the stronger condition of heaviness. We introduce pseudoheaviness, a weaker condition than heaviness that still implies non-displaceability. For every partial symplectic quasi-state on a closed symplectic manifold, we prove that every moment map formed from finitely many Poisson-commuting functions has a pseudoheavy fiber. When the quasi-state is simple, this fiber is heavy, giving a partial answer to their question. Applications also produce a family of singular Lagrangian submanifolds in $S^2\times S^2$ with different displacement properties relative to other Lagrangian submanifolds.'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1901.09395
@@ -20,9 +20,11 @@ Morimichi Kawasaki, Ryuma Orita
 Communications in Contemporary Mathematics, vol. **23** (2021), no. 5, 2050047  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/1901.09395 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.1142/S0219199720500479 "DOI")
 
-## Abstract
+## Overview {#abstract}
 
-In this paper, we introduce the notion of pseudoheaviness of closed subsets of closed symplectic manifolds and prove the existence of pseudoheavy fibers of moment maps. In particular, we generalize Entov and Polterovich's theorem, which ensures the existence of non-displaceable fibers. As its application, we provide a partial answer to a problem posed by them, which asks the existence of heavy fibers. Moreover, we obtain a family of singular Lagrangian submanifolds in $S^2\times S^2$ with various rigidities.
+A moment map formed from Poisson-commuting functions organizes a symplectic manifold into their common level sets, or fibers. Entov and Polterovich proved that, on a closed symplectic manifold, at least one fiber cannot be displaced from itself by a Hamiltonian diffeomorphism. They also asked whether one can find a fiber satisfying the stronger condition of heaviness.
+
+We introduce pseudoheaviness, a weaker condition than heaviness that still implies non-displaceability. For every partial symplectic quasi-state on a closed symplectic manifold, we prove that every moment map formed from finitely many Poisson-commuting functions has a pseudoheavy fiber. When the quasi-state is simple, this fiber is heavy, giving a partial answer to their question. Applications also produce a family of singular Lagrangian submanifolds in $S^2\times S^2$ with different displacement properties relative to other Lagrangian submanifolds.
 
 <details>
 <summary>BibTeX</summary>

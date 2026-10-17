@@ -11,7 +11,7 @@ authors:
 pubtype: journal
 citation: '*J. Topol. Anal.*, Online Ready'
 citation_full: Journal of Topology and Analysis, Online Ready
-abstract: Many transformation groups on manifolds are simple, but their universal coverings are not. In the present paper, we study the concept of relatively simple group, that is, a group with the maximum proper normal subgroup. We show that many examples of universal coverings of transformation groups are relatively simple, including the universal covering $\widetilde{\mathrm{Ham}}(M,\omega)$ of the group of Hamiltonian diffeomorphisms of a closed symplectic manifold $(M,\omega)$. Tsuboi constructed a metric space $\mathcal{M}(G)$ for a simple group $G$. We generalize his construction to relatively simple groups, and study their large scale geometric structure. In particular, Tsuboi's metric space of $\widetilde{\mathrm{Ham}}(M,\omega)$ is not quasi-isometric to the half line for every closed symplectic manifold $(M,\omega)$.
+abstract: 'Many groups of transformations of a manifold are simple, yet passing to their universal covers can destroy simplicity. We study a weaker property called relative simplicity: a group has a proper normal subgroup containing every other proper normal subgroup. Many universal covers of transformation groups have this property, including the universal cover $\widetilde{\mathrm{Ham}}(M,\omega)$ of the Hamiltonian diffeomorphism group of any closed symplectic manifold $(M,\omega)$. Relative simplicity also lets us extend Tsuboi''s construction of a metric space for a simple group. We use this extension to study the large-scale geometry of these universal covers. In particular, for every closed symplectic manifold, the Tsuboi metric space of $\widetilde{\mathrm{Ham}}(M,\omega)$ is not quasi-isometric to a half-line: even at large scales, its geometry cannot be modeled by a single ray.'
 links:
 - name: arXiv
   url: https://doi.org/10.48550/arXiv.2412.00839
@@ -24,9 +24,11 @@ Morimichi Kawasaki, Mitsuaki Kimura, Hiroki Kodama, Yoshifumi Matsuda, Takahiro 
 Journal of Topology and Analysis, Online Ready  
 [{{< icon "arxiv" >}}](https://doi.org/10.48550/arXiv.2412.00839 "arXiv") · [{{< icon "doi" >}}](https://doi.org/10.1142/S1793525326500445 "DOI")
 
-## Abstract
+## Overview {#abstract}
 
-Many transformation groups on manifolds are simple, but their universal coverings are not. In the present paper, we study the concept of relatively simple group, that is, a group with the maximum proper normal subgroup. We show that many examples of universal coverings of transformation groups are relatively simple, including the universal covering $\widetilde{\mathrm{Ham}}(M,\omega)$ of the group of Hamiltonian diffeomorphisms of a closed symplectic manifold $(M,\omega)$. Tsuboi constructed a metric space $\mathcal{M}(G)$ for a simple group $G$. We generalize his construction to relatively simple groups, and study their large scale geometric structure. In particular, Tsuboi's metric space of $\widetilde{\mathrm{Ham}}(M,\omega)$ is not quasi-isometric to the half line for every closed symplectic manifold $(M,\omega)$.
+Many groups of transformations of a manifold are simple, yet passing to their universal covers can destroy simplicity. We study a weaker property called relative simplicity: a group has a proper normal subgroup containing every other proper normal subgroup. Many universal covers of transformation groups have this property, including the universal cover $\widetilde{\mathrm{Ham}}(M,\omega)$ of the Hamiltonian diffeomorphism group of any closed symplectic manifold $(M,\omega)$.
+
+Relative simplicity also lets us extend Tsuboi's construction of a metric space for a simple group. We use this extension to study the large-scale geometry of these universal covers. In particular, for every closed symplectic manifold, the Tsuboi metric space of $\widetilde{\mathrm{Ham}}(M,\omega)$ is not quasi-isometric to a half-line: even at large scales, its geometry cannot be modeled by a single ray.
 
 <details>
 <summary>BibTeX</summary>

@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*J. Mod. Dyn.*, vol. **11**, pp. 313–339'
 citation_full: Journal of Modern Dynamics, vol. **11** (2017), pp. 313–339
-abstract: The first author introduced a relative symplectic capacity $C$ for a symplectic manifold $(N,\omega_N)$ and its subset $X$ which measures the existence of non-contractible periodic trajectories of Hamiltonian isotopies on the product of $N$ with the annulus $A_R=(-R,R)\times\mathbb{R}/\mathbb{Z}$. In the present paper, we give an exact computation of the capacity $C$ of the $2n$-torus $\mathbb{T}^{2n}$ relative to a Lagrangian submanifold $\mathbb{T}^n$ which implies the existence of non-contractible Hamiltonian periodic trajectories on $A_R\times\mathbb{T}^{2n}$. Moreover, we give a lower bound on the number of such trajectories.
+abstract: 'For a Hamiltonian system on the product of an annulus and a symplectic manifold, one can ask what forces a periodic trajectory with a prescribed winding around the annulus. The relative symplectic capacity $C$, introduced by Kawasaki, measures the threshold on the Hamiltonian along a chosen subset that guarantees such a trajectory. This paper computes $C$ exactly for the standard symplectic torus $\mathbb{T}^{2n}$ relative to its standard Lagrangian torus $\mathbb{T}^n$. The calculation gives a sharp existence condition for non-contractible periodic trajectories on $A_R\times\mathbb{T}^{2n}$, where $A_R=(-R,R)\times\mathbb{R}/\mathbb{Z}$. Under a non-degeneracy assumption, it also gives a lower bound on their number. The proof uses Hamiltonian Floer theory for non-contractible trajectories.'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1703.01730
@@ -20,9 +20,11 @@ Morimichi Kawasaki, Ryuma Orita
 Journal of Modern Dynamics, vol. **11** (2017), pp. 313–339  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/1703.01730 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.3934/jmd.2017013 "DOI")
 
-## Abstract
+## Overview {#abstract}
 
-The first author introduced a relative symplectic capacity $C$ for a symplectic manifold $(N,\omega_N)$ and its subset $X$ which measures the existence of non-contractible periodic trajectories of Hamiltonian isotopies on the product of $N$ with the annulus $A_R=(-R,R)\times\mathbb{R}/\mathbb{Z}$. In the present paper, we give an exact computation of the capacity $C$ of the $2n$-torus $\mathbb{T}^{2n}$ relative to a Lagrangian submanifold $\mathbb{T}^n$ which implies the existence of non-contractible Hamiltonian periodic trajectories on $A_R\times\mathbb{T}^{2n}$. Moreover, we give a lower bound on the number of such trajectories.
+For a Hamiltonian system on the product of an annulus and a symplectic manifold, one can ask what forces a periodic trajectory with a prescribed winding around the annulus. The relative symplectic capacity $C$, introduced by Kawasaki, measures the threshold on the Hamiltonian along a chosen subset that guarantees such a trajectory.
+
+This paper computes $C$ exactly for the standard symplectic torus $\mathbb{T}^{2n}$ relative to its standard Lagrangian torus $\mathbb{T}^n$. The calculation gives a sharp existence condition for non-contractible periodic trajectories on $A_R\times\mathbb{T}^{2n}$, where $A_R=(-R,R)\times\mathbb{R}/\mathbb{Z}$. Under a non-degeneracy assumption, it also gives a lower bound on their number. The proof uses Hamiltonian Floer theory for non-contractible trajectories.
 
 <details>
 <summary>BibTeX</summary>
