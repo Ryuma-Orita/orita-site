@@ -6,7 +6,7 @@ authors:
 pubtype: journal
 citation: '*Tokyo J. Math.*, vol. **41**, no. 1, pp. 113–130'
 citation_full: Tokyo Journal of Mathematics, vol. **41** (2018), no. 1, pp. 113–130
-abstract: In the present paper, we define Morse–Bott functions on manifolds with boundary which are generalizations of Morse functions and show Morse–Bott inequalities for these manifolds.
+abstract: 'Morse theory relates the topology of a manifold to the critical points of a smooth function. Morse–Bott theory allows these critical points to form submanifolds. On a manifold with boundary, the behavior of the function along the boundary must also enter this relationship. This paper defines Morse–Bott functions on compact manifolds with boundary and proves inequalities relating their critical submanifolds to the Betti numbers of the manifold. The boundary need not be a level set of the function. The inequalities include contributions from the interior and from the restriction of the function to the boundary, and the proof uses an explicit perturbation to Morse functions while controlling the behavior near the boundary.'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1609.02381
@@ -18,9 +18,11 @@ Ryuma Orita
 Tokyo Journal of Mathematics, vol. **41** (2018), no. 1, pp. 113–130  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/1609.02381 "arXiv") · [{{< icon "doi" >}}](https://dx.doi.org/10.3836/tjm/1502179256 "DOI")
 
-## Abstract
+## Overview {#abstract}
 
-In the present paper, we define Morse–Bott functions on manifolds with boundary which are generalizations of Morse functions and show Morse–Bott inequalities for these manifolds.
+Morse theory relates the topology of a manifold to the critical points of a smooth function. Morse–Bott theory allows these critical points to form submanifolds. On a manifold with boundary, the behavior of the function along the boundary must also enter this relationship.
+
+This paper defines Morse–Bott functions on compact manifolds with boundary and proves inequalities relating their critical submanifolds to the Betti numbers of the manifold. The boundary need not be a level set of the function. The inequalities include contributions from the interior and from the restriction of the function to the boundary, and the proof uses an explicit perturbation to Morse functions while controlling the behavior near the boundary.
 
 <details>
 <summary>BibTeX</summary>

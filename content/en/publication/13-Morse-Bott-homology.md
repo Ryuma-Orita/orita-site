@@ -7,7 +7,7 @@ authors:
 pubtype: preprint
 citation: arXiv:2504.16962
 citation_full: arXiv:2504.16962
-abstract: Banyaga and Hurtubise defined the Morse--Bott--Smale chain complex as a quotient of a large chain complex by introducing five degeneracy relations. However, their five degeneracy relations are in fact redundant. In the present paper, we unify these five conditions into a single degeneracy condition and resolve the issue of the well-definedness of the Morse--Bott--Smale chain complex. This provides an appropriate definition of the Morse--Bott homology and more computable examples. Moreover, we show that our chain complex for a Morse--Smale function is quasi-isomorphic to the usual Morse--Smale--Witten chain complex. As a consequence, we obtain an alternative proof of the Morse Homology Theorem.
+abstract: 'Morse–Bott theory studies the topology of a manifold using functions whose critical points may form submanifolds. To turn this idea into homology, the associated chain complex must be defined consistently. We revisit the construction of Banyaga and Hurtubise, which uses five degeneracy relations to form a quotient of a larger chain complex. We replace those five relations with a single degeneracy condition and resolve the problem of well-definedness. The resulting construction gives a suitable definition of Morse–Bott homology and makes more examples accessible to computation. For a Morse–Smale function, we also prove that our complex is quasi-isomorphic to the usual Morse–Smale–Witten complex, so the two constructions give the same homology. This yields another proof of the Morse Homology Theorem.'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/2504.16962
@@ -17,9 +17,11 @@ Ryuma Orita, Kanon Yashiro
 arXiv:2504.16962  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/2504.16962 "arXiv")
 
-## Abstract
+## Overview {#abstract}
 
-Banyaga and Hurtubise defined the Morse--Bott--Smale chain complex as a quotient of a large chain complex by introducing five degeneracy relations. However, their five degeneracy relations are in fact redundant. In the present paper, we unify these five conditions into a single degeneracy condition and resolve the issue of the well-definedness of the Morse--Bott--Smale chain complex. This provides an appropriate definition of the Morse--Bott homology and more computable examples. Moreover, we show that our chain complex for a Morse--Smale function is quasi-isomorphic to the usual Morse--Smale--Witten chain complex. As a consequence, we obtain an alternative proof of the Morse Homology Theorem.
+Morse–Bott theory studies the topology of a manifold using functions whose critical points may form submanifolds. To turn this idea into homology, the associated chain complex must be defined consistently. We revisit the construction of Banyaga and Hurtubise, which uses five degeneracy relations to form a quotient of a larger chain complex.
+
+We replace those five relations with a single degeneracy condition and resolve the problem of well-definedness. The resulting construction gives a suitable definition of Morse–Bott homology and makes more examples accessible to computation. For a Morse–Smale function, we also prove that our complex is quasi-isomorphic to the usual Morse–Smale–Witten complex, so the two constructions give the same homology. This yields another proof of the Morse Homology Theorem.
 
 <details>
 <summary>BibTeX</summary>

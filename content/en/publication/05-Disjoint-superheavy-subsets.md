@@ -7,7 +7,7 @@ authors:
 pubtype: journal
 citation: '*J. Topol. Anal.*, vol. **13**, no. 2, pp. 443–468'
 citation_full: Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468
-abstract: We present a lower bound for a fragmentation norm and construct a bi-Lipschitz embedding $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ with respect to the fragmentation norm on the group $\mathrm{Ham}(M)$ of Hamiltonian diffeomorphisms of a symplectic manifold $(M,\omega)$. As an application, we provide an answer to Brandenbursky's question on fragmentation norms on $\mathrm{Ham}(\Sigma_g)$, where $\Sigma_g$ is a closed Riemannian surface of genus $g\geq 2$.
+abstract: 'A fragmentation norm measures how many local Hamiltonian motions are needed to express a given Hamiltonian diffeomorphism. More precisely, it counts the smallest number of factors whose supports lie in allowed open sets. This gives a way to study the geometry of the group $\mathrm{Ham}(M)$ through decompositions into local motions. Using mutually disjoint subsets that are superheavy with respect to suitable invariants, we obtain lower bounds for fragmentation norms and, under appropriate spectral assumptions, construct bi-Lipschitz embeddings $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$. For a closed surface $\Sigma_g$ of genus $g\geq 2$ and the fragmentation norm associated with a contractible open set, such embeddings exist for every positive integer $n$. Restricting these embeddings to integer lattices answers a question of Brandenbursky.'
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1901.01647
@@ -20,9 +20,11 @@ Morimichi Kawasaki, Ryuma Orita
 Journal of Topology and Analysis, vol. **13** (2021), no. 2, pp. 443–468  
 [{{< icon "arxiv" >}}](https://arxiv.org/abs/1901.01647 "arXiv") · [{{< icon "doi" >}}](https://doi.org/10.1142/S179352532050017X "DOI")
 
-## Abstract
+## Overview {#abstract}
 
-We present a lower bound for a fragmentation norm and construct a bi-Lipschitz embedding $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$ with respect to the fragmentation norm on the group $\mathrm{Ham}(M)$ of Hamiltonian diffeomorphisms of a symplectic manifold $(M,\omega)$. As an application, we provide an answer to Brandenbursky's question on fragmentation norms on $\mathrm{Ham}(\Sigma_g)$, where $\Sigma_g$ is a closed Riemannian surface of genus $g\geq 2$.
+A fragmentation norm measures how many local Hamiltonian motions are needed to express a given Hamiltonian diffeomorphism. More precisely, it counts the smallest number of factors whose supports lie in allowed open sets. This gives a way to study the geometry of the group $\mathrm{Ham}(M)$ through decompositions into local motions.
+
+Using mutually disjoint subsets that are superheavy with respect to suitable invariants, we obtain lower bounds for fragmentation norms and, under appropriate spectral assumptions, construct bi-Lipschitz embeddings $I\colon \mathbb{R}^n\to\mathrm{Ham}(M)$. For a closed surface $\Sigma_g$ of genus $g\geq 2$ and the fragmentation norm associated with a contractible open set, such embeddings exist for every positive integer $n$. Restricting these embeddings to integer lattices answers a question of Brandenbursky.
 
 <details>
 <summary>BibTeX</summary>
