@@ -1,0 +1,28 @@
+{{/* The mail address is assembled by extend-footer.html; keep it out of profile metadata. */}}
+<div class="orita-author-links flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+  <a
+    class="hover:text-primary-700 dark:hover:text-primary-400"
+    href="#"
+    data-mail
+    aria-label="Email"
+    title="Email"
+    ><span class="inline-block align-text-bottom">{{ partial "icon.html" "email" }}</span></a
+  >
+  {{ with .Site.Params.Author.links }}
+    {{ range $links := . }}
+      {{ range $name, $url := $links }}
+        {{ if ne $name "email" }}
+          <a
+            class="hover:text-primary-700 dark:hover:text-primary-400"
+            href="{{ $url | safeURL }}"
+            target="_blank"
+            aria-label="{{ $name | title }}"
+            title="{{ $name | title }}"
+            rel="me noopener noreferrer"
+            ><span class="inline-block align-text-bottom">{{ partial "icon.html" $name }}</span></a
+          >
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>
