@@ -50,5 +50,12 @@
 {{- $menuURL := printf "https://fonts.googleapis.com/css2?%s&display=swap&%s" (delimit $menu "&") (querify "text" $menuText) -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{{ $fullURL | safeURL }}">
-<link rel="stylesheet" href="{{ $menuURL | safeURL }}">
+{{/* 外部フォントCSSの応答待ちで、本文や背景の初回描画を止めない。
+     到着後に適用し、読み込み中は既存のfallback書体を使う。
+     JavaScriptが無効でも書体を適用できるよう通常linkも残す。 */}}
+<link rel="preload" as="style" href="{{ $fullURL | safeURL }}" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="{{ $menuURL | safeURL }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ $fullURL | safeURL }}">
+  <link rel="stylesheet" href="{{ $menuURL | safeURL }}">
+</noscript>

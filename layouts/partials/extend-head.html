@@ -1,6 +1,3 @@
-{{/* テーマから渡される言語ごとの Site を使い、必要な書体を読み込む。 */}}
-{{ partial "orita-fonts.html" . }}
-
 {{/*
   iOS Safari は本文中の数字の並びを電話番号・日付・住所と判定して
   勝手にリンクにする。略歴の「2017.8 – 2018.3」が電話番号扱いされるため、
@@ -95,6 +92,24 @@
 
   if (!p) { p = ACTIVE_PAL[Math.floor(Math.random() * ACTIVE_PAL.length)]; }
 
+  /* 選ばれた模様だけを先に取得する。bodyのスタイル計算を待つと、
+     本文が描画できてもマスク画像の到着まで背景が透明になる。
+     CSS maskと同じAnonymous CORSモードにして、取得済み画像を再利用する。 */
+  var patternURL = function (layer) {
+    return '/img/pattern-' + p.p + '-' + layer + '.svg';
+  };
+  if (p.p !== 'none') {
+    ['a', 'b'].forEach(function (layer) {
+      var preload = document.createElement('link');
+      preload.rel = 'preload';
+      preload.as = 'image';
+      preload.type = 'image/svg+xml';
+      preload.crossOrigin = 'anonymous';
+      preload.href = patternURL(layer);
+      document.head.appendChild(preload);
+    });
+  }
+
   try {
     sessionStorage.setItem(KEY, p.n);
     /* ページを離れる瞬間に時刻を記録する */
@@ -144,8 +159,8 @@
       + ';--orita-inset-2:' + (p.d === 'none' ? (p.ins || '0') : insetFor(p.d, 720))
       /* 模様は2層。-a が奥（細い図形・ゆっくり）、-b が手前（太い図形・速い）。
          静止の配色は content を none にして手前の層を作らない。 */
-      + ';--orita-pattern:'   + (p.p === 'none' ? 'none' : 'url("/img/pattern-' + p.p + '-a.svg")')
-      + ';--orita-pattern-2:' + (p.p === 'none' ? 'none' : 'url("/img/pattern-' + p.p + '-b.svg")')
+      + ';--orita-pattern:'   + (p.p === 'none' ? 'none' : 'url("' + patternURL('a') + '")')
+      + ';--orita-pattern-2:' + (p.p === 'none' ? 'none' : 'url("' + patternURL('b') + '")')
       + ';--orita-content-2:' + (p.p === 'none' ? 'none' : '""')
       /* 層ごとの濃さの係数。手前を濃く、奥を淡くして遠近感を出す。
          静止の配色は1層だけなので係数を掛けない。 */
@@ -251,3 +266,6 @@
   } catch (e) { /* 検知できない環境では何もしない（従来どおり） */ }
 })();
 </script>
+
+{{/* 配色と模様の取得を開始してから、言語別の書体を非同期で読み込む。 */}}
+{{ partial "orita-fonts.html" . }}
