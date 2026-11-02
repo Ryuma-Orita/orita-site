@@ -17,7 +17,7 @@ showBreadcrumbs: false
 #### M1
 - SK, SO: Persistence theory
 #### B4
-- SF
+- SF (graduated on September 24, 2026)
 - HI: "手を動かしてまなぶ 集合と位相" by A. Fujioka (in Japanese)
 
 ### Theses
