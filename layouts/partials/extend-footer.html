@@ -37,12 +37,11 @@
   メールアドレスの迷惑メール対策。
 
   HTML にはアドレスを一切書かない。
-  languages.*.toml にはダミーURL（example.invalid）だけを置き、
-  ここで断片から組み立てて mailto: に差し替える。
-
-  Blowfish は email キーの値の先頭に mailto: を自動で付けるため、
-  差し替え前の href は "mailto:https://example.invalid/mail" になる。
-  その形も、素のダミーURLの形も、両方拾えるようにしてある。
+  独自 author-links.html の data-mail 付きリンクを、
+  ここで断片から組み立てた mailto: に差し替える。
+  author.links 設定にはメールのダミーURLを置かず、
+  rel=me や検索向けの構造化データへの混入を防ぐ。
+  本文等に残る従来形式のリンクも引き続き拾う。
 
   アドレスを変えるときは下の u と d の値を書き換える。
 */}}
@@ -71,3 +70,7 @@
   window.addEventListener("load", fixMailLinks);
 })();
 </script>
+
+{{/* Accessible mobile navigation; keep the theme files unchanged. */}}
+{{ $mobileMenu := resources.Get "js/mobile-menu.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script src="{{ $mobileMenu.RelPermalink }}" integrity="{{ $mobileMenu.Data.Integrity }}" defer></script>

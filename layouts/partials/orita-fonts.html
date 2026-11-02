@@ -1,0 +1,54 @@
+{{/*
+  Input: Site. Keep this mapping aligned with --orita-serif-local in custom.css.
+  Full character sets are needed only for this language's headings. Noto Serif
+  stays available for Latin, Greek and Cyrillic fallbacks. Korean's Hancom font
+  is still declared in custom.css; Noto Serif KR remains its fallback.
+*/}}
+{{- $lang := .Language.Lang -}}
+{{- $localFamily := "Zen Old Mincho" -}}
+{{- if in (slice "el" "ru" "la") $lang -}}
+  {{- $localFamily = "Noto Serif" -}}
+{{- else if eq $lang "he" -}}
+  {{- $localFamily = "Noto Serif Hebrew" -}}
+{{- else if eq $lang "ko" -}}
+  {{- $localFamily = "Noto Serif KR" -}}
+{{- else if eq $lang "zh-cn" -}}
+  {{- $localFamily = "Noto Serif SC" -}}
+{{- else if eq $lang "zh-tw" -}}
+  {{- $localFamily = "Noto Serif TC" -}}
+{{- end -}}
+
+{{/* Keep family names alphabetically ordered for the Google Fonts CSS2 API. */}}
+{{- $families := slice "Noto Serif" "Noto Serif Hebrew" "Noto Serif KR" "Noto Serif SC" "Noto Serif TC" "Zen Old Mincho" -}}
+{{- $weights := dict "Noto Serif" "400;700" "Noto Serif Hebrew" "400;600;700" "Noto Serif KR" "400;600;700" "Noto Serif SC" "400;600;700" "Noto Serif TC" "400;600;700" "Zen Old Mincho" "400;500;600;700" -}}
+{{- $full := slice -}}
+{{- $menu := slice -}}
+{{- range $families -}}
+  {{- $family := replace . " " "+" -}}
+  {{- if or (eq . $localFamily) (eq . "Noto Serif") -}}
+    {{- $full = $full | append (printf "family=%s:wght@%s" $family (index $weights .)) -}}
+  {{- else -}}
+    {{- $menuWeight := "400" -}}
+    {{/* Preserve Zen's Latin fallback in headings/header on non-Japanese pages. */}}
+    {{- if eq . "Zen Old Mincho" -}}
+      {{- $menuWeight = index $weights . -}}
+    {{- end -}}
+    {{- $menu = $menu | append (printf "family=%s:wght@%s" $family $menuWeight) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/*
+  All language labels remain in their existing fonts, even on another language's
+  page. Include printable ASCII for Zen's Latin/numeric fallback and punctuation.
+  This limits the other scripts' CSS to actual menu text instead of full CJK sets.
+*/}}
+{{- $menuText := " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~–—…·" -}}
+{{- range hugo.Sites -}}
+  {{- $menuText = printf "%s %s" $menuText (.Language.Params.displayName | plainify) -}}
+{{- end -}}
+{{- $fullURL := printf "https://fonts.googleapis.com/css2?%s&display=swap" (delimit $full "&") -}}
+{{- $menuURL := printf "https://fonts.googleapis.com/css2?%s&display=swap&%s" (delimit $menu "&") (querify "text" $menuText) -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ $fullURL | safeURL }}">
+<link rel="stylesheet" href="{{ $menuURL | safeURL }}">
