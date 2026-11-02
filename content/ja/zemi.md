@@ -18,7 +18,7 @@ showBreadcrumbs: false
 - SK, SO: パーシステンス理論
 #### B4
 - SF（2026年9月24日卒業）
-- HI: 手を動かしてまなぶ 集合と位相（藤岡敦 著）
+- HI: 四元数（今野紀雄 著）
 
 ### 学位論文
 
@@ -40,3 +40,4 @@ showBreadcrumbs: false
 - John W. Milnor, "Morse Theory", Princeton University Press
 - 池・エスカラ・大林・鍛冶 共著「位相的データ解析から構造発見へ」サイエンス社
 - 藤岡敦 著「手を動かしてまなぶ 集合と位相」裳華房
+- 今野紀雄 著「四元数」森北出版

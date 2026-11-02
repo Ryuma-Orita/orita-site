@@ -18,7 +18,7 @@ showBreadcrumbs: false
 - SK, SO: Persistence theory
 #### B4
 - SF (graduated on September 24, 2026)
-- HI: "手を動かしてまなぶ 集合と位相" by A. Fujioka (in Japanese)
+- HI: "四元数" by N. Konno (in Japanese)
 
 ### Theses
 
@@ -40,3 +40,4 @@ showBreadcrumbs: false
 - John W. Milnor, "Morse Theory", Princeton University Press
 - Y. Ike, E. G. Escolar, I. Obayashi, and S. Kaji, "位相的データ解析から構造発見へ" (in Japanese), Saiensu-sha
 - A. Fujioka, "手を動かしてまなぶ 集合と位相" (in Japanese), Shokabo
+- N. Konno, "四元数" (in Japanese), Morikita Publishing
