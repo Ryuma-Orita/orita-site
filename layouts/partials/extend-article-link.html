@@ -16,11 +16,11 @@
     {{- $url  := .url  | default "" -}}
     {{- if $url -}}
       {{- if eq (lower $name) "arxiv" -}}
-        <a href="{{ $url }}" title="arXiv" aria-label="arXiv" rel="noopener">
+        <a class="orita-icon--arxiv orita-icon--brand" href="{{ $url }}" title="arXiv" aria-label="arXiv" rel="noopener">
           {{- with resources.Get "icons/arxiv.svg" }}{{ .Content | safeHTML }}{{ end -}}
         </a>
       {{- else if in $url "doi.org" -}}
-        <a href="{{ $url }}" title="DOI" aria-label="DOI" rel="noopener">
+        <a class="orita-icon--brand" href="{{ $url }}" title="DOI" aria-label="DOI" rel="noopener">
           {{- with resources.Get "icons/doi.svg" }}{{ .Content | safeHTML }}{{ end -}}
         </a>
       {{- else -}}
