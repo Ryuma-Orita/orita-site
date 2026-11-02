@@ -202,10 +202,10 @@ body::after {
 /* start = 書字方向の先頭。RTL（ヘブライ語）では自動的に右揃えになる */
 .prose { text-align: start; }
 
-/* プロフィール等の通常表は見た目だけ見出し行を隠す。
+/* プロフィール表は見た目だけ見出し行を隠す。
    display:none と違い、列見出しを読み上げ用に残す。
    専用ラッパー内の講義日程表には適用しない。 */
-.prose > table > thead {
+.orita-profile-content > table > thead {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -225,8 +225,8 @@ body::after {
   overflow-x: auto;
 }
 
-.prose table th,
-.prose table td {
+.orita-profile-content table th,
+.orita-profile-content table td {
   padding-top: 0.45rem;
   padding-bottom: 0.45rem;
   /* 和文を語の途中で折らない（「マス・フォア・インダストリ / 研究所」対策）。
@@ -239,27 +239,27 @@ body::after {
 }
 
 /* 期間・年の列は折り返さない */
-.prose table th:first-child,
-.prose table td:first-child { white-space: nowrap; }
+.orita-profile-content table th:first-child,
+.orita-profile-content table td:first-child { white-space: nowrap; }
 
 /* 職位・所属の列が痩せすぎないように（広い画面のみ） */
 @media (min-width: 641px) {
-  .prose table td:nth-child(2) { min-width: 12em; }
-  .prose table td:nth-child(3) { min-width: 14em; }
+  .orita-profile-content table td:nth-child(2) { min-width: 12em; }
+  .orita-profile-content table td:nth-child(3) { min-width: 14em; }
 }
 
 /* 狭い画面（スマートフォン）では折り返しを許す。
    和文を折らない設定のままだと、長い所属名が画面からはみ出して
    途中が読めなくなるため。 */
 @media (max-width: 640px) {
-  .prose table th,
-  .prose table td {
+  .orita-profile-content table th,
+  .orita-profile-content table td {
     word-break: normal;
     overflow-wrap: anywhere;
     line-break: auto;
     padding-inline-end: 0.5rem;   /* inline-end = 書字方向の末尾。RTL では左側 */
   }
-  .prose table td:first-child { white-space: nowrap; }
+  .orita-profile-content table td:first-child { white-space: nowrap; }
 }
 
 /* 授業日程：画面内で本文を折り返し、横スクロールを不要にする。
@@ -375,10 +375,8 @@ html:lang(ja) .prose blockquote { font-style: normal; }
 
    本文中のアイコンリンク（YouTube / arXiv / DOI / 記事 / メール）と
    プロフィール欄のアイコンの調整。
-   テーマの class 名ではなく viewBox で狙い撃ちしているので、
-   テーマを更新しても壊れない。
-     0 0 24 24            … 自作アイコン（正方形）
-     0 0 17.732 24.269    … arXiv 公式ロゴ（縦長）
+   独自 icon partial / shortcode が付ける用途別 class を使う。
+   SVGの寸法やパスが変わっても、アイコンの用途をCSSで推測しない。
    ------------------------------------------------------------ */
 
 /* 本文中のアイコン：文字と同じ高さに揃える */
@@ -391,7 +389,7 @@ html:lang(ja) .prose blockquote { font-style: normal; }
 }
 
 /* arXiv 公式ロゴは縦長なので少しだけ大きく */
-.prose a svg[viewBox="0 0 17.732 24.269"] {
+.prose a .orita-icon--arxiv svg {
   height: 1.25em;
   vertical-align: -0.28em;
 }
@@ -404,7 +402,7 @@ html:lang(ja) .prose blockquote { font-style: normal; }
 }
 
 /* プロフィール欄：縦長の arXiv ロゴを正方形に潰させない */
-svg[viewBox="0 0 17.732 24.269"] { width: auto !important; }
+.orita-icon--arxiv svg { width: auto; }
 
 /* 著者欄のメール等の操作アイコンを、明暗どちらでも識別しやすくする。
    ホバー色は後段の共通設定に任せる。 */
@@ -506,20 +504,11 @@ html[lang^="la" i]        { --orita-serif-local: "Noto Serif"; }   /* 明體 */
    見出しと、ヘッダー（サイト名とメニュー）。
    本文とフッターはゴシックのまま（長文の読みやすさを優先）。
 
-   ヘッダーの狙い方について
-     Blowfish 2.106.0 から、ヘッダーは <header> で囲まれるようになった。
-     それ以前は <div class="fixed inset-x-0 z-100"> が直接 body の子で、
-     id も無かったので class の組み合わせで指定していた。
-     どちらの版でも効くよう、両方の書き方を並べてある
-     （当たらない側は無視されるだけ）。
-     テーマ更新で class や構造が変わった場合は明朝体が外れるだけで、
-     表示が壊れることはない。 */
+   サイトナビ、本文内の見出し、検索入力に適用する。
+   旧テーマ用の fixed div 推測はせず、独自partialのclassで限定する。 */
 main h1, main h2, main h3,
 .prose h1, .prose h2, .prose h3,
-header,
-body > div[class~="fixed"][class~="inset-x-0"],
-body > div[class*="fixed"]:not(#search-wrapper):not(#the-top),
-header > div[class~="fixed"][class~="inset-x-0"] {
+.orita-site-header, main header, .orita-search-header {
   /* Zen Old Mincho は日本語用のため、ギリシャ文字・キリル文字・
      ヘブライ文字のアクセント付き字を持たない。そのままだと
      システムが別のフォントから合成し、字体が不自然になる
@@ -541,50 +530,35 @@ header > div[class~="fixed"][class~="inset-x-0"] {
   letter-spacing: 0.015em;
 }
 
-/* ヘッダーの中身（サイト名・メニュー）にも確実に届かせる。
-   テーマ側がメニューの <span> などに独自のフォントを指定していても
-   上書きできるよう、子孫まで指定する。 */
-header *,
-body > div[class~="fixed"][class~="inset-x-0"] *,
-body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) * {
+/* 対象ヘッダー内では、子要素もその書体を継承する。 */
+.orita-site-header *, main header *, .orita-search-header * {
   font-family: inherit;
 }
 
-/* --- 言語一覧の各項目 ---
-
-   一覧は「その言語の文字」で書かれるが、ページ自体の言語は別のこと
-   （フランス語のページでギリシャ語の項目を見る等）。そのため
-   :lang() では狙えず、上の指定でページの言語のフォントが当たってしまう。
-   例：仏語ページの「Ελληνικά」が Zen Old Mincho の斜体ギリシャ文字になる。
-
-   リンク先（/el/ など）で項目を特定して、その言語の文字に合う
-   フォントを当てる。ヘッダー全体への指定より後から優先させる必要が
-   あるため !important を使う（この用途に限る）。
-   テーマ側のリンクの書き方が変わっても、当たらなくなるだけで壊れない。 */
-a[href$="/el/"],
-a[href$="/ru/"]    { font-family: "Noto Serif", "Times New Roman", serif !important; }
-a[href$="/he/"]    { font-family: "Noto Serif Hebrew", "Times New Roman", serif !important; }
-/* 言語一覧の「한국어」だけは訓民정음にしない。ここは全14言語の
-   ページに出るため、訓民正음を当てると韓国語以外のページでも
-   フォントを読み込むことになる。 */
-a[href$="/ko/"]    { font-family: "Noto Serif KR", serif !important; }
-
-/* ただし韓国語のページ自身では、サイト名（ヘッダー左の氏名）も
-   /ko/ へのリンクなので上の指定に巻き込まれてしまう。
-   このページでは訓民正音を既に読み込んでいるので、
-   /ko/ へのリンクすべてを訓民正音に戻す。 */
-:lang(ko) a[href$="/ko/"],
-html[lang^="ko" i] a[href$="/ko/"] {
-  font-family: "HancomHunminjeongeum", "Noto Serif KR", serif !important;
+/* 言語メニューはリンク先URLではなく言語コードで書体を選ぶ。
+   ナビのサイト名にも従来と同じ書体の優先順を保つ。 */
+.orita-language-link[data-language="el"],
+.orita-language-link[data-language="ru"],
+html:lang(el) .orita-site-header .main-menu > a,
+html:lang(ru) .orita-site-header .main-menu > a {
+  font-family: "Noto Serif", "Times New Roman", serif;
 }
-a[href$="/zh-cn/"] { font-family: "Noto Serif SC", serif !important; }
-a[href$="/zh-tw/"] { font-family: "Noto Serif TC", serif !important; }
-
-/* メニューの文字は小さいので、字間を少しだけ空けて締める */
-body > div[class~="fixed"][class~="inset-x-0"],
-body > div[class*="fixed"]:not(#search-wrapper):not(#the-top) {
-  letter-spacing: 0.04em;
+.orita-language-link[data-language="he"],
+html:lang(he) .orita-site-header .main-menu > a {
+  font-family: "Noto Serif Hebrew", "Times New Roman", serif;
 }
+.orita-language-link[data-language="ko"] {
+  font-family: "Noto Serif KR", serif;
+}
+/* 韓国語ページ自身では、従来どおり訓民正音の書体を使う。 */
+html:lang(ko) .orita-language-link[data-language="ko"],
+html:lang(ko) .orita-site-header .main-menu > a {
+  font-family: "HancomHunminjeongeum", "Noto Serif KR", serif;
+}
+.orita-language-link[data-language="zh-cn"],
+html:lang(zh-CN) .orita-site-header .main-menu > a { font-family: "Noto Serif SC", serif; }
+.orita-language-link[data-language="zh-tw"],
+html:lang(zh-TW) .orita-site-header .main-menu > a { font-family: "Noto Serif TC", serif; }
 
 /* トップページの名前。明朝体は字面が大きいので、
    行の高さと下の余白をテーマ既定より広めに取る。 */
@@ -614,119 +588,62 @@ main h1 ~ nav { margin-top: 0.9rem; }
   background-position: left bottom;
 }
 
-/* --- リンクの色 ---
-
-   ここに1箇所だけまとめる。以前はセクション2と5に分散し、
-   重複と順序の食い違いで不具合が出ていた。
-
-   同じ強さの指定は「後に書いたほうが勝つ」。
-   そのため、次の順に並べること。
-
-     (1) 本文中のリンクの色
-     (2) 例外: 公式ロゴ / 自作アイコン / 表の中
-     (3) 下線の扱い
-     (4) ホバー色（すべてに優先させたいので最後）
-
-   訪問済みリンクについて:
-     ブラウザ既定の紫はサイト側の指定より弱いため、
-     色を指定している箇所には出ない。特別な対処は不要。
-     :link と :visited の両方を書くのは、
-     訪問の有無で見た目が変わらないことを明示するため。 */
-
-/* (1) 本文中のリンク */
-.prose a:link,
-.prose a:visited {
-  color: var(--orita-link) !important;
+/* --- リンクの色と操作状態 ---
+   Blowfish 2.106.0 の utilities は cascade layer 内、独自CSSはその外側。
+   通常状態 → 用途別の例外 → 操作状態の順に置き、!important や偽IDで
+   優先度を引き上げない。訪問済みリンクも同じ通常色を使う。 */
+.prose a {
+  color: var(--orita-link);
   text-decoration: underline;
   text-underline-offset: 0.18em;
   text-decoration-thickness: 1px;
   text-decoration-color: color-mix(in oklab, currentColor 32%, transparent);
 }
 
-/* (2a) 例外: 公式ロゴ（arXiv・DOI）は固有の色を保つ */
-.prose a:has(svg[viewBox="0 0 17.732 24.269"]):link,
-.prose a:has(svg[viewBox="0 0 17.732 24.269"]):visited,
-.prose a:has(svg[viewBox="0 0 130 130"]):link,
-.prose a:has(svg[viewBox="0 0 130 130"]):visited {
-  color: inherit !important;
+/* 本文アイコンは本文色を継承。公式ロゴのSVG固有色も保持する。
+   :where で通常リンクと同じ優先度にし、後段の操作状態へ自然に渡す。 */
+.prose a:where(:has(.orita-icon--brand), :has(.orita-icon--action)) {
+  color: inherit;
   text-decoration: none;
 }
 
-/* (2b) 例外: 自作アイコン（YouTube・記事・メール）は本文と同じ色 */
-.prose a:has(svg[viewBox="0 0 24 24"]):link,
-.prose a:has(svg[viewBox="0 0 24 24"]):visited {
-  color: inherit !important;
-  text-decoration: none;
-}
-
-/* (2c) 例外: 略歴の表。所属名が全行リンクなので、色を付けると一斉に光る。
-        通常は本文と同じ色にし、下線だけで示す。 */
-.prose table a:link,
-.prose table a:visited {
-  color: inherit !important;
+/* 略歴の所属名は本文色＋薄い下線。ほかの表には適用しない。 */
+.orita-profile-content table a {
+  color: inherit;
   text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
 }
 
-/* (3) 一覧のタイトルや見出しの中のリンクには下線を付けない */
+/* 一覧タイトル・見出しリンクには下線を付けない。 */
 main h1 a, main h2 a, main h3 a,
 main article a:not(.prose a) {
   text-decoration: none;
 }
 
-/* (4) ホバー色（サイト全体）
-
-   要素名で絞るとテーマの構造次第で届かないため、a / button / summary を対象にする。
-   文字が <a> の中の <span> に入っている場合があるので子要素も含める。
-   :not(#no-such-id) は指定の強さを最大にするための書き方。
-   そんな id は存在しないので対象は変わらない。
-   **ホバー色にだけ必要**（テーマが hover:text-primary-500 という
-   クラス指定を当てており、それに勝つ必要があるため）。
-   平常時の色は自分の指定同士の順序で決まるので、この書き方は使わない。 */
-a:not(#no-such-id):hover,
-a:not(#no-such-id):focus-visible,
-a:not(#no-such-id):hover *,
-a:not(#no-such-id):focus-visible *,
-button:not(#no-such-id):hover,
-button:not(#no-such-id):focus-visible,
-button:not(#no-such-id):hover *,
-button:not(#no-such-id):focus-visible *,
-summary:not(#no-such-id):hover,
-summary:not(#no-such-id):hover *,
-[role="button"]:not(#no-such-id):hover,
-[role="button"]:not(#no-such-id):hover * {
-  color: var(--orita-accent) !important;
-  text-decoration-color: var(--orita-accent) !important;
+/* サイト共通の操作色。テーマのレイヤー外にある目次とコピー操作は
+   用途を明示し、明暗の通常色より操作状態を優先する。 */
+body :is(a, button):is(:hover, :focus-visible),
+body :is(summary, [role="button"]):hover,
+.toc a:is(:hover, :focus-visible),
+.copy-button:is(:hover, :focus-visible) {
+  color: var(--orita-accent);
+  text-decoration-color: var(--orita-accent);
+}
+body :is(a, button):is(:hover, :focus-visible) *,
+body :is(summary, [role="button"]):hover * {
+  color: inherit;
+  text-decoration-color: inherit;
 }
 
-/* (4a) ホバー例外: 公式ロゴは色を変えず、薄くするだけ */
-.prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover,
-.prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover,
-.prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover *,
-.prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover * {
-  color: inherit !important;
-}
-/* 不透明度は親子で掛け合わされるため、リンク本体だけに指定する。 */
-.prose a:has(svg[viewBox="0 0 17.732 24.269"]):not(#no-such-id):hover,
-.prose a:has(svg[viewBox="0 0 130 130"]):not(#no-such-id):hover {
+/* 本文内の公式ロゴはホバー時だけ薄くする。フォーカス時の色・輪郭は
+   上の共通設定を維持。不透明度を子にも重ね掛けしない。 */
+.prose a:has(.orita-icon--brand):hover {
+  color: inherit;
   opacity: 0.6;
 }
 
-/* (4c) ホバー例外: 表の中のリンク。
-        通常時は色を消しているので、ホバーでアクセント色に戻す。
-        (2c) で color: inherit !important を掛けているため、
-        ここでも同じ強さで上書きする必要がある。 */
-.prose table a:not(#no-such-id):hover,
-.prose table a:not(#no-such-id):hover * {
-  color: var(--orita-accent) !important;
-  text-decoration-color: var(--orita-accent) !important;
-}
-
-/* (4b) ホバー例外: 自作アイコンは専用の色。
-        通常のアクセント色は本文色と近い配色があり、
-        アイコンだと変化が分かりにくいため。 */
-.prose a:has(svg[viewBox="0 0 24 24"]):not(#no-such-id):hover,
-.prose a:has(svg[viewBox="0 0 24 24"]):not(#no-such-id):hover * {
-  color: var(--orita-icon-hover, var(--orita-accent)) !important;
+/* 自作の本文アイコンは、従来の専用ホバー色を使う。 */
+.prose a:has(.orita-icon--action):hover {
+  color: var(--orita-icon-hover, var(--orita-accent));
   opacity: 1;
 }
 

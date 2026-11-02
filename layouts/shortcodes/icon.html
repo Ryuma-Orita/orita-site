@@ -1,0 +1,18 @@
+{{- /* Avoid extra whitespace; retain Blowfish's inline shortcode wrapper. */ -}}
+{{- $name := $.Get 0 -}}
+{{- $icon := resources.Get (printf "icons/%s.svg" $name) -}}
+{{- if $icon -}}
+  {{- $classes := "relative inline-block align-text-bottom icon" -}}
+  {{- if eq $name "arxiv" -}}
+    {{- $classes = printf "%s orita-icon--arxiv orita-icon--brand" $classes -}}
+  {{- else if eq $name "doi" -}}
+    {{- $classes = printf "%s orita-icon--brand" $classes -}}
+  {{- else if in (slice "youtube" "article" "email") $name -}}
+    {{- $classes = printf "%s orita-icon--action" $classes -}}
+  {{- end -}}
+  <span class="{{ $classes }}">
+    {{- strings.Replace $icon.Content "\n" "" | safeHTML -}}
+  </span>
+{{- else -}}
+  {{- errorf `icon shortcode: resource "%s" not found. Check the path is correct or remove the shortcode: %s` (printf "icons/%s.svg" $name) .Position -}}
+{{- end -}}

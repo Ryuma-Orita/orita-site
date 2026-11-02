@@ -1,0 +1,15 @@
+{{- $icon := resources.Get (print "icons/" . ".svg") -}}
+{{- if $icon -}}
+  {{- /* Keep Blowfish's wrapper; expose icon purpose without relying on SVG geometry. */ -}}
+  {{- $classes := "relative block icon" -}}
+  {{- if eq . "arxiv" -}}
+    {{- $classes = printf "%s orita-icon--arxiv orita-icon--brand" $classes -}}
+  {{- else if eq . "doi" -}}
+    {{- $classes = printf "%s orita-icon--brand" $classes -}}
+  {{- else if in (slice "youtube" "article" "email") . -}}
+    {{- $classes = printf "%s orita-icon--action" $classes -}}
+  {{- end -}}
+  <span class="{{ $classes }}">
+    {{- $icon.Content | safeHTML -}}
+  </span>
+{{- end -}}
